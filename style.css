@@ -274,38 +274,30 @@ ul li a:hover {
 	transform: scale(1.1);
 }
 
-
 /* Sorrybot */
+
+.title-container h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.title-container .back-button {
+  position: absolute;
+  left: 4vw;
+  width: 30px;
+  cursor: pointer;
+  top: 13%;
+}
 
 .sorrybot {
   position: fixed;
-  top: 50px;
+  top: 150px;
   left: 10%;
   width: 80%;
   bottom: 50px;
   display: flex;
   flex-direction: column;
   padding: 20px;
-}
-
-.sorrybot section {
-  padding: 20px 0;
-  color: white;
-}
-
-.sorrybot .title-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.sorrybot .back-button {
-  position: absolute;
-  left: 10px;
-  width: 30px;
-  height: 40px;
-  cursor: pointer;
 }
 
 .sorrybot h2 {
@@ -392,21 +384,4 @@ ul li a:hover {
   height: 40px;
   color: #24122c;
   cursor: pointer;
-}
-
-@media (max-width: 490px) {
-  .sorrybot {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .sorrybot .sorrybox {
-    height: 90%;
-  }
-
-  section span {
-    display: block;
-  }
 }
