@@ -204,3 +204,30 @@ ul li a:hover {
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
 }
+
+/* Sticker-page */
+
+.loading-container {
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.loading-container.show {
+  opacity: 1;
+}
+.loading-icon img {
+  width: 400px;
+  height: auto;
+}
+
+.loading-text h2 {
+  margin: 0px;
+}
+
+.loading-text p {
+  color: #ffffff;
+  font-size: 40px;
+  margin: 5px;
+}
