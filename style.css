@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-	font-size: 5vw;
+	font-size: 6vw;
 	color: #ffffff;
 }
 
@@ -101,13 +101,13 @@ ul li a:hover {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 5vw;
+	gap: 7vw;
 }
 
 .icons {
 	position: relative;
-	width: 60vmin;
-	height: 60vmin;
+	width: 62vmin;
+	height: 62vmin;
 }
 
 .icon {
