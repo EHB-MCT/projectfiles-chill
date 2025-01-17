@@ -36,6 +36,15 @@ h2 {
 	color: #ffffff;
 }
 
+p {
+	color: #ffffff;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
 /* Navbar */
 
 nav {
@@ -414,4 +423,21 @@ ul li a:hover {
 	h2 {
 		font-size: 5vw;
 	}
+}
+
+/*Index*/
+
+.call-to-action {
+	text-align: center;
+}
+
+.partners {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.partners img {
+	object-fit: contain;
+	width: 30%;
+	padding: 5%;
 }
