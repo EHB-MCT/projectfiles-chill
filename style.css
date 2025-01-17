@@ -5,6 +5,7 @@ body {
 	overflow: hidden;
 	font-family: "lores-12", sans-serif;
 	box-sizing: border-box;
+	cursor: url("./icons/cursor.png") 16 16, default;
 }
 
 *,
@@ -17,6 +18,12 @@ body {
 	background: linear-gradient(#0d1f34, #24122c);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+a,
+button,
+.clickable {
+	cursor: url("./icons/pointer.png") 16 16, pointer;
 }
 
 h1 {
