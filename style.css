@@ -43,8 +43,11 @@ nav {
 
 nav .logo img {
   color: white;
-  transition: all 0.2s ease;
   width: 70px;
+}
+
+nav .logo {
+  transition: all 0.2s ease;
 }
 
 nav .logo:hover {
