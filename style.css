@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   overflow: hidden;
-  font-family: "lores-12", sans-serif;
+  font-family: "lores-9-narrow", sans-serif;
   box-sizing: border-box;
 }
 
@@ -36,7 +36,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
-  font-family: "lores-12", sans-serif;
   padding-left: 50px;
   padding-right: 50px;
 }
