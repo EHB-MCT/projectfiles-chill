@@ -249,7 +249,7 @@ ul li a:hover {
 .stickers {
 	display: grid;
 	grid-template-columns: repeat(3, 230px);
-  gap: 20px;
+	gap: 20px;
 	margin-top: 20px;
 	justify-content: center;
 }
@@ -277,111 +277,327 @@ ul li a:hover {
 /* Sorrybot */
 
 .title-container h2 {
-  text-align: center;
-  font-size: 3rem;
+	text-align: center;
+	font-size: 3rem;
 }
 
 .title-container .back-button {
-  position: absolute;
-  left: 4vw;
-  width: 30px;
-  cursor: pointer;
-  top: 13%;
+	position: absolute;
+	left: 4vw;
+	width: 30px;
+	cursor: pointer;
+	top: 13%;
 }
 
 .sorrybot {
-  position: fixed;
-  top: 150px;
-  left: 10%;
-  width: 80%;
-  bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+	position: fixed;
+	top: 150px;
+	left: 10%;
+	width: 80%;
+	bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
 }
 
 .sorrybot h2 {
-  font-size: 2rem;
-  margin: 0;
+	font-size: 2rem;
+	margin: 0;
 }
 
 .sorrybox {
-  flex: 1;
-  overflow-y: auto;
-  padding: 10px;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  background-color: rgba(0, 0, 0, 0.3);
+	flex: 1;
+	overflow-y: auto;
+	padding: 10px;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .sorrybox::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 .sorrybox .chat {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
 }
 
 .smart-toy-icon {
-  height: 40px;
-  width: 50px;
-  padding: 5px;
-  margin-right: 15px;
+	height: 40px;
+	width: 50px;
+	padding: 5px;
+	margin-right: 15px;
 }
 
 .sorrybox .chat p {
-  color: white;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid white;
-  padding: 15px;
-  max-width: 75%;
+	color: white;
+	font-size: 1.2rem;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid white;
+	padding: 15px;
+	max-width: 75%;
 }
 
 .sorrybox .incoming p {
-  color: white;
-  background: transparent;
+	color: white;
+	background: transparent;
 }
 
 .sorrybox .outgoing {
-  justify-content: flex-end;
-  padding-right: 50px;
+	justify-content: flex-end;
+	padding-right: 50px;
 }
 
 .sorrybox .outgoing p {
-  color: black;
-  background: white;
-  padding: 10px;
+	color: black;
+	background: white;
+	padding: 10px;
 }
 
 .chat-input {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  border: 1px solid white;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 10px;
+	border: 1px solid white;
 }
 
 .chat-input textarea {
-  flex: 1;
-  height: 40px;
-  padding: 10px;
-  border: none;
-  background: transparent;
-  color: white;
-  font-size: 1rem;
-  outline: none;
+	flex: 1;
+	height: 40px;
+	padding: 10px;
+	border: none;
+	background: transparent;
+	color: white;
+	font-size: 1rem;
+	outline: none;
 }
 
 .chat-input img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  color: #24122c;
-  cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	color: #24122c;
+	cursor: pointer;
+}
+
+/*Origami eerste pagina*/
+.origami-container {
+	position: relative;
+	overflow: visible;
+	z-index: 1;
+}
+
+.origami-schaar {
+	position: absolute;
+	top: 295px;
+	margin-left: 365px;
+	opacity: 0.6;
+	width: 40px;
+	height: 40px;
+	z-index: -1;
+}
+.origami-schaar img {
+	width: 100px;
+	height: 100px;
+}
+
+.origami-container .back-button {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	width: 30px;
+	height: 45px;
+	cursor: pointer;
+	margin-left: 50px;
+}
+
+.origami-container h2 {
+	text-align: center;
+	font-size: 3rem;
+}
+
+.origami-container img {
+	height: 350px;
+	position: relative;
+	top: -10px;
+	left: 440px;
+	z-index: 2;
+}
+
+.origami-button {
+	position: relative;
+	left: 675px;
+}
+
+.origami-button button {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 15px 35px;
+	font-size: 25px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+}
+
+.origami-button button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+/*Origami tweede pagina*/
+.pen {
+	position: absolute;
+	top: 170px;
+	left: 60%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.pen img {
+	width: 300px;
+	height: 250px;
+}
+
+.origami-container-2 {
+	position: relative;
+	overflow: visible;
+}
+
+.origami-container-2 .back-button {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	width: 30px;
+	height: 45px;
+	cursor: pointer;
+	margin-left: 50px;
+}
+.origami-container-2 h2 {
+	text-align: center;
+	font-size: 3rem;
+}
+
+.origami-container-2 img {
+	height: 350px;
+	position: relative;
+	top: -10px;
+	left: 575px;
+	width: 400px;
+	height: 400px;
+}
+
+.origami-button-2 {
+	position: relative;
+	top: 91px;
+	left: 675px;
+}
+
+.origami-button-2 button {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 15px 35px;
+	font-size: 25px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+}
+
+.origami-button-2 button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+/*Origami kies jou shape page*/
+.choose {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.origami-foto {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 125px;
+}
+
+.origami-foto img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border: 2px solid #ffffff;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+	transition: transform 0.3s;
+}
+
+.origami-foto h2 {
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+/*Origami videos*/
+
+.video {
+	margin-left: 350px;
+}
+
+.origami-button-video {
+	position: relative;
+	top: 10px;
+	left: 1054px;
+}
+
+.origami-button-video button {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 15px 35px;
+	font-size: 25px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+}
+
+.origami-button-video button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+/*Origami einde page*/
+
+.origami-container-einde {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	text-align: center;
+}
+
+.origami-button-einde {
+	position: relative;
+	left: 140px;
+	bottom: 150px;
+}
+
+.origami-button-einde button {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	width: 1300px;
+	padding: 15px 35px;
+	font-size: 25px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+}
+
+.origami-button-einde button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
 }
