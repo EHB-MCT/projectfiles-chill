@@ -35,21 +35,22 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+  padding: 20px 20px;
   font-family: "lores-12", sans-serif;
   padding-left: 50px;
   padding-right: 50px;
 }
 
-nav .logo {
+nav .logo img {
   color: white;
-  text-decoration: none;
-  font-size: 2em;
-  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 70px;
 }
 
 nav .logo:hover {
   color: #e62e5a;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }
 
 nav ul {
