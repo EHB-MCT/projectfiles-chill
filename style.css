@@ -283,8 +283,6 @@ li a.active {
 	font-size: 3rem;
 }
 
-
-
 .sorrybot h2 {
 	font-size: 2rem;
 	margin: 0;
@@ -308,8 +306,6 @@ li a.active {
 	align-items: flex-start;
 	margin-bottom: 20px;
 }
-
-
 
 .sorrybox .chat p {
 	color: white;
@@ -364,4 +360,239 @@ li a.active {
 	height: 40px;
 	color: #24122c;
 	cursor: pointer;
+}
+
+/*Origami eerste pagina*/
+.origami-container {
+	position: relative;
+	overflow: visible;
+	z-index: 1;
+}
+
+.origami-schaar {
+	position: absolute;
+	top: 295px;
+	margin-left: 365px;
+	opacity: 0.6;
+	width: 40px;
+	height: 40px;
+	z-index: -1;
+}
+.origami-schaar img {
+	width: 100px;
+	height: 100px;
+}
+
+.origami-container .back-button {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	width: 30px;
+	height: 45px;
+	cursor: pointer;
+	margin-left: 50px;
+}
+
+.origami-container h2 {
+	text-align: center;
+	font-size: 3rem;
+}
+
+.origami-container img {
+	height: 350px;
+	position: relative;
+	top: -10px;
+	left: 440px;
+	z-index: 2;
+}
+
+.origami-button {
+	position: relative;
+	left: 675px;
+}
+
+.origami-button button {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 15px 35px;
+	font-size: 25px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+}
+
+.origami-button button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+/*Origami tweede pagina*/
+.pen {
+	position: absolute;
+	top: 170px;
+	left: 60%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.pen img {
+	width: 300px;
+	height: 250px;
+}
+
+.origami-container-2 {
+	position: relative;
+	overflow: visible;
+}
+
+.origami-container-2 .back-button {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	width: 30px;
+	height: 45px;
+	cursor: pointer;
+	margin-left: 50px;
+}
+.origami-container-2 h2 {
+	text-align: center;
+	font-size: 3rem;
+}
+
+.origami-container-2 img {
+	height: 350px;
+	position: relative;
+	top: -10px;
+	left: 575px;
+	width: 400px;
+	height: 400px;
+}
+
+.origami-button-2 {
+	position: relative;
+	top: 91px;
+	left: 675px;
+}
+
+.origami-button-2 button {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 15px 35px;
+	font-size: 25px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+}
+
+.origami-button-2 button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+/*Origami kies jou shape page*/
+.choose {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.origami-foto {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 125px;
+}
+
+.origami-foto img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border: 2px solid #ffffff;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+	transition: transform 0.3s;
+}
+
+.origami-foto h2 {
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+/*Origami videos*/
+
+.video {
+	margin-left: 350px;
+}
+
+.origami-button-video {
+	position: relative;
+	top: 10px;
+	left: 1054px;
+}
+
+.origami-button-video button {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 15px 35px;
+	font-size: 25px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+}
+
+.origami-button-video button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+/*Origami einde page*/
+
+.origami-container-einde {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	text-align: center;
+}
+
+.origami-button-einde {
+	position: relative;
+	left: 140px;
+	bottom: 150px;
+}
+
+.origami-button-einde button {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	width: 1300px;
+	padding: 15px 35px;
+	font-size: 25px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+}
+
+.origami-button-einde button:hover {
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+@media (max-width: 768px) {
+	.container {
+		margin: 2vh 2vw;
+		gap: 3vw;
+	}
+
+	.icon {
+		width: 20vmin;
+		height: 20vmin;
+	}
+
+	h1 {
+		font-size: 7vw;
+	}
+
+	h2 {
+		font-size: 5vw;
+	}
 }
