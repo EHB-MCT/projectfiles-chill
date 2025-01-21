@@ -3,7 +3,14 @@ body {
 	height: 100%;
 	margin: 0;
 	overflow: hidden;
-	font-family: "lores-12", sans-serif;
+	font-family: "lores-9-narrow", sans-serif;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
 }
 
 body {
@@ -13,12 +20,12 @@ body {
 }
 
 h1 {
-	font-size: 7rem;
+	font-size: 6vw;
 	color: #ffffff;
 }
 
 h2 {
-	font-size: 4rem;
+	font-size: 3vw;
 	color: #ffffff;
 }
 
@@ -28,21 +35,24 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 5px 20px;
-	font-family: "lores-12", sans-serif;
+	padding: 20px 20px;
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
-nav .logo {
+nav .logo img {
 	color: white;
-	text-decoration: none;
-	font-size: 2em;
-	font-weight: bold;
+	width: 250px;
+}
+
+nav .logo {
+	transition: all 0.2s ease;
 }
 
 nav .logo:hover {
 	color: #e62e5a;
+	transform: scale(1.1);
+	transition: all 0.2s ease;
 }
 
 nav ul {
@@ -60,13 +70,17 @@ ul li {
 ul li a {
 	color: white;
 	text-decoration: none;
-	font-size: 20px;
-	padding: 10px 15px;
+	font-size: 30px;
+	padding: 20px 25px;
 	display: block;
 	transition: background-color 0.3s;
 }
 
 ul li a:hover {
+	color: #e62e5a;
+}
+
+li a.active {
 	color: #e62e5a;
 }
 
@@ -89,31 +103,38 @@ ul li a:hover {
 }
 
 /* 4-methods */
+
+/* Layout adjustments */
 .container {
-	margin: 100px 50px;
+	margin: 5vh auto;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	margin-left: 50px;
-	gap: 100px;
+	gap: ;
+}
+
+.text-methods h1 {
+	text-align: center;
+	font-size: 14vmin;
+	color: white;
 }
 
 .icons {
-	position: relative;
-	width: 600px;
-	height: 600px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 10vw;
 }
 
 .icon {
-	width: 240px;
-	height: 240px;
+	width: 25vmin;
+	height: 25vmin;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border: 2px solid #ffffff;
 	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-	position: absolute;
+	position: relative;
 	overflow: hidden;
 	transition: transform 0.3s;
 }
@@ -137,8 +158,8 @@ ul li a:hover {
 }
 
 .icon img {
-	width: 220px;
-	height: 220px;
+	width: 90%;
+	height: 90%;
 	transform: rotate(-45deg);
 	position: relative;
 	z-index: 1;
@@ -148,12 +169,11 @@ ul li a:hover {
 	opacity: 1;
 }
 
-/* Custom content for each icon */
 .icon::after {
 	content: "";
 	position: absolute;
 	color: #ffffff;
-	font-size: 2.2rem;
+	font-size: 1.5vw;
 	z-index: 3;
 	opacity: 0;
 	transition: opacity 0.3s ease;
@@ -161,55 +181,38 @@ ul li a:hover {
 }
 
 .icon.heart::after {
-	content: "Feel";
+	content: "Emotie maker";
 }
 
 .icon.sun::after {
-	content: "Paste";
-}
-
-.icon.robot::after {
-	content: "Chat";
+	content: "Sticker maker";
 }
 
 .icon.origami::after {
-	content: "Create";
+	content: "Origami maker";
 }
 
 .icon:hover::after {
 	opacity: 1;
 }
 
-/* Position the icons in a diamond shape */
 .icon.heart {
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%) rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .icon.sun {
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%) rotate(45deg);
-}
-
-.icon.robot {
-	right: 0;
-	top: 50%;
-	transform: translateY(-50%) rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .icon.origami {
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%) rotate(45deg);
+	transform: rotate(45deg);
 }
 
 /* Sticker-page */
 
 .loading-container {
 	text-align: center;
-	margin-top: 60px;
+	margin-top: 15vh;
 	opacity: 0;
 	transition: opacity 3s ease-in-out;
 }
@@ -218,7 +221,7 @@ ul li a:hover {
 	opacity: 1;
 }
 .loading-icon img {
-	width: 400px;
+	width: 20vw;
 	height: auto;
 }
 
@@ -228,7 +231,7 @@ ul li a:hover {
 
 .loading-text p {
 	color: #ffffff;
-	font-size: 40px;
+	font-size: 2vw;
 	margin: 5px;
 }
 
@@ -236,7 +239,6 @@ ul li a:hover {
 .sticker-container .back-button {
 	position: absolute;
 	width: 30px;
-	height: 45px;
 	cursor: pointer;
 	margin-left: 50px;
 }
@@ -281,24 +283,7 @@ ul li a:hover {
 	font-size: 3rem;
 }
 
-.title-container .back-button {
-	position: absolute;
-	left: 4vw;
-	width: 30px;
-	cursor: pointer;
-	top: 13%;
-}
 
-.sorrybot {
-	position: fixed;
-	top: 150px;
-	left: 10%;
-	width: 80%;
-	bottom: 50px;
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-}
 
 .sorrybot h2 {
 	font-size: 2rem;
@@ -324,12 +309,7 @@ ul li a:hover {
 	margin-bottom: 20px;
 }
 
-.smart-toy-icon {
-	height: 40px;
-	width: 50px;
-	padding: 5px;
-	margin-right: 15px;
-}
+
 
 .sorrybox .chat p {
 	color: white;
@@ -384,220 +364,4 @@ ul li a:hover {
 	height: 40px;
 	color: #24122c;
 	cursor: pointer;
-}
-
-/*Origami eerste pagina*/
-.origami-container {
-	position: relative;
-	overflow: visible;
-	z-index: 1;
-}
-
-.origami-schaar {
-	position: absolute;
-	top: 295px;
-	margin-left: 365px;
-	opacity: 0.6;
-	width: 40px;
-	height: 40px;
-	z-index: -1;
-}
-.origami-schaar img {
-	width: 100px;
-	height: 100px;
-}
-
-.origami-container .back-button {
-	position: absolute;
-	top: 20px;
-	left: 50px;
-	width: 30px;
-	height: 45px;
-	cursor: pointer;
-	margin-left: 50px;
-}
-
-.origami-container h2 {
-	text-align: center;
-	font-size: 3rem;
-}
-
-.origami-container img {
-	height: 350px;
-	position: relative;
-	top: -10px;
-	left: 440px;
-	z-index: 2;
-}
-
-.origami-button {
-	position: relative;
-	left: 675px;
-}
-
-.origami-button button {
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	padding: 15px 35px;
-	font-size: 25px;
-	font-family: "lores-12", sans-serif;
-	transition: all 0.1s ease;
-}
-
-.origami-button button:hover {
-	cursor: pointer;
-	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
-}
-
-/*Origami tweede pagina*/
-.pen {
-	position: absolute;
-	top: 170px;
-	left: 60%;
-	transform: translateX(-50%);
-	z-index: 1;
-}
-
-.pen img {
-	width: 300px;
-	height: 250px;
-}
-
-.origami-container-2 {
-	position: relative;
-	overflow: visible;
-}
-
-.origami-container-2 .back-button {
-	position: absolute;
-	top: 20px;
-	left: 50px;
-	width: 30px;
-	height: 45px;
-	cursor: pointer;
-	margin-left: 50px;
-}
-.origami-container-2 h2 {
-	text-align: center;
-	font-size: 3rem;
-}
-
-.origami-container-2 img {
-	height: 350px;
-	position: relative;
-	top: -10px;
-	left: 575px;
-	width: 400px;
-	height: 400px;
-}
-
-.origami-button-2 {
-	position: relative;
-	top: 91px;
-	left: 675px;
-}
-
-.origami-button-2 button {
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	padding: 15px 35px;
-	font-size: 25px;
-	font-family: "lores-12", sans-serif;
-	transition: all 0.1s ease;
-}
-
-.origami-button-2 button:hover {
-	cursor: pointer;
-	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
-}
-
-/*Origami kies jou shape page*/
-.choose {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-	flex-wrap: wrap;
-}
-
-.origami-foto {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	margin-top: 125px;
-}
-
-.origami-foto img {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	border: 2px solid #ffffff;
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-	transition: transform 0.3s;
-}
-
-.origami-foto h2 {
-	font-size: 30px;
-	margin-top: 10px;
-}
-
-/*Origami videos*/
-
-.video {
-	margin-left: 350px;
-}
-
-.origami-button-video {
-	position: relative;
-	top: 10px;
-	left: 1054px;
-}
-
-.origami-button-video button {
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	padding: 15px 35px;
-	font-size: 25px;
-	font-family: "lores-12", sans-serif;
-	transition: all 0.1s ease;
-}
-
-.origami-button-video button:hover {
-	cursor: pointer;
-	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
-}
-
-/*Origami einde page*/
-
-.origami-container-einde {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 70vh;
-	text-align: center;
-}
-
-.origami-button-einde {
-	position: relative;
-	left: 140px;
-	bottom: 150px;
-}
-
-.origami-button-einde button {
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	width: 1300px;
-	padding: 15px 35px;
-	font-size: 25px;
-	font-family: "lores-12", sans-serif;
-	transition: all 0.1s ease;
-}
-
-.origami-button-einde button:hover {
-	cursor: pointer;
-	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
 }
