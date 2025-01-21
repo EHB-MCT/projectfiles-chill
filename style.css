@@ -392,6 +392,29 @@ ul li a:hover {
   cursor: pointer;
 }
 
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.suggestions button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e62e5a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestions button:hover {
+  background-color: #ff6b8b;
+}
+
 @media (max-width: 768px) {
   .container {
     margin: 2vh 2vw;
