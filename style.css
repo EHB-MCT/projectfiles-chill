@@ -278,24 +278,6 @@ li a.active {
 
 /* Sorrybot */
 
-.title-container .back-button {
-	position: absolute;
-	width: 30px;
-	cursor: pointer;
-	margin-left: 50px;
-}
-
-.sorrybot {
-	position: absolute;
-	top: calc(100px + 13vh);
-	left: 10%;
-	width: 80%;
-	bottom: 50px;
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-}
-
 .title-container h2 {
 	text-align: center;
 	font-size: 3rem;
@@ -350,13 +332,6 @@ li a.active {
 	padding: 10px;
 }
 
-.smart-toy-icon {
-	width: 100px;
-	height: 100px;
-	padding: 5px;
-	margin-right: 15px;
-}
-
 .chat-input {
 	display: flex;
 	align-items: center;
@@ -396,7 +371,7 @@ li a.active {
 
 .origami-schaar {
 	position: absolute;
-	top: 295px;
+	top: 345px;
 	margin-left: 365px;
 	opacity: 0.6;
 	width: 40px;
@@ -421,6 +396,7 @@ li a.active {
 .origami-container h2 {
 	text-align: center;
 	font-size: 3rem;
+	margin-top: 10px;
 }
 
 .origami-container img {
@@ -433,6 +409,7 @@ li a.active {
 
 .origami-button {
 	position: relative;
+	bottom: 30px;
 	left: 675px;
 }
 
@@ -454,7 +431,7 @@ li a.active {
 /*Origami tweede pagina*/
 .pen {
 	position: absolute;
-	top: 170px;
+	top: 248px;
 	left: 60%;
 	transform: translateX(-50%);
 	z-index: 1;
@@ -495,8 +472,8 @@ li a.active {
 
 .origami-button-2 {
 	position: relative;
-	top: 91px;
-	left: 675px;
+	top: 9px;
+	left: 690px;
 }
 
 .origami-button-2 button {
@@ -527,7 +504,7 @@ li a.active {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	margin-top: 125px;
+	margin-top: 60px;
 }
 
 .origami-foto img {
@@ -553,7 +530,7 @@ li a.active {
 .origami-button-video {
 	position: relative;
 	top: 10px;
-	left: 1054px;
+	left: 1020px;
 }
 
 .origami-button-video button {
@@ -582,16 +559,18 @@ li a.active {
 }
 
 .origami-button-einde {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: relative;
-	left: 140px;
-	bottom: 150px;
+	top: -150px;
 }
 
 .origami-button-einde button {
 	background-color: #e62e5a;
 	border: none;
 	color: #ffffff;
-	width: 1300px;
+	width: 200px;
 	padding: 15px 35px;
 	font-size: 25px;
 	font-family: "lores-12", sans-serif;
@@ -602,6 +581,7 @@ li a.active {
 	cursor: pointer;
 	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
 }
+
 @media (max-width: 768px) {
 	.container {
 		margin: 2vh 2vw;
