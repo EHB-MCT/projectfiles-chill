@@ -283,23 +283,7 @@ li a.active {
 	font-size: 3rem;
 }
 
-.title-container .back-button {
-	position: absolute;
-	width: 30px;
-	cursor: pointer;
-	margin-left: 50px;
-}
 
-.sorrybot {
-	position: absolute;
-	top: calc(100px + 13vh);
-	left: 10%;
-	width: 80%;
-	bottom: 50px;
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-}
 
 .sorrybot h2 {
 	font-size: 2rem;
@@ -325,12 +309,7 @@ li a.active {
 	margin-bottom: 20px;
 }
 
-.smart-toy-icon {
-	width: 100px;
-	height: 100px;
-	padding: 5px;
-	margin-right: 15px;
-}
+
 
 .sorrybox .chat p {
 	color: white;
@@ -385,24 +364,4 @@ li a.active {
 	height: 40px;
 	color: #24122c;
 	cursor: pointer;
-}
-
-@media (max-width: 768px) {
-	.container {
-		margin: 2vh 2vw;
-		gap: 3vw;
-	}
-
-	.icon {
-		width: 20vmin;
-		height: 20vmin;
-	}
-
-	h1 {
-		font-size: 7vw;
-	}
-
-	h2 {
-		font-size: 5vw;
-	}
 }
