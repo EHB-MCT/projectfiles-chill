@@ -582,6 +582,15 @@ li a.active {
 }
 
 
+nav .menu-hamburger {
+	width: 35px;
+	display: none;
+}
+
+.mobile-menu {
+	margin-left: 0;
+}
+@media (max-width: 478px) {
 	.container {
 		margin: 2vh 2vw;
 		gap: 3vw;

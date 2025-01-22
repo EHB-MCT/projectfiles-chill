@@ -16,6 +16,5 @@ menuHamburger.addEventListener("click", () => {
 		menuHamburger.src = "./icons/X.svg";
 	} else {
 		menuHamburger.src = "./icons/Hamburger.svg";
-		n;
 	}
 });
