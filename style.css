@@ -366,11 +366,12 @@ li a.active {
 	position: relative;
 	overflow: visible;
 	z-index: 1;
+	padding: 0 10px;
 }
 
 .origami-schaar {
 	position: absolute;
-	top: 345px;
+	top: 315px;
 	margin-left: 365px;
 	opacity: 0.6;
 	width: 40px;
@@ -418,7 +419,6 @@ li a.active {
 	color: #ffffff;
 	padding: 15px 35px;
 	font-size: 25px;
-	font-family: "lores-12", sans-serif;
 	transition: all 0.1s ease;
 }
 
@@ -491,6 +491,10 @@ li a.active {
 }
 
 /*Origami kies jou shape page*/
+
+.kiezen h2 {
+	text-align: center;
+}
 .choose {
 	display: flex;
 	justify-content: center;
@@ -581,7 +585,6 @@ li a.active {
 	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
 }
 
-
 nav .menu-hamburger {
 	width: 35px;
 	display: none;
@@ -590,7 +593,8 @@ nav .menu-hamburger {
 .mobile-menu {
 	margin-left: 0;
 }
-@media (max-width: 478px) {
+
+@media (min-width: 320px) and (max-width: 768px){
 	.container {
 		margin: 2vh 2vw;
 		gap: 3vw;
@@ -691,10 +695,141 @@ nav .menu-hamburger {
 		text-align: center;
 		background-color: none;
 	}
-	
+
 	.menu-hamburger {
 		cursor: pointer;
 		transition: transform 0.3s ease;
 	}
 
+	.origami-container {
+		position: relative;
+		overflow: visible;
+		z-index: 0;
+	}
+
+	.origami-schaar {
+		position: absolute;
+		opacity: 0.9;
+		top: 264px;
+		margin-left: 10%;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	.origami-schaar img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.origami-container .back-button {
+		top: -35px;
+		left: 18px;
+		margin-left: 0;
+		width: 15px;
+		height: 25px;
+	}
+
+	.origami-container h2 {
+		font-size: 24px;
+		margin-top: 20px;
+	}
+
+	.origami-container img {
+		height: 150px;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 0;
+	}
+
+	.origami-button {
+		bottom: -55px;
+		left: 70%;
+		transform: translateX(-50%);
+	}
+
+	.origami-button button {
+		padding: 10px 25px;
+		font-size: 20px;
+	}
+
+	.pen {
+		position: absolute;
+		top: 235px;
+		left: 71%;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	.pen img {
+		width: 150px;
+		height: 125px;
+	}
+
+	.origami-container-2 {
+		position: relative;
+		overflow: visible;
+	}
+
+	.origami-container-2 .back-button {
+		top: -35px;
+		left: 18px;
+		margin-left: 0;
+		width: 15px;
+		height: 25px;
+	}
+
+	.origami-container-2 h2 {
+		font-size: 24px;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.origami-container-2 img {
+		height: 200px;
+		width: 200px;
+		left: 50%;
+		top: 20px;
+		transform: translateX(-50%);
+		position: relative;
+	}
+
+	.origami-button-2 {
+		top: 100px;
+		left: 71%;
+		transform: translateX(-50%);
+	}
+
+	.origami-button-2 button {
+		padding: 10px 25px;
+		font-size: 20px;
+	}
+
+	.kiezen h2 {
+		font-size: 24px;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.kiezen .back-button {
+		top: -5px;
+		left: 18px;
+		margin-left: 10px;
+		width: 15px;
+		height: 25px;
+	}
+	.video {
+		width: 30px;
+		height: 40px;
+		left: 20px;
+	}
+	.origami-button-2 {
+		top: 100px;
+		left: 71%;
+		transform: translateX(-50%);
+	}
+
+	.origami-button-2 button {
+		padding: 10px 25px;
+		font-size: 20px;
+	}
 }
