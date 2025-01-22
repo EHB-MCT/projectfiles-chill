@@ -326,11 +326,12 @@ li a.active {
 	position: relative;
 	overflow: visible;
 	z-index: 1;
+	padding: 0 10px;
 }
 
 .origami-schaar {
 	position: absolute;
-	top: 345px;
+	top: 315px;
 	margin-left: 365px;
 	opacity: 0.6;
 	width: 40px;
@@ -378,7 +379,6 @@ li a.active {
 	color: #ffffff;
 	padding: 15px 35px;
 	font-size: 25px;
-	font-family: "lores-12", sans-serif;
 	transition: all 0.1s ease;
 }
 
@@ -451,6 +451,10 @@ li a.active {
 }
 
 /*Origami kies jou shape page*/
+
+.kiezen h2 {
+	text-align: center;
+}
 .choose {
 	display: flex;
 	justify-content: center;
@@ -549,6 +553,7 @@ nav .menu-hamburger {
 .mobile-menu {
 	margin-left: 0;
 }
+
 @media (min-width: 320px) and (max-width: 478px) {
 	html,
 	body {
