@@ -27,11 +27,7 @@
 					</ul>
 				</li>
 			</ul>
-			<img
-				src="./icons/Hamburger.svg"
-				alt="menu hamburger"
-				class="menu-hamburger"
-			/>
+			<img src="./icons/Hamburger.svg" alt="menu hamburger" class="menu-hamburger" />
 		</nav>
 		<div class="origami-container-einde">
 			<h2>
@@ -40,7 +36,17 @@
 			</h2>
 		</div>
 		<div class="origami-button-einde">
-			<button type="button" onclick="location.href='4methods.html'">Klaar?</button>
+			<button id="soundButton" type="button">Klaar?</button>
 		</div>
+		<script type="text/javascript">
+			document.getElementById("soundButton").addEventListener("click", function () {
+				const audio = new Audio("audio/eindsound.mp3");
+				audio.play();
+
+				audio.onended = () => {
+					location.href = "4methods.html";
+				};
+			});
+		</script>
 	</body>
 </html>
