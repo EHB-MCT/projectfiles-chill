@@ -455,21 +455,22 @@ ul li a:hover {
 	background-color: transparent;
 	border: none;
 	border: 2px solid #ffffff;
-	/* Blue stroke */
-	padding: 15px 35px;
-	font-size: 25px;
+	width: 150px;
+	height: 60px;
+	font-size: 20px;
 	font-family: "lores-12", sans-serif;
+	/* Later de typografie veranderen */
 	transition: all 0.1s ease;
 	color: #ffffff;
 	margin: 0 10px;
+	text-align: center;
 }
 
 .emotiebuttons button:hover {
-	background-color: #ffffff;
-	color: #24122c;
-
+	border: 2px solid #e62e5a;
+	color: #e62e5a;
 	cursor: pointer;
-	box-shadow: 0 0 10px 5px rgb(255, 255, 255);
+	box-shadow: 0 0 10px 5px #e62e5a;
 }
 
 
