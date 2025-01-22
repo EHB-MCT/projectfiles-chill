@@ -5,10 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="https://use.typekit.net/sid3fky.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
 		<script>
 			window.onload = function () {
 				const content = document.querySelector(".loading-container");
+
+				// Play the audio
+				const audio = new Audio("audio/3-second.mp3");
+				audio.play();
 
 				setTimeout(function () {
 					content.classList.add("show");
@@ -23,7 +27,7 @@
 	<body>
 		<div>
 			<div class="loading-container">
-				<div class="loading-icon"><img src="/icons/Sticker.png" alt="" /></div>
+				<div class="loading-icon"><img src="/icons/Sticker_loadpage.svg" alt="" /></div>
 				<div class="loading-text">
 					<h2>Welkom bij de Sticker Maker</h2>
 					<p>Maak je excuses onvergetelijk?</p>
