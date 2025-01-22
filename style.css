@@ -152,21 +152,20 @@ li a.active {
 /* Individual icon styles */
 .icon {
 	position: relative;
-	width: 500px; 
-	height: 500px; 
+	width: 500px;
+	height: 500px;
 	overflow: hidden;
 }
 
 /* Image within icons */
 .icon-img {
-	width: 100%; 
-	height: 100%; 
-	object-fit: contain; 
-	transition: transform 0.3s ease; 
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: transform 0.3s ease;
 }
 
 /* Rotation effects for different icons */
-
 
 /* Sticker-page */
 
@@ -550,7 +549,7 @@ nav .menu-hamburger {
 .mobile-menu {
 	margin-left: 0;
 }
-@media (max-width: 478px) {
+@media (min-width: 320px) and (max-width: 478px) {
 	html,
 	body {
 		height: 100%;
@@ -694,8 +693,158 @@ nav .menu-hamburger {
 
 	.icon {
 		position: relative;
-		width: 300px; 
-		height: 300px; 
+		width: 300px;
+		height: 300px;
 		overflow: hidden;
+	}
+
+	.origami-mobile .origami-container {
+		position: relative;
+		overflow: visible;
+		z-index: 0;
+	}
+
+	.origami-schaar {
+		position: absolute;
+		opacity: 0.9;
+		top: 264px;
+		margin-left: 10%;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	.origami-schaar img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.origami-container .back-button {
+		top: -35px;
+		left: 18px;
+		margin-left: 0;
+		width: 15px;
+		height: 25px;
+	}
+
+	.origami-container h2 {
+		font-size: 24px;
+		margin-top: 20px;
+	}
+
+	.origami-container img {
+		height: 150px;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 0;
+	}
+
+	.origami-button {
+		bottom: -55px;
+		left: 70%;
+		transform: translateX(-50%);
+	}
+
+	.origami-button button {
+		padding: 10px 25px;
+		font-size: 20px;
+	}
+
+	.pen {
+		position: absolute;
+		top: 235px;
+		left: 71%;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	.pen img {
+		width: 150px;
+		height: 125px;
+	}
+
+	.origami-container-2 {
+		position: relative;
+		overflow: visible;
+	}
+
+	.origami-container-2 .back-button {
+		top: -35px;
+		left: 18px;
+		margin-left: 0;
+		width: 15px;
+		height: 25px;
+	}
+
+	.origami-container-2 h2 {
+		font-size: 24px;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.origami-container-2 img {
+		height: 200px;
+		width: 200px;
+		left: 50%;
+		top: 20px;
+		transform: translateX(-50%);
+		position: relative;
+	}
+
+	.origami-button-2 {
+		top: 100px;
+		left: 71%;
+		transform: translateX(-50%);
+	}
+
+	.origami-button-2 button {
+		padding: 10px 25px;
+		font-size: 20px;
+	}
+
+	.kiezen h2 {
+		font-size: 24px;
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	.kiezen .back-button {
+		top: -5px;
+		left: 18px;
+		margin-left: 10px;
+		width: 15px;
+		height: 25px;
+	}
+	.video {
+		width: 30px;
+		height: 40px;
+		left: 20px;
+	}
+	.origami-button-2 {
+		top: 100px;
+		left: 71%;
+		transform: translateX(-50%);
+	}
+
+	.origami-button-2 button {
+		padding: 10px 25px;
+		font-size: 20px;
+	}
+	.text-methods h1 {
+		padding-top: 70px;
+		text-align: center;
+		font-size: 12vmin;
+		color: white;
+	}
+
+	.icons-1 p,
+	.icons-2 p,
+	.icons-3 p {
+		font-size: 30px;
+		color: #fff;
+		text-align: center;
+		margin-top: 20px;
+		background-color: #e62e5a;
+		padding: 15px 25px;
+		display: flex;
 	}
 }
