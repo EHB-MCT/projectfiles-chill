@@ -105,6 +105,7 @@ li a.active {
 /* 4-methods */
 
 /* Layout adjustments */
+/* General Container */
 .container {
 	margin: 5vh auto;
 	display: flex;
@@ -112,100 +113,60 @@ li a.active {
 	align-items: center;
 }
 
+/* Title */
 .text-methods h1 {
 	text-align: center;
-	font-size: 14vmin;
+	font-size: 12vmin;
 	color: white;
+}
+
+/* Icon container styles */
+.icons-1,
+.icons-2,
+.icons-3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 15px;
+}
+
+/* Icon text styling */
+.icons p {
+	font-size: 46px;
+	color: #fff;
+	text-align: center;
+	margin-top: 110px;
+	background-color: #e62e5a;
+	padding: 10px 15px;
+	display: none;
 }
 
 .icons {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: 10vw;
+	gap: 7vw;
 }
 
+/* Individual icon styles */
 .icon {
-	width: 25vmin;
-	height: 25vmin;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 2px solid #ffffff;
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 	position: relative;
+	width: 500px; 
+	height: 500px; 
 	overflow: hidden;
-	transition: transform 0.3s;
 }
 
-.icon::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #e62e5a;
-	z-index: 2;
-	opacity: 0;
-	transition: opacity 0.3s ease;
+/* Image within icons */
+.icon-img {
+	width: 100%; 
+	height: 100%; 
+	object-fit: contain; 
+	transition: transform 0.3s ease; 
 }
 
-.icon:hover {
-	border-color: #e62e5a;
-	box-shadow: 0 0 25px rgba(230, 46, 90, 0.9);
-}
+/* Rotation effects for different icons */
 
-.icon img {
-	width: 90%;
-	height: 90%;
-	transform: rotate(-45deg);
-	position: relative;
-	z-index: 1;
-}
-
-.icon:hover::before {
-	opacity: 1;
-}
-
-.icon::after {
-	content: "";
-	position: absolute;
-	color: #ffffff;
-	font-size: 1.5vw;
-	z-index: 3;
-	opacity: 0;
-	transition: opacity 0.3s ease;
-	transform: rotate(-45deg);
-}
-
-.icon.heart::after {
-	content: "Emotie maker";
-}
-
-.icon.sun::after {
-	content: "Sticker maker";
-}
-
-.icon.origami::after {
-	content: "Origami maker";
-}
-
-.icon:hover::after {
-	opacity: 1;
-}
-
-.icon.heart {
-	transform: rotate(45deg);
-}
-
-.icon.sun {
-	transform: rotate(45deg);
-}
-
-.icon.origami {
-	transform: rotate(45deg);
-}
 
 /* Sticker-page */
 
@@ -594,7 +555,6 @@ nav .menu-hamburger {
 	margin-left: 0;
 }
 
-@media (min-width: 320px) and (max-width: 768px){
 	.container {
 		margin: 2vh 2vw;
 		gap: 3vw;
@@ -699,137 +659,5 @@ nav .menu-hamburger {
 	.menu-hamburger {
 		cursor: pointer;
 		transition: transform 0.3s ease;
-	}
-
-	.origami-container {
-		position: relative;
-		overflow: visible;
-		z-index: 0;
-	}
-
-	.origami-schaar {
-		position: absolute;
-		opacity: 0.9;
-		top: 264px;
-		margin-left: 10%;
-		transform: translateX(-50%);
-		z-index: 1;
-	}
-
-	.origami-schaar img {
-		width: 50px;
-		height: 50px;
-	}
-
-	.origami-container .back-button {
-		top: -35px;
-		left: 18px;
-		margin-left: 0;
-		width: 15px;
-		height: 25px;
-	}
-
-	.origami-container h2 {
-		font-size: 24px;
-		margin-top: 20px;
-	}
-
-	.origami-container img {
-		height: 150px;
-		left: 50%;
-		transform: translateX(-50%);
-		top: 0;
-	}
-
-	.origami-button {
-		bottom: -55px;
-		left: 70%;
-		transform: translateX(-50%);
-	}
-
-	.origami-button button {
-		padding: 10px 25px;
-		font-size: 20px;
-	}
-
-	.pen {
-		position: absolute;
-		top: 235px;
-		left: 71%;
-		transform: translateX(-50%);
-		z-index: 1;
-	}
-
-	.pen img {
-		width: 150px;
-		height: 125px;
-	}
-
-	.origami-container-2 {
-		position: relative;
-		overflow: visible;
-	}
-
-	.origami-container-2 .back-button {
-		top: -35px;
-		left: 18px;
-		margin-left: 0;
-		width: 15px;
-		height: 25px;
-	}
-
-	.origami-container-2 h2 {
-		font-size: 24px;
-		margin-top: 20px;
-		text-align: center;
-	}
-
-	.origami-container-2 img {
-		height: 200px;
-		width: 200px;
-		left: 50%;
-		top: 20px;
-		transform: translateX(-50%);
-		position: relative;
-	}
-
-	.origami-button-2 {
-		top: 100px;
-		left: 71%;
-		transform: translateX(-50%);
-	}
-
-	.origami-button-2 button {
-		padding: 10px 25px;
-		font-size: 20px;
-	}
-
-	.kiezen h2 {
-		font-size: 24px;
-		margin-top: 20px;
-		text-align: center;
-	}
-
-	.kiezen .back-button {
-		top: -5px;
-		left: 18px;
-		margin-left: 10px;
-		width: 15px;
-		height: 25px;
-	}
-	.video {
-		width: 30px;
-		height: 40px;
-		left: 20px;
-	}
-	.origami-button-2 {
-		top: 100px;
-		left: 71%;
-		transform: translateX(-50%);
-	}
-
-	.origami-button-2 button {
-		padding: 10px 25px;
-		font-size: 20px;
 	}
 }
