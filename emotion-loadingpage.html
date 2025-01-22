@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/sid3fky.css" />
+		<script>
+			window.onload = function () {
+				const content = document.querySelector(".loading-container");
+
+				setTimeout(function () {
+					content.classList.add("show");
+				}, 0);
+
+				setTimeout(function () {
+					window.location.href = "./emotievisualiser.html";
+				}, 3000);
+			};
+		</script>
+	</head>
+	<body>
+		<div>
+			<div class="loading-container">
+				<div class="loading-icon"><img src="/icons/Heartloadpage.svg" alt="" /></div>
+				<div class="loading-text">
+					<h2>Welkom bij de emotie maker</h2>
+					<p>Maak jouw excuses door jouw emoties toe te voegen!</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
