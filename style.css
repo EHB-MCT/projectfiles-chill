@@ -178,6 +178,7 @@ li a.active {
 .loading-container.show {
 	opacity: 1;
 }
+
 .loading-icon img {
 	width: 20vw;
 	height: auto;
@@ -337,6 +338,7 @@ li a.active {
 	height: 40px;
 	z-index: -1;
 }
+
 .origami-schaar img {
 	width: 100px;
 	height: 100px;
@@ -414,6 +416,7 @@ li a.active {
 	cursor: pointer;
 	margin-left: 50px;
 }
+
 .origami-container-2 h2 {
 	text-align: center;
 	font-size: 3rem;
@@ -454,6 +457,7 @@ li a.active {
 .kiezen h2 {
 	text-align: center;
 }
+
 .choose {
 	display: flex;
 	justify-content: center;
@@ -576,6 +580,7 @@ nav .menu-hamburger {
 	color: #ffffff;
 	margin: 0 10px;
 	text-align: center;
+
 }
 
 .emotiebuttons button:hover {
@@ -621,7 +626,7 @@ input[type="text"]::placeholder {
 .heartemotievisualiser {
 	display: flex;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	height: 100%;
 }
 
@@ -652,7 +657,12 @@ input[type="text"]::placeholder {
 	margin-left: 50px;
 }
 
+.emotiebuttons1 {}
+
+.emotiebuttons2 {}
+
 @media (max-width: 478px) {
+
 	html,
 	body {
 		height: 100%;
@@ -917,9 +927,27 @@ input[type="text"]::placeholder {
 		width: 15px;
 		height: 25px;
 	}
+
 	.video {
 		width: 30px;
 		height: 40px;
 		left: 20px;
+	}
+
+	.emotiebuttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 10px;
+		/* Gap between the two columns */
+	}
+
+	.emotiebuttons1,
+	.emotiebuttons2 {
+		display: flex;
+		flex-direction: column;
+		/* Stack buttons vertically inside each column */
+		gap: 10px;
+		/* Gap between buttons inside the column */
 	}
 }
