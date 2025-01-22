@@ -327,11 +327,12 @@ li a.active {
 	position: relative;
 	overflow: visible;
 	z-index: 1;
+	padding: 0 10px;
 }
 
 .origami-schaar {
 	position: absolute;
-	top: 345px;
+	top: 315px;
 	margin-left: 365px;
 	opacity: 0.6;
 	width: 40px;
@@ -379,7 +380,6 @@ li a.active {
 	color: #ffffff;
 	padding: 15px 35px;
 	font-size: 25px;
-	font-family: "lores-12", sans-serif;
 	transition: all 0.1s ease;
 }
 
@@ -452,6 +452,10 @@ li a.active {
 }
 
 /*Origami kies jou shape page*/
+
+.kiezen h2 {
+	text-align: center;
+}
 .choose {
 	display: flex;
 	justify-content: center;
@@ -550,15 +554,6 @@ nav .menu-hamburger {
 .mobile-menu {
 	margin-left: 0;
 }
-@media (max-width: 478px) {
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		overflow: auto;
-		font-family: "lores-9-narrow", sans-serif;
-		box-sizing: border-box;
-	}
 
 	.container {
 		margin: 2vh 2vw;
@@ -664,38 +659,5 @@ nav .menu-hamburger {
 	.menu-hamburger {
 		cursor: pointer;
 		transition: transform 0.3s ease;
-	}
-
-	.text-methods h1 {
-		padding-top: 70px;
-		text-align: center;
-		font-size: 12vmin;
-		color: white;
-	}
-
-	.icons-1 p,
-	.icons-2 p,
-	.icons-3 p {
-		font-size: 30px;
-		color: #fff;
-		text-align: center;
-		margin-top: 20px;
-		background-color: #e62e5a;
-		padding: 15px 25px;
-		display: flex;
-	}
-
-	.icons {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 10vw;
-	}
-
-	.icon {
-		position: relative;
-		width: 300px; 
-		height: 300px; 
-		overflow: hidden;
 	}
 }
