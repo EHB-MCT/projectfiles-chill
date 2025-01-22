@@ -32,7 +32,19 @@
 			<img src="stickers/schaar.png" alt="schaar" />
 		</div>
 		<div class="origami-container">
-			<a href="./4methods.html"><img src="./icons/back-button.png" alt="Back Button" class="back-button" /> </a>
+			<a id="backButton" href="./4methods.html">
+				<img src="./icons/back-button.png" alt="Back Button" class="back-button" />
+			</a>
+			<script type="text/javascript">
+				document.getElementById("backButton").addEventListener("click", function (event) {
+					event.preventDefault();
+					const audio = new Audio("audio/Return.mp3");
+					audio.play();
+					audio.onended = () => {
+						window.location.href = this.href;
+					};
+				});
+			</script>
 			<h2>Neem een vierkante papier en een potlood</h2>
 			<img src="stickers/A4 papier-dittolines.svg" alt="A4 paper" />
 			<div class="origami-tussentitel">
