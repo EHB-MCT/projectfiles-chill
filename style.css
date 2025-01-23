@@ -590,38 +590,54 @@ nav .menu-hamburger {
 	box-shadow: 0 0 10px 5px #e62e5a;
 }
 
-input[type="submit"] {
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	padding: 15px 35px;
-	font-size: 25px;
-	font-family: "lores-12", sans-serif;
-	transition: all 0.1s ease;
-}
-
 input[type="submit"]:hover {
 	cursor: pointer;
 	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
 }
 
+/* Container holding the form */
+.emotiezenden form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+}
+
+
+#emotietext {
+	padding-bottom: 50%;
+}
+
+
+.help2 {
+	line-break: auto;
+	width: 100%;
+}
+
+/* Input text field */
 input[type="text"] {
 	background-color: transparent;
 	border: 2px solid #ffffff;
-	/* Same stroke as the buttons */
-	padding: 15px 35px;
-	font-size: 25px;
+	padding: 20px 30px;
+	font-size: 30px;
 	font-family: "lores-12", sans-serif;
 	color: #ffffff;
-	transition: all 0.1s ease;
+	box-sizing: border-box;
 }
 
-input[type="text"]::placeholder {
+/* Submit button */
+input[type="submit"] {
+	background-color: #e62e5a;
+	border: none;
 	color: #ffffff;
-	/* Matches text color */
-	opacity: 0.7;
-	/* Slightly faded placeholder text */
+	padding: 20px 30px;
+	font-size: 30px;
+	font-family: "lores-12", sans-serif;
+	transition: all 0.1s ease;
+	width: 100%;
+	box-sizing: border-box;
 }
+
 
 .heartemotievisualiser {
 	display: flex;
