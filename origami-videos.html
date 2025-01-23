@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
 		<script src="./menu.js" defer></script>
+		<script src="origami-video.js" defer></script>
 	</head>
 	<body>
 		<nav>
@@ -45,22 +46,19 @@
 			</a>
 			<h2>Volg de video stap per stap!</h2>
 		</div>
-		<div class="video">
-			<iframe
-				width="810"
-				height="434"
-				src="https://www.youtube.com/embed/D8B5Uwxkc7Y?si=sb44FqPABKNEEd5y"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				referrerpolicy="strict-origin-when-cross-origin"
-				allowfullscreen
-			></iframe>
-		</div>
-		<div class="origami-button-video">
-			<button type="button" onclick="location.href='origami-endpage.html'">
-				Klaar?
-			</button>
+
+		<div class="center-container">
+			<div class="video">
+				<video id="origami-video" controls width="560" height="315">
+					<source src="" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			<div class="button-container">
+				<button type="button" onclick="location.href='origami-endpage.html'">
+					Klaar?
+				</button>
+			</div>
 		</div>
 	</body>
 </html>
