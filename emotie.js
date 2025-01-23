@@ -18,7 +18,7 @@ const emotieImages = {
 	blij: "images/joy.gif",
 	afschuw: "images/disgust.gif",
 	bang: "images/fear.gif",
-	boos: "images/angry.gif",
+	boos: "images/angry.gif", // Added .gif extension for consistency
 	triestig: "images/sad.gif",
 	verrast: "images/shock.gif",
 };
@@ -34,6 +34,14 @@ emotieButtons.forEach((button) => {
 
 		// Update the image source
 		const emotie = button.getAttribute("data-emotie");
-		emotieImage.src = emotieImages[emotie] || "icons/heart2.png"; // Default image
+		const newSrc = emotieImages[emotie] || "icons/heart2.png"; // Default image
+		emotieImage.src = newSrc;
+
+		// Set the id for GIF styling if the newSrc ends with .gif
+		if (newSrc.endsWith(".gif")) {
+			emotieImage.id = "gifImage"; // Assign ID for GIFs
+		} else {
+			emotieImage.id = "pngImage"; // Assign ID for non-GIFs (like PNG)
+		}
 	});
 });

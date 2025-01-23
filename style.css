@@ -664,13 +664,17 @@ input[type="text"]::placeholder {
 }
 
 .heartemotievisualiser img {
-	width: 550px;
+	width: 360px;
 	/* Default width for the heart image */
 	height: auto;
-	/* Maintain aspect ratio */
-	transition: all 0.3s ease;
-	/* Smooth transition when resizing */
 }
+
+#gifImage {
+	width: 650px;
+	height: auto;
+
+}
+
 
 .heartemotievisualiser img.selected-gif {
 	width: 650px;
@@ -684,9 +688,8 @@ input[type="text"]::placeholder {
 }
 
 
-.emotiebuttons1 {}
 
-.emotiebuttons2 {}
+
 
 
 @media (max-width: 478px) {
