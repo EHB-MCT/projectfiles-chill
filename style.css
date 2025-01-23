@@ -658,13 +658,36 @@ input[type="text"]::placeholder {
 }
 
 .emotiebuttons button.selected {
-    border: 2px solid #e62e5a;
-    color: #e62e5a;
-    box-shadow: 0 0 10px 5px #e62e5a;
+	border: 2px solid #e62e5a;
+	color: #e62e5a;
+	box-shadow: 0 0 10px 5px #e62e5a;
 }
+
+.heartemotievisualiser img {
+	width: 550px;
+	/* Default width for the heart image */
+	height: auto;
+	/* Maintain aspect ratio */
+	transition: all 0.3s ease;
+	/* Smooth transition when resizing */
+}
+
+.heartemotievisualiser img.selected-gif {
+	width: 650px;
+	/* Increased size for the GIF */
+	height: auto;
+	/* Maintain aspect ratio */
+	box-shadow: 0 0 15px 5px rgba(230, 46, 90, 0.7);
+	/* Optional styling */
+	border-radius: 10px;
+	/* Optional rounded corners */
+}
+
+
 .emotiebuttons1 {}
 
 .emotiebuttons2 {}
+
 
 @media (max-width: 478px) {
 

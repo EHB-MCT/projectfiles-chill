@@ -32,3 +32,8 @@ We imported it from another repository that we created before this repository wa
 We imported it from another repository that we created before this repository was visible.
 [ChatGPT Conversation for the sounds when u touch a back button](https://chatgpt.com/share/6790ba77-486c-8000-8c9a-07cd4af9f6bd)
 [ChatGPT Conversation for the sounds when u enter the methods](https://chatgpt.com/share/6790bffb-32c4-8000-be93-98c58be029ac)
+
+# Emotie-branch
+
+When a button is selected it will show the right button , at the same time verify the css
+[Chatgpt.com](https://chatgpt.com/share/6792049b-c464-8007-80d7-48cbd549dd7a)
