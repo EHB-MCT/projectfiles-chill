@@ -6,8 +6,6 @@
     <title>Sorry Bot</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
-    <script src="./sorrybot.js" defer></script>
-    <script src="./menu.js" defer></script>
 
   </head>
   <body>
@@ -60,19 +58,28 @@
             class="smart-toy-icon"
           />
           <p>
-            Hallo, ik ben Sorry bot! Ik ben hier om u te helpen met jouw emoties
-            te begrijpen en sorry te zeggen. Ben je er klaar voor?
+            Hallo, ik ben Sorry Bot! Ik ben hier om u te helpen met jouw emoties
+            te begrijpen en sorry te zeggen. Hoe voel je je vandaag?
           </p>
         </li>
       </ul>
       <div class="chat-input">
-        <textarea placeholder="Enter a message..." required></textarea>
+        <div class="suggestions"></div>
+        <textarea placeholder="Schrijf hier je antwoord..." required></textarea>
         <img
           id="send-btn"
           src="./icons/Send.png"
           alt="Smart Toy Icon"
           class="smart-toy-icon"
         />
+      </div>
+      <div class="choices-container" style="display: none">
+        <button id="goTo3Methods" class="choice-btn">
+          Ga naar de 3 methodes
+        </button>
+        <button id="newExcusesChat" class="choice-btn">
+          Maak een nieuwe excuses chat
+        </button>
       </div>
     </div>
   </body>
