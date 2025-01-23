@@ -609,7 +609,7 @@ input[type="submit"]:hover {
 }
 
 
-.help2 {
+.help2, .emotietextsorry {
 	line-break: auto;
 	width: 100%;
 }
@@ -728,6 +728,75 @@ input[type="submit"] {
 
 #nextStep a {
 	text-decoration: none;
+}
+
+.emotiesorry {
+	width: 40%;
+	text-align: end;
+}
+
+.emotiegift {
+	color: #ffffff;
+	width: 40%;
+	text-align: center;
+}
+
+.emotiegift img {
+	width: 100%;
+	display: block;
+	flex-direction: column;
+	margin-bottom: 7%;
+}
+
+.emotiegift a {
+	text-decoration: none;
+	color: #fff;
+
+}
+
+.emotiesorry a {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 15px 35px;
+	font-size: 23px;
+	transition: all 0.1s ease;
+	text-decoration: none;
+	width: 28vh;
+	text-align: center;
+	text-decoration: none;
+
+}
+
+.emotiesorry a :hover {
+	background-color: #e62e5a;
+	border: none;
+	padding: 15px 35px;
+	font-size: 23px;
+	transition: all 0.1s ease;
+	text-decoration: none;
+	width: 28vh;
+	text-align: center;
+	text-decoration: none;
+
+
+}
+
+.emotietextsorry {
+	margin-bottom: 5%;
+}
+
+.emotiesorry a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+
+.emotiesturen {
+	display: flex;
+	justify-content: space-around;
+	color: #ffffff;
+	margin-top: 5%;
 }
 
 @media (max-width: 478px) {
@@ -1018,5 +1087,25 @@ input[type="submit"] {
 		/* Stack buttons vertically inside each column */
 		gap: 20px;
 		/* Gap between buttons inside the column */
+	}
+
+	.emotiesturen {
+		margin-top: 25%;
+		flex-direction: column;
+	}
+
+	.emotiegift {
+		width: 100%;
+	}
+
+	.emotiesorry {
+		margin-top: 10%;
+		width: 80%;
+		text-align: center;
+		align-self: center;
+	}
+
+	.emotietextsorry {
+		margin-bottom: 10%;
 	}
 }
