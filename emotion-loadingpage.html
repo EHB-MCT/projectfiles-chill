@@ -3,35 +3,30 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sorry Bot</title>
+		<title>Document</title>
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/sid3fky.css" />
 		<script>
 			window.onload = function () {
 				const content = document.querySelector(".loading-container");
-
-				// Play the audio
-				const audio = new Audio("audio/3-second.mp3");
-				audio.play();
 
 				setTimeout(function () {
 					content.classList.add("show");
 				}, 0);
 
 				setTimeout(function () {
-					window.location.href = "./chatbot.html";
+					window.location.href = "./emotievisualiser.html";
 				}, 3000);
 			};
 		</script>
-		<!-- https://chatgpt.com/share/6788e0be-ec60-8004-92fe-271724db49fb -->
 	</head>
 	<body>
 		<div>
 			<div class="loading-container">
-				<div class="loading-icon"><img src="./icons/Chatbot.png" alt="" /></div>
+				<div class="loading-icon"><img src="/icons/Heart_loadpage.svg" alt="" /></div>
 				<div class="loading-text">
-					<h2>Welkom bij de Sorry Bot</h2>
-					<p>Praat over je gevoelens</p>
+					<h2>Welkom bij de emotie maker</h2>
+					<p>Maak jouw excuses door jouw emoties toe te voegen!</p>
 				</div>
 			</div>
 		</div>
