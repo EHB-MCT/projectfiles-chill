@@ -9,39 +9,46 @@ buttons.forEach((button) => {
 	});
 });
 
-// Get the image element and buttons
-const emotieImage = document.getElementById("emotieImage");
-const emotieButtons = document.querySelectorAll(".emotiebuttons button");
+const emotionButtons = document.querySelectorAll(".emotiebuttons button");
 
-// Object mapping emotions to images
 const emotieImages = {
 	blij: "images/joy.gif",
 	afschuw: "images/disgust.gif",
 	bang: "images/fear.gif",
-	boos: "images/angry.gif", // Added .gif extension for consistency
+	boos: "images/angry.gif",
 	triestig: "images/sad.gif",
 	verrast: "images/shock.gif",
 };
 
-// Add click event listeners to buttons
-emotieButtons.forEach((button) => {
-	button.addEventListener("click", () => {
-		// Remove 'selected' class from all buttons
-		emotieButtons.forEach((btn) => btn.classList.remove("selected"));
+const emotieImage = document.getElementById("emotieImage");
+const nextStepButton = document.getElementById("nextStep");
 
-		// Add 'selected' class to clicked button
+emotionButtons.forEach((button) => {
+	button.addEventListener("click", () => {
+		emotionButtons.forEach((btn) => btn.classList.remove("selected"));
 		button.classList.add("selected");
 
-		// Update the image source
 		const emotie = button.getAttribute("data-emotie");
 		const newSrc = emotieImages[emotie] || "icons/heart2.png"; // Default image
 		emotieImage.src = newSrc;
 
-		// Set the id for GIF styling if the newSrc ends with .gif
 		if (newSrc.endsWith(".gif")) {
-			emotieImage.id = "gifImage"; // Assign ID for GIFs
+			emotieImage.id = "gifImage";
 		} else {
-			emotieImage.id = "pngImage"; // Assign ID for non-GIFs (like PNG)
+			emotieImage.id = "pngImage";
 		}
+
+		nextStepButton.style.display = "block";
 	});
 });
+
+// als geen button geselecteerd word dan wordt het niet gedisplayed
+const hideNextStepButton = () => {
+	const selectedButton = document.querySelector(".emotiebuttons button.selected");
+	if (!selectedButton) {
+		nextStepButton.style.display = "none";
+	}
+};
+
+// Check and hide the 'Next Step' button when page loads or if no emotion is selected
+hideNextStepButton();

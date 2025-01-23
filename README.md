@@ -37,3 +37,5 @@ We imported it from another repository that we created before this repository wa
 
 When a button is selected it will show the right button , at the same time verify the css
 [Chatgpt.com](https://chatgpt.com/share/6792049b-c464-8007-80d7-48cbd549dd7a)
+When I select the button it will show the " volgende stap "button
+[Chatgpt.com](https://chatgpt.com/share/6792290a-fba0-8007-9ae1-7ba6d540f37c)

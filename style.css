@@ -561,7 +561,7 @@ nav .menu-hamburger {
 .emotiebuttons {
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	text-align: center;
 	margin: 50px;
 	gap: 10px;
@@ -578,7 +578,7 @@ nav .menu-hamburger {
 	/* Later de typografie veranderen */
 	transition: all 0.1s ease;
 	color: #ffffff;
-	margin: 0 10px;
+	margin: 0 20px;
 	text-align: center;
 
 }
@@ -680,17 +680,39 @@ input[type="text"]::placeholder {
 	width: 650px;
 	/* Increased size for the GIF */
 	height: auto;
-	/* Maintain aspect ratio */
 	box-shadow: 0 0 15px 5px rgba(230, 46, 90, 0.7);
-	/* Optional styling */
 	border-radius: 10px;
-	/* Optional rounded corners */
 }
 
+.next {
+	display: flex;
+	justify-content: center;
+}
 
+#nextStep {
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 15px 35px;
+	font-size: 23px;
+	transition: all 0.1s ease;
+	text-decoration: none;
+	width: 28vh;
+	text-align: center;
 
+}
 
+#nextStep:hover {
+	/* Increased size for the GIF */
+	height: auto;
+	box-shadow: 0 0 15px 5px rgba(230, 46, 90, 0.7);
+	text-decoration: none;
 
+}
+
+#nextStep a {
+	text-decoration: none;
+}
 
 @media (max-width: 478px) {
 
