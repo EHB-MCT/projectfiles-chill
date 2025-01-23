@@ -16,11 +16,6 @@ body {
 	box-sizing: inherit;
 }
 
-a,
-button {
-	cursor: url("./icons/pointer.png") 14 14, pointer;
-}
-
 body {
 	background: linear-gradient(#0d1f34, #24122c);
 	background-repeat: no-repeat;
