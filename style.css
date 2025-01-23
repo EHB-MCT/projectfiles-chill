@@ -4,6 +4,8 @@ body {
 	margin: 0;
 	overflow: hidden;
 	font-family: "lores-9-narrow", sans-serif;
+	font-style: normal;
+	font-weight: 100;
 	box-sizing: border-box;
 }
 
@@ -22,11 +24,18 @@ body {
 h1 {
 	font-size: 6vw;
 	color: #ffffff;
+	font-weight: 100;
 }
 
 h2 {
 	font-size: 3vw;
 	color: #ffffff;
+	font-weight: 100;
+}
+
+button {
+	font-family: "lores-9-narrow", sans-serif;
+	font-weight: 700;
 }
 
 /* Navbar */
@@ -425,7 +434,6 @@ li a.active {
 
 .typing-indicator span {
 	margin-right: 5px;
-	font-weight: bold;
 	animation: typingDots 1.5s infinite;
 }
 
@@ -570,7 +578,6 @@ li a.active {
 	color: #ffffff;
 	padding: 15px 35px;
 	font-size: 25px;
-	font-family: "lores-12", sans-serif;
 	transition: all 0.1s ease;
 }
 
@@ -614,30 +621,39 @@ li a.active {
 }
 
 /*Origami videos*/
-
-.video {
-	margin-left: 350px;
+.center-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5vh;
+	text-align: center;
+	width: 100vw;
 }
 
-.origami-button-video {
-	position: relative;
-	top: 10px;
-	left: 1020px;
+.video-container iframe {
+	width: 70vw;
+	height: 39.375vw;
+	max-width: 560px;
+	max-height: 315px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.origami-button-video button {
+.button-container button {
 	background-color: #e62e5a;
 	border: none;
-	color: #ffffff;
-	padding: 15px 35px;
-	font-size: 25px;
-	font-family: "lores-12", sans-serif;
-	transition: all 0.1s ease;
+	color: white;
+	padding: 1.5vh 3vw;
+	font-size: 2.5vh;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	transition: all 0.2s ease;
 }
 
-.origami-button-video button:hover {
+.button-container button:hover {
 	cursor: pointer;
 	box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+	transition: all 0.2s ease;
 }
 
 /*Origami einde page*/
@@ -665,7 +681,6 @@ li a.active {
 	width: 200px;
 	padding: 15px 35px;
 	font-size: 25px;
-	font-family: "lores-12", sans-serif;
 	transition: all 0.1s ease;
 }
 
@@ -700,8 +715,6 @@ nav .menu-hamburger {
 	width: 150px;
 	height: 60px;
 	font-size: 20px;
-	font-family: "lores-12", sans-serif;
-	/* Later de typografie veranderen */
 	transition: all 0.1s ease;
 	color: #ffffff;
 	margin: 0 10px;
@@ -721,7 +734,6 @@ input[type="submit"] {
 	color: #ffffff;
 	padding: 15px 35px;
 	font-size: 25px;
-	font-family: "lores-12", sans-serif;
 	transition: all 0.1s ease;
 }
 
@@ -736,7 +748,6 @@ input[type="text"] {
 	/* Same stroke as the buttons */
 	padding: 15px 35px;
 	font-size: 25px;
-	font-family: "lores-12", sans-serif;
 	color: #ffffff;
 	transition: all 0.1s ease;
 }
@@ -1026,11 +1037,5 @@ input[type="text"]::placeholder {
 	.origami-button-2 button {
 		padding: 10px 25px;
 		font-size: 20px;
-	}
-
-	.video {
-		width: 30px;
-		height: 40px;
-		left: 20px;
 	}
 }

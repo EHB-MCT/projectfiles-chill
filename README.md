@@ -23,7 +23,6 @@ We imported it from another repository that we created before this repository wa
 
 [ChatGPT Conversation for Making a scenario chatbot](https://chatgpt.com/share/6790d49a-8c54-8001-a3db-3c65f35a18ee)
 [ChatGPT Conversation for making a generated sorry letter](https://chatgpt.com/share/6790d4ee-1770-8001-b9f4-6f278ae4f8f0)
-=======
 
 # Origami-branch
 
