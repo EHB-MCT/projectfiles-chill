@@ -990,7 +990,7 @@ input[type="text"]::placeholder {
 	.emotiebuttons {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: center;
 		gap: 10px;
 		/* Gap between the two columns */
 	}
@@ -1000,7 +1000,7 @@ input[type="text"]::placeholder {
 		display: flex;
 		flex-direction: column;
 		/* Stack buttons vertically inside each column */
-		gap: 10px;
+		gap: 20px;
 		/* Gap between buttons inside the column */
 	}
 }
