@@ -36,27 +36,36 @@
 		</nav>
 		<div class="emotie-container">
 			<a href="./4methods.html"><img src="./icons/back-button.png" alt="Back Button" class="back-button" /></a>
-			<h2>Hoe voelde jij je NA het conflict</h2>
+			<div class="emotiesturen">
+				<div class="emotiegift">
+					<img src="" alt="Combined Emotions" id="combinedGif" />
+					<p>Hier zie je een combinatie van jouw emoties tijdens en na het conflict.</p>
+				</div>
+				<script>
+					// Haal de gekozen emoties op uit localStorage
+					const emotionDuring = localStorage.getItem("selectedEmotion-during");
+					const emotionAfter = localStorage.getItem("selectedEmotion-after");
 
-			<div class="loading-text">
-				<div class="heartemotievisualiser">
-					<img src="icons/heart2.png" alt="" class="heartimage" id="emotieImage" />
+					// Toon de gecombineerde GIF's met afwisseling
+					if (emotionDuring && emotionAfter) {
+						const gifElement = document.getElementById("combinedGif");
+						let showDuring = true;
+
+						setInterval(() => {
+							gifElement.src = showDuring ? emotionDuring : emotionAfter;
+							showDuring = !showDuring;
+						}, 2000); // Wissel elke 2 seconden
+					} else {
+						console.error("Emoties zijn niet correct opgeslagen in localStorage.");
+					}
+				</script>
+
+				<div class="emotiesorry">
+					<form action="#">
+						<div class="help"><input class="emotietextsorry" type="text" id="emotietext" name="fname" size="100" placeholder="" /><br /><br /></div>
+					</form>
+					<a href="4methods.html">Andere sorrytools</a>
 				</div>
-				<div class="emotiebuttons">
-					<div class="emotiebuttons1">
-						<button type="button" data-emotie="blij">blij</button>
-						<button type="button" data-emotie="afschuw">afschuw</button>
-						<button type="button" data-emotie="bang">bang</button>
-					</div>
-					<div class="emotiebuttons2">
-						<button type="button" data-emotie="boos">boos</button>
-						<button type="button" data-emotie="triestig">triestig</button>
-						<button type="button" data-emotie="verrast">verrast</button>
-					</div>
-				</div>
-			</div>
-			<div class="next">
-				<a id="nextStep" href="emotiefinishTEST.html" style="display: none">Volgende stap</a>
 			</div>
 		</div>
 	</body>

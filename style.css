@@ -565,6 +565,7 @@ nav .menu-hamburger {
 	text-align: center;
 	margin: 50px;
 	gap: 10px;
+
 }
 
 .emotiebuttons button {
@@ -574,7 +575,7 @@ nav .menu-hamburger {
 	width: 150px;
 	height: 60px;
 	font-size: 20px;
-	font-family: "lores-12", sans-serif;
+	font-family: "lores-9-narrow", sans-serif;
 	/* Later de typografie veranderen */
 	transition: all 0.1s ease;
 	color: #ffffff;
@@ -1089,11 +1090,12 @@ input[type="submit"] {
 		/* Gap between buttons inside the column */
 	}
 
+	/*
 	.emotiesturen {
 		margin-top: 25%;
 		flex-direction: column;
 	}
-
+*/
 	.emotiegift {
 		width: 100%;
 	}

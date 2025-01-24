@@ -39,3 +39,5 @@ When a button is selected it will show the right button , at the same time verif
 [Chatgpt.com](https://chatgpt.com/share/6792049b-c464-8007-80d7-48cbd549dd7a)
 When I select the button it will show the " volgende stap "button
 [Chatgpt.com](https://chatgpt.com/share/6792290a-fba0-8007-9ae1-7ba6d540f37c)
+The localstorage of the gif and the switching of the 2 gifs
+[Chatgpt.com](https://chatgpt.com/share/67936ac8-b8dc-8007-a21e-4ac76b0aa2a9)

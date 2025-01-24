@@ -52,3 +52,18 @@ const hideNextStepButton = () => {
 
 // Check and hide the 'Next Step' button when page loads or if no emotion is selected
 hideNextStepButton();
+
+emotionButtons.forEach((button) => {
+	button.addEventListener("click", () => {
+		const emotie = button.getAttribute("data-emotie");
+		const newSrc = emotieImages[emotie] || "icons/heart2.png";
+
+		// Opslaan van de geselecteerde emotie in localStorage
+		const currentStep = window.location.pathname.includes("emotie-na-het-conflict") ? "after" : "during";
+		localStorage.setItem(`selectedEmotion-${currentStep}`, newSrc);
+
+		// Update afbeelding en volgende stap knop
+		emotieImage.src = newSrc;
+		nextStepButton.style.display = "block";
+	});
+});
