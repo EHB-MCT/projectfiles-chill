@@ -844,7 +844,7 @@ body.no-overflow-hidden {
 .deelnemers {
 	display: grid;
 	grid-template-columns: repeat(3, 250px);
-	gap: 150px;
+	gap: 300px;
 	margin-top: 50px;
 	justify-content: center;
 }
@@ -867,11 +867,35 @@ body.no-overflow-hidden {
 }
 
 .deelnemer img[src="images/Icoba 2.png"] {
-	width: 95px; /* Adjust the width */
-	height: 70px; /* Adjust the height */
+	width: 120px;
+	height: 70px;
 }
 .deelnemer p {
 	font-size: 18px;
+}
+
+.wie-zijn-wij-extrainfo-text {
+	max-width: 70%;
+	margin-top: 45px;
+	margin-left: 50px;
+}
+
+.wie-zijn-wij-extrainfo-link {
+	display: flex;
+	gap: 60px;
+	margin-top: 45px;
+	margin-left: 50px;
+}
+
+.wie-zijn-wij-extrainfo-link a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.wie-zijn-wij-extrainfo-contact {
+	max-width: 100%;
+	margin-top: 45px;
+	margin-left: 50px;
 }
 /* MOBILE VERSION */
 
