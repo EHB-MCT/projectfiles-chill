@@ -255,6 +255,110 @@ li a.active {
 	transform: scale(1.1);
 }
 
+/* Sticker Edit Page */
+
+.dropdown-edit {
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.edit-sticker-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 5px;
+	margin-right: 50px;
+	height: 80vh;
+}
+
+.dropdown-typo-content .typo-1 {
+	font-family: "dream-big-wide", sans-serif;
+	font-style: normal;
+}
+
+.dropdown-typo-content .typo-2 {
+	font-family: "pf-reminder", sans-serif;
+	font-style: normal;
+}
+
+.dropdown-typo-content .typo-3 {
+	font-family: "roca", sans-serif;
+	font-style: italic;
+}
+
+.dropdown-typo-content .typo-1,
+.typo-2,
+.typo-3 {
+	margin-top: 5px;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	border: 2px solid white;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dropdown-edit #color-btn,
+#typography-btn {
+	background-color: #3377b3;
+	color: white;
+	border: none;
+	text-align: left;
+	font-size: 16px;
+	cursor: pointer;
+	width: 307px;
+	height: 50px;
+}
+
+.dropdown-content.show {
+	display: block;
+}
+
+.edit-left h2 {
+	text-align: center;
+	border: 3px solid #3377b3;
+	padding: 30px;
+	margin-top: 0;
+}
+
+.edit-left {
+	width: 20vw;
+}
+
+.edit-right {
+	background-color: yellow;
+	width: 75vw;
+}
+
+#dropdown-edit-content,
+#dropdown-typo-content {
+	display: none;
+	top: 100%;
+	left: 0;
+	padding: 10px;
+}
+
+.dropdown-edit-content label {
+	display: block;
+	margin-bottom: 10px;
+	color: #ffffff;
+}
+
+.dropdown-edit button {
+	padding: 10px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+#dropdown-edit-content.show,
+#dropdown-typo-content.show {
+	display: block;
+	z-index: 10;
+}
+
 /* Sorrybot */
 
 .title-container h2 {
