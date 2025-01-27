@@ -412,6 +412,7 @@ li a.active {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin-bottom: 25px;
 }
 
 .suggestions button {
