@@ -1110,4 +1110,8 @@ input[type="submit"] {
 	.emotietextsorry {
 		margin-bottom: 10%;
 	}
+
+	.emotiesturen {
+		flex-direction: column;
+	}
 }

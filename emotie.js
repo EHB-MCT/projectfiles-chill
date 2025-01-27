@@ -50,7 +50,7 @@ const hideNextStepButton = () => {
 	}
 };
 
-// Check and hide the 'Next Step' button when page loads or if no emotion is selected
+// Het tonen van de nextstep button wanneer het geselecteerd is of niet 
 hideNextStepButton();
 
 emotionButtons.forEach((button) => {
