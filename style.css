@@ -272,6 +272,22 @@ li a.active {
 	height: 80vh;
 }
 
+
+#sticker-message.typo-1 {
+  font-family: "dream-big-wide", sans-serif;
+  font-style: normal;
+}
+
+#sticker-message.typo-2 {
+  font-family: "pf-reminder", sans-serif;
+  font-style: normal;
+}
+
+#sticker-message.typo-3 {
+  font-family: "roca", sans-serif;
+  font-style: italic;
+}  
+
 .dropdown-typo-content .typo-1 {
 	font-family: "dream-big-wide", sans-serif;
 	font-style: normal;
@@ -287,19 +303,28 @@ li a.active {
 	font-style: italic;
 }
 
+
 .dropdown-typo-content .typo-1,
-.typo-2,
-.typo-3 {
+.dropdown-typo-content .typo-2,
+.dropdown-typo-content .typo-3 {
 	margin-top: 5px;
 	color: white;
 	font-size: 30px;
 	padding: 10px;
-	border: 2px solid white;
 	width: 200px;
 	height: 100px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	box-sizing: border-box; 
+	border: 2px solid white; 
+	transition: border 0.2s ease; 
+}
+
+.dropdown-typo-content .typo-1.active,
+.dropdown-typo-content .typo-2.active,
+.dropdown-typo-content .typo-3.active {
+	border-color: #e62e5a; 
 }
 
 .dropdown-edit #color-btn,
@@ -310,7 +335,7 @@ li a.active {
 	text-align: left;
 	font-size: 16px;
 	cursor: pointer;
-	width: 307px;
+	width: 320px;
 	height: 50px;
 }
 
@@ -411,6 +436,7 @@ textarea::placeholder {
 	display: block;
 	text-align: center; 
 }
+
 
 /* Sorrybot */
 

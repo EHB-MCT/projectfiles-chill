@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
 		<link rel="stylesheet" href="https://use.typekit.net/sid3fky.css" />
 		<script src="./menu.js"></script>
-		<script src="sticker.js" defer></script>
+		<script src="./sticker.js" defer></script>
 	</head>
 	<body>
 		<nav>
@@ -46,11 +46,11 @@
 						<div class="dropdown-edit">
 							<button id="color-btn">Kleuren</button>
 							<div class="dropdown-edit-content" id="dropdown-edit-content">
-								<label><input type="checkbox" /> Rood</label>
-								<label><input type="checkbox" /> Oranje</label>
-								<label><input type="checkbox" /> Geel</label>
-								<label><input type="checkbox" /> Groen</label>
-								<label><input type="checkbox" /> Blauw</label>
+								<label><input type="checkbox" id="color-red" /> Rood</label>
+								<label><input type="checkbox" id="color-orange"/> Oranje</label>
+								<label><input type="checkbox" id="color-yellow" /> Geel</label>
+								<label><input type="checkbox" id="color-green"/> Groen</label>
+								<label><input type="checkbox" id="color-blue"/> Blauw</label>
 							</div>
 						</div>
 
@@ -95,32 +95,36 @@
 		<script>
 			function toggleDropdown(dropdownContentId) {
 				const dropdownContent = document.getElementById(dropdownContentId);
-
 				dropdownContent.classList.toggle("show");
 			}
 
-			document
-				.getElementById("color-btn")
-				.addEventListener("click", function (event) {
-					event.stopPropagation();
-					toggleDropdown("dropdown-edit-content");
-				});
+			const preventCloseCheckboxes = document.querySelectorAll(
+				"#dropdown-edit-content input[type='checkbox']"
+			);
+			preventCloseCheckboxes.forEach((checkbox) =>
+				checkbox.addEventListener("click", (event) => {
+				event.stopPropagation();
+			})
+		);
 
-			document
-				.getElementById("typography-btn")
-				.addEventListener("click", function (event) {
-					event.stopPropagation();
-					toggleDropdown("dropdown-typo-content");
-				});
+			document.getElementById("color-btn").addEventListener("click", function (event) {
+			event.stopPropagation();
+			toggleDropdown("dropdown-edit-content");
+		});
+
+			document.getElementById("typography-btn").addEventListener("click", function (event) {
+			event.stopPropagation();
+			toggleDropdown("dropdown-typo-content");
+		});
 
 			window.addEventListener("click", function () {
-				const dropdowns = document.querySelectorAll(
-					".dropdown-edit-content, .dropdown-typo-content"
-				);
-				dropdowns.forEach((dropdown) => {
-					dropdown.classList.remove("show");
-				});
-			});
+			const dropdowns = document.querySelectorAll(
+			".dropdown-edit-content, .dropdown-typo-content"
+		);
+			dropdowns.forEach((dropdown) => {
+			dropdown.classList.remove("show");
+		});
+	});
 		</script>
 	</body>
 </html>
