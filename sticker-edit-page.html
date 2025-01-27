@@ -67,24 +67,28 @@
 			</div>
 
 			<div class="edit-right">
-				<div class="btn-titel">
-					<a href="./sticker-page.html"
-						><img
-							src="./icons/back-button.png"
-							alt="Back Button"
-							class="back-button"
-						/>
-					</a>
-				</div>
-				<div class="sticker-preview">
-					<img id="selected-sticker" src="" alt="Selected Sticker" />
-				</div>
+				<div class="edit-right-contain">
+					<div class="btn-titel">
+						<a href="./sticker-page.html"
+							><img
+								src="./icons/back-button.png"
+								alt="Back Button"
+								class="back-button"
+							/>
+						</a>
+					</div>
+					<div class="sticker-preview">
+						<img id="selected-sticker" src="" alt="Selected Sticker" />
+					</div>
 
-				<textarea
-					placeholder="Een kleine bericht op de sticker?"
-					id="sticker-message"
-				></textarea>
-				<button>Delen</button>
+					<textarea
+						placeholder="Een kleine bericht op de sticker?"
+						id="sticker-message"
+					></textarea>
+					<div class="sticker-button">
+						<button>Delen</button>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -98,7 +102,7 @@
 			document
 				.getElementById("color-btn")
 				.addEventListener("click", function (event) {
-					event.stopPropagation(); 
+					event.stopPropagation();
 					toggleDropdown("dropdown-edit-content");
 				});
 

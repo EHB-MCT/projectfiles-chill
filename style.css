@@ -329,7 +329,6 @@ li a.active {
 }
 
 .edit-right {
-	background-color: yellow;
 	width: 75vw;
 }
 
@@ -343,13 +342,13 @@ li a.active {
 
 .dropdown-edit-content label {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	color: #ffffff;
 }
 
 .dropdown-edit button {
 	padding: 10px;
-	margin-bottom: 5px;
+	margin-bottom: 20px;
 	cursor: pointer;
 }
 
@@ -357,6 +356,59 @@ li a.active {
 #dropdown-typo-content.show {
 	display: block;
 	z-index: 10;
+}
+
+.sticker-button button {
+	display: flex;
+	margin-left: 12.5vw;
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 5px 25px;
+	font-size: 25px;
+	transition: all 0.1s ease;
+}
+
+.sticker-preview img { 
+	width: 25vw;
+	padding: 10px;
+}
+
+.sticker-preview  {
+	display: flex;
+	justify-content: center;
+	width: 50vw;
+	padding: 10px 20px;
+	border: 3px solid #fff;
+	margin-bottom: 10px;
+	margin-left: 12.5vw;
+}
+
+#sticker-message {
+	width: 50vw;
+	background-color: none;
+	font-size: 16px;
+	border: 3px solid #fff;
+	padding: 10px;
+}
+
+textarea {
+	color: white;
+	background-color: transparent;
+	width: 100%;
+	height: 100px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+textarea::placeholder {
+	color: #fff;
+}
+
+.edit-right-contain {
+	display: block;
+	text-align: center; 
 }
 
 /* Sorrybot */
