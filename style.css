@@ -815,6 +815,7 @@ input[type="text"]::placeholder {
 }
 
 .primary img {
+  position: absolute;
   z-index: -1;
   width: 12vh;
 }
@@ -853,6 +854,23 @@ body.no-overflow-hidden {
 .secondary {
   margin-top: 8vh;
   text-align: center;
+}
+
+.third {
+  width: 70%;
+  text-align: center;
+}
+
+.partner-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.partner-images img {
+  object-fit: contain;
+  padding: 5vh;
+  width: 35vh;
 }
 
 /* end index.html */
