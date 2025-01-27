@@ -715,37 +715,15 @@ nav .menu-hamburger {
 .mobile-menu {
   margin-left: 0;
 }
-
 /* Emotie Page*/
 .emotiebuttons {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	margin: 50px;
-	gap: 10px;
-
-}
-
-.emotiebuttons button {
-	background-color: transparent;
-	border: none;
-	border: 2px solid #ffffff;
-	width: 150px;
-	height: 60px;
-	font-size: 20px;
-	font-family: "lores-9-narrow", sans-serif;
-	/* Later de typografie veranderen */
-	transition: all 0.1s ease;
-	color: #ffffff;
-	margin: 0 20px;
-	text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
   margin: 50px;
   gap: 10px;
+
 }
 
 .emotiebuttons button {
@@ -755,10 +733,13 @@ nav .menu-hamburger {
   width: 150px;
   height: 60px;
   font-size: 20px;
+  font-family: "lores-9-narrow", sans-serif;
+  /* Later de typografie veranderen */
   transition: all 0.1s ease;
   color: #ffffff;
-  margin: 0 10px;
+  margin: 0 20px;
   text-align: center;
+
 }
 
 .emotiebuttons button:hover {
@@ -768,16 +749,6 @@ nav .menu-hamburger {
   box-shadow: 0 0 10px 5px #e62e5a;
 }
 
-
-input[type="submit"] {
-  background-color: #e62e5a;
-  border: none;
-  color: #ffffff;
-  padding: 15px 35px;
-  font-size: 25px;
-  transition: all 0.1s ease;
-}
-
 input[type="submit"]:hover {
   cursor: pointer;
   box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
@@ -785,67 +756,55 @@ input[type="submit"]:hover {
 
 /* Container holding the form */
 .emotiezenden form {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
 }
 
 
 #emotietext {
-	padding-bottom: 50%;
+  padding-bottom: 50%;
 }
 
 
 .help2, .emotietextsorry {
-	line-break: auto;
-	width: 100%;
+  line-break: auto;
+  width: 100%;
 }
 
 /* Input text field */
 input[type="text"] {
-	background-color: transparent;
-	border: 2px solid #ffffff;
-	padding: 20px 30px;
-	font-size: 30px;
-	font-family: "lores-12", sans-serif;
-	color: #ffffff;
-	box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  padding: 20px 30px;
+  font-size: 30px;
+  font-family: "lores-12", sans-serif;
+  color: #ffffff;
+  box-sizing: border-box;
 }
 
 /* Submit button */
 input[type="submit"] {
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	padding: 20px 30px;
-	font-size: 30px;
-	font-family: "lores-12", sans-serif;
-	transition: all 0.1s ease;
-	width: 100%;
-	box-sizing: border-box;
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  padding: 15px 35px;
-  font-size: 25px;
+  background-color: #e62e5a;
+  border: none;
   color: #ffffff;
+  padding: 20px 30px;
+  font-size: 30px;
+  font-family: "lores-12", sans-serif;
   transition: all 0.1s ease;
-}
-
-input[type="text"]::placeholder {
-  color: #ffffff;
-  opacity: 0.7;
-
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
 .heartemotievisualiser {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
+
 
 .emotiezenden {
   display: flex;
@@ -867,136 +826,134 @@ input[type="text"]::placeholder {
 }
 
 .emotie-container .back-button {
-	position: absolute;
-	width: 30px;
-	cursor: pointer;
-	margin-left: 50px;
+  position: absolute;
+  width: 30px;
+  cursor: pointer;
+  margin-left: 50px;
 }
 
 .emotiebuttons button.selected {
-	border: 2px solid #e62e5a;
-	color: #e62e5a;
-	box-shadow: 0 0 10px 5px #e62e5a;
+  border: 2px solid #e62e5a;
+  color: #e62e5a;
+  box-shadow: 0 0 10px 5px #e62e5a;
 }
 
 .heartemotievisualiser img {
-	width: 360px;
-	/* Default width for the heart image */
-	height: auto;
+  width: 360px;
+  /* Default width for the heart image */
+  height: auto;
 }
 
 #gifImage {
-	width: 650px;
-	height: auto;
+  width: 650px;
+  height: auto;
 
 }
 
 
 .heartemotievisualiser img.selected-gif {
-	width: 650px;
-	/* Increased size for the GIF */
-	height: auto;
-	box-shadow: 0 0 15px 5px rgba(230, 46, 90, 0.7);
-	border-radius: 10px;
+  width: 650px;
+  /* Increased size for the GIF */
+  height: auto;
+  box-shadow: 0 0 15px 5px rgba(230, 46, 90, 0.7);
+  border-radius: 10px;
 }
 
 .next {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #nextStep {
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	padding: 15px 35px;
-	font-size: 23px;
-	transition: all 0.1s ease;
-	text-decoration: none;
-	width: 28vh;
-	text-align: center;
+  background-color: #e62e5a;
+  border: none;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 23px;
+  transition: all 0.1s ease;
+  text-decoration: none;
+  width: 28vh;
+  text-align: center;
 
 }
 
 #nextStep:hover {
-	/* Increased size for the GIF */
-	height: auto;
-	box-shadow: 0 0 15px 5px rgba(230, 46, 90, 0.7);
-	text-decoration: none;
+  /* Increased size for the GIF */
+  height: auto;
+  box-shadow: 0 0 15px 5px rgba(230, 46, 90, 0.7);
+  text-decoration: none;
 
 }
 
 #nextStep a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .emotiesorry {
-	width: 40%;
-	text-align: end;
+  width: 40%;
+  text-align: end;
 }
 
 .emotiegift {
-	color: #ffffff;
-	width: 40%;
-	text-align: center;
+  color: #ffffff;
+  width: 40%;
+  text-align: center;
 }
 
 .emotiegift img {
-	width: 100%;
-	display: block;
-	flex-direction: column;
-	margin-bottom: 7%;
+  width: 100%;
+  display: block;
+  flex-direction: column;
+  margin-bottom: 7%;
 }
 
 .emotiegift a {
-	text-decoration: none;
-	color: #fff;
+  text-decoration: none;
+  color: #fff;
 
 }
 
 .emotiesorry a {
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	padding: 15px 35px;
-	font-size: 23px;
-	transition: all 0.1s ease;
-	text-decoration: none;
-	width: 28vh;
-	text-align: center;
-	text-decoration: none;
+  background-color: #e62e5a;
+  border: none;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 23px;
+  transition: all 0.1s ease;
+  text-decoration: none;
+  width: 28vh;
+  text-align: center;
 
 }
 
 .emotiesorry a :hover {
-	background-color: #e62e5a;
-	border: none;
-	padding: 15px 35px;
-	font-size: 23px;
-	transition: all 0.1s ease;
-	text-decoration: none;
-	width: 28vh;
-	text-align: center;
-	text-decoration: none;
+  background-color: #e62e5a;
+  border: none;
+  padding: 15px 35px;
+  font-size: 23px;
+  transition: all 0.1s ease;
+  text-decoration: none;
+  width: 28vh;
+  text-align: center;
 
 
 }
 
 .emotietextsorry {
-	margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 .emotiesorry a {
-	text-decoration: none;
-	color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 
 .emotiesturen {
-	display: flex;
-	justify-content: space-around;
-	color: #ffffff;
-	margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+  margin-top: 5%;
 }
 
 @media (max-width: 478px) {
@@ -1142,12 +1099,7 @@ input[type="text"]::placeholder {
 		gap: 10vw;
 	}
 
-	.icon {
-		position: relative;
-		width: 300px;
-		height: 300px;
-		overflow: hidden;
-	}
+	
 
 	.origami-mobile .origami-container {
 		position: relative;
@@ -1289,12 +1241,7 @@ input[type="text"]::placeholder {
 		/* Gap between buttons inside the column */
 	}
 
-	/*
-	.emotiesturen {
-		margin-top: 25%;
-		flex-direction: column;
-	}
-*/
+	
 	.emotiegift {
 		width: 100%;
 	}
