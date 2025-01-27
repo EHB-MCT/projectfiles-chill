@@ -6,50 +6,53 @@
     <title>Sorry Bot</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
-    <script src="./sorrybot.js" defer></script>
+    <script src="./chatbot.js" defer></script>
     <script src="./menu.js" defer></script>
-
   </head>
   <body>
     <nav>
-      <a href="index.html" class="logo">
+      <div class="nav-left">
+        <a href="index.html" class="logo">
           <img src="./icons/logo.svg" alt="SorryBox Logo" class="logo-image" />
-      </a>
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="chatbot-loadingpage.html" class="active">Sorrybot</a></li>
-          <li><a href="4methods.html" >Sorrytools</a></li>
-          <li class="dropdown">
-              <a href="#" class="dropbtn"
-                  >Over ons<i class="bx bxs-chevron-down arrow"></i
-              ></a>
-              <ul class="dropdown-content">
-                  <li><a href="wiezijnwe.html">Wie zijn we?</a></li>
-                  <li><a href="werkwijze.html">Werkwijze</a></li>
-                  <li><a href="sorrybox2.html">SorryBox 2.0</a></li>
-                  <li><a href="methodieken.html">Methodieken</a></li>
-              </ul>
-          </li>
-      </ul>
-      <img
-				src="./icons/Hamburger.svg"
-				alt="menu hamburger"
-				class="menu-hamburger"
-			/>
-  </nav>
-
-    <section>
-      <div class="title-container">
-        <a href="./4methods.html"
-          ><img
-            src="./icons/back-button.png"
-            alt="Back Button"
-            class="back-button"
-          />
         </a>
-        <h2>Sorry Bot</h2>
       </div>
-    </section>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="chatbot-loadingpage.html" class="active">Sorrybot</a>
+          </li>
+          <li><a href="4methods.html">Sorrytools</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">
+              Over ons<i class="bx bxs-chevron-down arrow"></i>
+            </a>
+            <ul class="dropdown-content">
+              <li><a href="wiezijnwe.html">Wie zijn we?</a></li>
+              <li><a href="werkwijze.html">Werkwijze</a></li>
+              <li><a href="sorrybox2.html">SorryBox 2.0</a></li>
+              <li><a href="methodieken.html">Methodieken</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <img
+        src="./icons/Hamburger.svg"
+        alt="menu hamburger"
+        class="menu-hamburger"
+      />
+    </nav>
+
+    <div class="btn-titel">
+      <a href="./4methods.html">
+        <img
+          src="./icons/back-button.png"
+          alt="Back Button"
+          class="back-button"
+        />
+      </a>
+      <h2>Sorry bot</h2>
+    </div>
 
     <div class="sorrybot">
       <ul class="sorrybox">
@@ -60,19 +63,30 @@
             class="smart-toy-icon"
           />
           <p>
-            Hallo, ik ben Sorry bot! Ik ben hier om u te helpen met jouw emoties
-            te begrijpen en sorry te zeggen. Ben je er klaar voor?
+            Hallo, ik ben Sorry Bot! Ik ben hier om u te helpen met jouw emoties
+            te begrijpen en sorry te zeggen. Hoe voel je je vandaag?
           </p>
         </li>
       </ul>
+      <div class="suggestions"></div>
+
       <div class="chat-input">
-        <textarea placeholder="Enter a message..." required></textarea>
+        <textarea placeholder="Schrijf hier je antwoord..." required></textarea>
         <img
           id="send-btn"
           src="./icons/Send.png"
-          alt="Smart Toy Icon"
+          alt="Send Icon"
           class="smart-toy-icon"
         />
+      </div>
+
+      <div class="choices-container" style="display: none">
+        <button id="goTo3Methods" class="choice-btn">
+          Ga naar de 3 methodes
+        </button>
+        <button id="newExcusesChat" class="choice-btn">
+          Maak een nieuwe excuses chat
+        </button>
       </div>
     </div>
   </body>
