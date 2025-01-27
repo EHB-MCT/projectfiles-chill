@@ -39,3 +39,14 @@ We imported it from another repository that we created before this repository wa
 We imported it from another repository that we created before this repository was visible.
 [ChatGPT Conversation for the sounds when u touch a back button](https://chatgpt.com/share/6790ba77-486c-8000-8c9a-07cd4af9f6bd)
 [ChatGPT Conversation for the sounds when u enter the methods](https://chatgpt.com/share/6790bffb-32c4-8000-be93-98c58be029ac)
+
+# Emotie-branch
+
+When a button is selected it will show the right button , at the same time verify the css
+[Chatgpt.com](https://chatgpt.com/share/6792049b-c464-8007-80d7-48cbd549dd7a)
+When I select the button it will show the " volgende stap "button
+[Chatgpt.com](https://chatgpt.com/share/6792290a-fba0-8007-9ae1-7ba6d540f37c)
+The localstorage of the gif and the switching of the 2 gifs
+[Chatgpt.com](https://chatgpt.com/share/67936ac8-b8dc-8007-a21e-4ac76b0aa2a9)
+Generate a link for the emotiefinishpage
+[Chatgpt.com](https://chatgpt.com/share/67936ac8-b8dc-8007-a21e-4ac76b0aa2a9)
