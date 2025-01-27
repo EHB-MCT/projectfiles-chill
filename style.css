@@ -303,7 +303,6 @@ li a.active {
 	font-style: italic;
 }
 
-
 .dropdown-typo-content .typo-1,
 .dropdown-typo-content .typo-2,
 .dropdown-typo-content .typo-3 {
@@ -384,7 +383,7 @@ li a.active {
 	z-index: 10;
 }
 
-.sticker-button button {
+.button-container a button {
 	display: flex;
 	margin-left: 12.5vw;
 	background-color: #e62e5a;
@@ -435,6 +434,13 @@ textarea::placeholder {
 .edit-right-contain {
 	display: block;
 	text-align: center; 
+}
+
+/* Sticker End Page */
+.center-container h2 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
