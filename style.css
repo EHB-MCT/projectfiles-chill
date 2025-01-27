@@ -835,6 +835,44 @@ body.no-overflow-hidden {
 	height: auto;
 }
 
+.wie-zijn-wij-container-text {
+	max-width: 50%;
+	margin-top: 45px;
+	margin-left: 50px;
+}
+
+.deelnemers {
+	display: grid;
+	grid-template-columns: repeat(3, 250px);
+	gap: 150px;
+	margin-top: 50px;
+	justify-content: center;
+}
+
+.deelnemer {
+	width: 200px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 2px solid #ffffff;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+	text-align: center;
+}
+
+.deelnemer img {
+	width: 120px;
+	height: 120px;
+}
+
+.deelnemer img[src="images/Icoba 2.png"] {
+	width: 95px; /* Adjust the width */
+	height: 70px; /* Adjust the height */
+}
+.deelnemer p {
+	font-size: 18px;
+}
 /* MOBILE VERSION */
 
 @media (max-width: 768px) {
