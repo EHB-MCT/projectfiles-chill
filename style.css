@@ -801,7 +801,9 @@ input[type="text"]::placeholder {
 }
 
 /*WIE ZIJN WIJ PAGE*/
-
+body.no-overflow-hidden {
+	overflow: auto;
+}
 .wie-zijn-wij {
 	display: flex;
 	flex-wrap: nowrap;
