@@ -238,6 +238,9 @@ const showSuggestions = () => {
       const randomFollowUp =
         followUpQuestions[Math.floor(Math.random() * followUpQuestions.length)];
 
+      // Clear suggestions after selection
+      suggestionsContainer.innerHTML = "";
+
       setTimeout(() => {
         generateResponse(randomResponse, randomFollowUp); // Generate response
       }, 800);
@@ -261,6 +264,9 @@ const showYesNoSuggestions = () => {
     button.addEventListener("click", () => {
       sorrybox.appendChild(createChatLi(text, "outgoing")); // Append outgoing message
       sorrybox.scrollTo(0, sorrybox.scrollHeight);
+
+      // Clear suggestions after selection
+      suggestionsContainer.innerHTML = "";
 
       setTimeout(() => {
         if (text === "Ja") {
@@ -299,6 +305,9 @@ const handleChat = () => {
   userResponses.situation = userMessage; // Save user input
   chatInput.value = ""; // Clear textarea
   chatInput.style.height = "40px"; // Reset height
+
+  // Clear suggestions after user input
+  suggestionsContainer.innerHTML = "";
 
   const thankYouResponses = [
     "Dank je dat je dit met me deelt.",
