@@ -66,8 +66,7 @@ const generateSorryLetter = async () => {
     <img src="./icons/Chatbot.png" alt="Robot" class="smart-toy-icon" />
     <p class="typing-indicator">
       <span>.</span><span>.</span><span>.</span>
-    </p>
-  `;
+    </p>`;
   sorrybox.appendChild(typingIndicator);
   sorrybox.scrollTo(0, sorrybox.scrollHeight);
 
@@ -179,8 +178,7 @@ const generateResponse = (responseText, followUp = null) => {
     <img src="./icons/Chatbot.png" alt="Robot" class="smart-toy-icon" />
     <p class="typing-indicator">
       <span>.</span><span>.</span><span>.</span>
-    </p>
-  `;
+    </p>`;
   sorrybox.appendChild(typingIndicator);
   sorrybox.scrollTo(0, sorrybox.scrollHeight);
 
@@ -219,16 +217,17 @@ const followUpQuestions = [
 
 const showSuggestions = () => {
   suggestionsContainer.innerHTML = ""; // Clear old suggestions
-  chatInput.disabled = true; // Disable the textarea
-  chatInput.placeholder = ""; // Remove the placeholder text
+  chatInput.disabled = false; // Ensure the textarea remains active
+  chatInput.placeholder = "Schrijf hier je antwoord..."; // Show the placeholder
 
   suggestions.forEach(({ text, response }) => {
     const button = document.createElement("button");
     button.textContent = text;
+
+    // When a suggestion is clicked
     button.addEventListener("click", () => {
       userResponses.emotion = text; // Save the selected emotion
-
-      sorrybox.appendChild(createChatLi(text, "outgoing"));
+      sorrybox.appendChild(createChatLi(text, "outgoing")); // Show the clicked suggestion as outgoing
       sorrybox.scrollTo(0, sorrybox.scrollHeight);
 
       // Pick a random response
@@ -239,86 +238,81 @@ const showSuggestions = () => {
       const randomFollowUp =
         followUpQuestions[Math.floor(Math.random() * followUpQuestions.length)];
 
-      setTimeout(() => {
-        generateResponse(randomResponse, randomFollowUp); // Second question with variation
-      }, 800);
+      // Clear suggestions after selection
+      suggestionsContainer.innerHTML = "";
 
-      suggestionsContainer.innerHTML = ""; // Clear suggestions
-      chatInput.disabled = false; // Enable the textarea
-      chatInput.placeholder = "Schrijf hier je antwoord..."; // Restore the placeholder
+      setTimeout(() => {
+        generateResponse(randomResponse, randomFollowUp); // Generate response
+      }, 800);
     });
+
     suggestionsContainer.appendChild(button);
   });
 };
 
 // Functie om Ja/Nee suggesties te tonen voor de derde vraag
 const showYesNoSuggestions = () => {
-  suggestionsContainer.innerHTML = ""; // Wis oude suggesties
-  chatInput.disabled = true; // Zet textarea uit zodat gebruikers niet kunnen typen
-  chatInput.placeholder = ""; // Verwijder de placeholder tekst
+  suggestionsContainer.innerHTML = ""; // Clear old suggestions
+  chatInput.disabled = false; // Keep textarea active
+  chatInput.placeholder = "Schrijf hier je antwoord..."; // Ensure placeholder stays visible
 
   ["Ja", "Nee"].forEach((text) => {
     const button = document.createElement("button");
     button.textContent = text;
+
+    // Handle button click
     button.addEventListener("click", () => {
-      sorrybox.appendChild(createChatLi(text, "outgoing"));
+      sorrybox.appendChild(createChatLi(text, "outgoing")); // Append outgoing message
       sorrybox.scrollTo(0, sorrybox.scrollHeight);
+
+      // Clear suggestions after selection
+      suggestionsContainer.innerHTML = "";
 
       setTimeout(() => {
         if (text === "Ja") {
-          // Array of positive responses
           const positiveResponses = [
             "Dat is een mooie beslissing. Laten we samen werken aan een goed sorry.",
             "Top dat je die keuze maakt! We gaan samen iets goeds bedenken.",
-            "Echt goed van je! Laten we kijken hoe we dit het beste kunnen aanpakken.",
-            "Super! We gaan ervoor en maken er een mooi sorry van.",
           ];
-
-          // Choose a random response
           const randomResponse =
             positiveResponses[
               Math.floor(Math.random() * positiveResponses.length)
             ];
 
           generateResponse(randomResponse);
-          setTimeout(generateSorryLetter, 1200); // Genereer de sorry-brief
+          setTimeout(generateSorryLetter, 1200); // Generate the apology letter
         } else {
           generateResponse(
-            "Ik begrijp dat het moeilijk kan zijn om sorry te zeggen. Maar sorry zeggen kan helpen om jezelf beter te voelen en de situatie op te lossen. Wil je er nog eens over nadenken?",
-            "Wil je sorry zeggen?" // Vraag opnieuw
+            "Ik begrijp dat het moeilijk kan zijn om sorry te zeggen. Wil je er nog eens over nadenken?",
+            "Wil je sorry zeggen?" // Re-prompt
           );
         }
       }, 800);
-
-      suggestionsContainer.innerHTML = ""; // Wis suggesties
-      chatInput.disabled = false; // Zet textarea weer aan
-      chatInput.placeholder = "Schrijf hier je antwoord..."; // Zet de placeholder terug
     });
+
     suggestionsContainer.appendChild(button);
   });
 };
 
 // Functie om de chat af te handelen voor gebruikersinvoer
 const handleChat = () => {
-  userMessage = chatInput.value.trim();
-  if (!userMessage) return;
+  userMessage = chatInput.value.trim(); // Get user input
+  if (!userMessage) return; // Skip empty input
 
-  sorrybox.appendChild(createChatLi(userMessage, "outgoing"));
+  sorrybox.appendChild(createChatLi(userMessage, "outgoing")); // Display user message
   sorrybox.scrollTo(0, sorrybox.scrollHeight);
 
-  userResponses.situation = userMessage; // Sla de situatie op
+  userResponses.situation = userMessage; // Save user input
+  chatInput.value = ""; // Clear textarea
+  chatInput.style.height = "40px"; // Reset height
 
-  chatInput.value = ""; // Wis de invoer
-  chatInput.style.height = "40px"; // Reset de hoogte
+  // Clear suggestions after user input
+  suggestionsContainer.innerHTML = "";
 
-  // Array of response variations
   const thankYouResponses = [
     "Dank je dat je dit met me deelt.",
     "Goed dat je het zegt, zo kunnen we er samen naar kijken.",
-    "Bedankt dat je dit met mij hebt gedeeld.",
   ];
-
-  // Pick a random response
   const randomThankYou =
     thankYouResponses[Math.floor(Math.random() * thankYouResponses.length)];
 
