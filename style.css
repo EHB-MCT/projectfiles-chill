@@ -869,7 +869,7 @@ body.no-overflow-hidden {
 }
 
 .secondary {
-  margin-top: 8vh;
+  margin-top: -9vh;
   text-align: center;
 }
 
@@ -888,6 +888,28 @@ body.no-overflow-hidden {
   object-fit: contain;
   padding: 5vh;
   width: 35vh;
+}
+
+.carrousel {
+  width: 80%;
+  display: flex;
+  justify-self: center;
+}
+
+.carrousel a {
+  width: 60vh;
+}
+
+.functie {
+  border-style: solid;
+  border-color: white;
+  padding: 5vh;
+  margin: 4vh;
+  height: 65vh;
+}
+
+.functie img {
+  width: 80%;
 }
 
 /* end index.html */
