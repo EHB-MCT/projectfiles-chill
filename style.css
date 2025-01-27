@@ -814,21 +814,38 @@ input[type="text"]::placeholder {
   margin-top: 4vh;
 }
 
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.links a {
+  margin: 2vh;
+}
+
+#secondary-call-to-action {
+  color: #ffffff;
+  text-decoration: underline white;
+  font-size: 2.5vh;
+}
+
 .primary img {
-  position: absolute;
+  position: relative;
   z-index: -1;
   width: 12vh;
 }
 
 #vertical {
-  left: 10vh;
-  top: 45vh;
+  right: 60vh;
+  top: -25vh;
 }
 
 #horizontal {
   rotate: 90deg;
-  right: 15vh;
-  top: 17vh;
+  right: -65vh;
+  top: -55vh;
 }
 
 .index-button {
