@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
-  font-size: 6vw;
+  font-size: 4vw;
   color: #ffffff;
   font-weight: 100;
 }
@@ -654,7 +654,9 @@ li a.active {
   padding: 1.5vh 3vw;
   font-size: 2.5vh;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -799,6 +801,118 @@ input[type="text"]::placeholder {
   cursor: pointer;
   margin-left: 50px;
 }
+
+/*index.html*/
+
+.primary {
+  text-align: center;
+  width: 50%;
+}
+
+.primary p {
+  margin-bottom: 10vh;
+  margin-top: 4vh;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.links a {
+  margin: 2vh;
+}
+
+#secondary-call-to-action {
+  color: #ffffff;
+  text-decoration: underline white;
+  font-size: 2.5vh;
+}
+
+.primary img {
+  position: relative;
+  z-index: -1;
+  width: 12vh;
+}
+
+#vertical {
+  right: 60vh;
+  top: -25vh;
+}
+
+#horizontal {
+  rotate: 90deg;
+  right: -65vh;
+  top: -55vh;
+}
+
+.index-button {
+  background-color: #e62e5a;
+  border: none;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 25px;
+  font-family: "lores-12", sans-serif;
+  transition: all 0.1s ease;
+  text-decoration: none;
+}
+
+.index-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+body.no-overflow-hidden {
+  overflow: auto;
+}
+
+.secondary {
+  margin-top: -9vh;
+  text-align: center;
+}
+
+.third {
+  width: 70%;
+  text-align: center;
+}
+
+.partner-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.partner-images img {
+  object-fit: contain;
+  padding: 5vh;
+  width: 35vh;
+}
+
+.carrousel {
+  width: 80%;
+  display: flex;
+  justify-self: center;
+}
+
+.carrousel a {
+  width: 60vh;
+}
+
+.functie {
+  border-style: solid;
+  border-color: white;
+  padding: 5vh;
+  margin: 4vh;
+  height: 65vh;
+}
+
+.functie img {
+  width: 80%;
+}
+
+/* end index.html */
 
 @media (max-width: 768px) {
   html,
