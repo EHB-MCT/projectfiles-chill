@@ -1522,6 +1522,40 @@ body.no-overflow-hidden {
   overflow: auto;
 }
 
+.sparkles2 img {
+  position: relative;
+  z-index: -1;
+}
+
+.small {
+  bottom: 30vh;
+  left: 35vh;
+  width: 12vh;
+}
+
+.purple-big {
+  bottom: 35vh;
+  left: 55vh;
+}
+
+.purple {
+  bottom: 65vh;
+  width: 8vh;
+}
+
+.sparkle-1 {
+  bottom: 80vh;
+  width: 10vh;
+  left: 10vh;
+}
+
+.sparkle-2 {
+  top: -135vh;
+  rotate: 90deg;
+  right: 100vh;
+  width: 15vh;
+}
+
 @media (max-width: 478px) {
   .no-overflow-hidden {
     overflow-x: hidden;
@@ -1552,6 +1586,10 @@ body.no-overflow-hidden {
     width: 10%;
   }
 
+  .secondary {
+    width: 100%;
+  }
+
   #secondary-call-to-action {
     font-size: 2vh;
   }
@@ -1566,7 +1604,7 @@ body.no-overflow-hidden {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 16px;
-    width: 45%;
+    width: 80%;
   }
 
   .carrousel a {
