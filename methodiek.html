@@ -86,6 +86,7 @@
                     <div class="sort-buttons">
                         <button class="sort-az">A ➔ Z</button>
                         <button class="sort-date">Nieuw ➔ Oud</button>
+                        <button class="filter-toggle">Filter</button>
                         <div class="filters-mobile">
                             
                             <button class="clear-filters">Filter leegmaken</button>
@@ -154,5 +155,20 @@
                     </div>    
                 </section>
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  const filterToggleButton = document.querySelector(".filter-toggle");
+                  const filterSection = document.querySelector(".filters-mobile");
+          
+                  filterToggleButton.addEventListener("click", function() {
+                    filterSection.classList.toggle("active");
+                    if (filterSection.classList.contains("active")) {
+                      filterSection.style.display = "block";
+                    } else {
+                      filterSection.style.display = "none";
+                    }
+                  });
+                });
+              </script>
 	</body>
 </html>

@@ -1179,7 +1179,6 @@ input[type="text"] {
   font-size: 30px;
 }
 
-
 .content {
   width: 75%;
   padding: 20px 70px
@@ -1259,7 +1258,9 @@ input[type="text"] {
   display: none;
 }
 
-
+.sort-buttons .filter-toggle{
+  display: none;
+}
 
 @media (max-width: 478px) {
 
@@ -2227,7 +2228,12 @@ body.no-overflow-hidden {
   }
 
   .filters-mobile{
+    display: none;
+  }
+
+  .sort-buttons .filter-toggle{
     display: block;
   }
+  
 }
 
