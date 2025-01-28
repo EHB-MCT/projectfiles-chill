@@ -50,3 +50,7 @@ The localstorage of the gif and the switching of the 2 gifs
 [Chatgpt.com](https://chatgpt.com/share/67936ac8-b8dc-8007-a21e-4ac76b0aa2a9)
 Generate a link for the emotiefinishpage
 [Chatgpt.com](https://chatgpt.com/share/67936ac8-b8dc-8007-a21e-4ac76b0aa2a9)
+
+# Methodiek
+
+[ChatGPT Conversation for the filter](https://chatgpt.com/share/6799272e-aac0-8004-beb2-c42658086d78)

@@ -1262,6 +1262,10 @@ input[type="text"] {
   display: none;
 }
 
+.search-sort-mobile {
+  display: none;
+}
+
 @media (max-width: 478px) {
 
 	html,
@@ -2235,6 +2239,13 @@ body.no-overflow-hidden {
     display: block;
   }
   
+  .search-sort-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative  ;
+    top: 0;
+}
   
 }
 
