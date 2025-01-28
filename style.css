@@ -1527,13 +1527,46 @@ body.no-overflow-hidden {
     overflow-x: hidden;
   }
 
+  .container {
+    padding-top: 13vh;
+  }
+
+  .primary {
+    width: 80%;
+  }
+
+  .primary p {
+    font-size: 4vw;
+    margin-bottom: 4vh;
+  }
+
+  #horizontal {
+    right: -22vh;
+    top: -52vh;
+    width: 10%;
+  }
+
+  #vertical {
+    right: 22vh;
+    top: -24vh;
+    width: 10%;
+  }
+
+  #secondary-call-to-action {
+    font-size: 2vh;
+  }
+
+  .index-button {
+    font-size: 15px;
+  }
+
   .carrousel {
     display: flex;
     gap: 16px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 16px;
-    width: 35%;
+    width: 45%;
   }
 
   .carrousel a {
@@ -1560,12 +1593,12 @@ body.no-overflow-hidden {
   }
 
   .third {
-    width: 80%;
+    width: 82%;
   }
 
   .partner-images img {
     padding: 1.5vh;
-    width: 12vh;
+    width: 15vh;
   }
 }
 
