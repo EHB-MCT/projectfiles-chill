@@ -2198,7 +2198,6 @@ body.no-overflow-hidden {
 
   .article {
     align-items: center;
-    text-align: center;
     padding: 10px;
   }
 
@@ -2213,6 +2212,10 @@ body.no-overflow-hidden {
 
   .article .text p {
     font-size: 0.9rem;
+    }
+
+    .text {
+      padding-left: 0;
     }
 }
 
