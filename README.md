@@ -20,11 +20,10 @@ We imported it from another repository that we created before this repository wa
 
 [Chatbot HTML CSS JavaScript](https://youtu.be/Bv8FORu-ACA?si=waKLsf2wM4lzvmfr)
 [ChatGPT Conversation for designing the chatbot in the middle](https://chatgpt.com/share/6788fb6a-5260-8004-bff5-6bdae33e6bb0)
-
 [ChatGPT Conversation for Making a scenario chatbot](https://chatgpt.com/share/6790d49a-8c54-8001-a3db-3c65f35a18ee)
 [ChatGPT Conversation for making a generated sorry letter](https://chatgpt.com/share/6790d4ee-1770-8001-b9f4-6f278ae4f8f0)
+[Veranderen van AI](https://chatgpt.com/share/67989c0a-0bbc-8001-beea-ceedb78e0fb6)
 
-https://chatgpt.com/share/679795ae-9408-800f-99ca-125e7930ea43
 
 # Origami-branch
 

@@ -1,58 +1,65 @@
-const fetch = require("node-fetch"); // Import fetch for API calls
-const express = require("express"); // Express for setting up the server
+const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const fetch = require("node-fetch");
 
 const app = express();
 const PORT = 3000;
 
-// Your Cohere API key
-const COHERE_API_KEY = "aELBuIbAeSnMbyg3FkAZqgspYfPVxjrAuD90FE5L";
+// OpenAI API Key
+const OPENAI_API_KEY = "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";
 
 app.use(cors());
 app.use(bodyParser.json());
 
-// Endpoint for generating a sorry letter
-app.post("/generate-sorry-letter", async (req, res) => {
-  const { emotion, situation } = req.body;
+// Chat endpoint
+app.post("/chat", async (req, res) => {
+  const { message, context } = req.body;
 
-  // Short and simple prompt for kids
-  const prompt = `Schrijf een korte en eenvoudige sorry-brief voor een kind. Houd rekening met deze informatie:
-  - Emotie: ${emotion}.
-  - Situatie: ${situation}.
-  Zorg dat de brief niet langer is dan 5 zinnen.`;
+  // Construct a strict system role
+  const prompt = `
+Je bent SorryBot, een AI-assistent die mensen helpt om oprechte excuses te maken en empathie te tonen. Je blijft strikt in het thema van verontschuldigingen, empathie en het herstellen van relaties. 
+Je beantwoordt GEEN algemene kennisvragen, vragen over politiek, geschiedenis of iets dat niet gerelateerd is aan het thema van Sorrybox. 
+Als een vraag buiten je thema valt, reageer je vriendelijk met iets als: "Sorry, daar kan ik je niet mee helpen. Ik ben hier om je te helpen excuses te maken of empathie te tonen."
+
+Hier is de huidige context:
+${JSON.stringify(context)}
+
+De gebruiker zegt:
+"${message}"
+
+Reageer binnen je rol en focus op excuses en empathie. Vraag door naar emoties of situaties als dat nodig is.
+`;
 
   try {
-    // Call Cohere API
-    const response = await fetch("https://api.cohere.ai/v1/generate", {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${COHERE_API_KEY}`,
         "Content-Type": "application/json",
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "command-xlarge-nightly", // The AI model to use
-        prompt: prompt,
-        max_tokens: 150, // Limit the number of generated tokens
-        temperature: 0.7, // Adjust creativity (0.7 is balanced)
+        model: "gpt-4",
+        messages: [{ role: "system", content: prompt }],
+        max_tokens: 300,
+        temperature: 0.7,
       }),
     });
 
-    // Parse the response
     const data = await response.json();
-    const apologyLetter = data.generations[0].text.trim();
+    const reply = data.choices[0].message.content;
 
-    // Send the apology letter back to the client
-    res.status(200).send({ apologyLetter });
+    // Optional: update context with AI suggestions
+    const updatedContext = { ...context }; // Add more context logic if needed
+
+    res.json({ reply, context: updatedContext });
   } catch (error) {
-    console.error("Cohere API Error:", error.message);
-    res.status(500).send({
-      error: "Er ging iets mis bij het genereren van de sorry-brief.",
-    });
+    console.error("Error with OpenAI API:", error);
+    res.status(500).json({ error: "Error generating response" });
   }
 });
 
-// Start the server
+// Start server
 app.listen(PORT, () => {
-  console.log(`Server draait op http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
