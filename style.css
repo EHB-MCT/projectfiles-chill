@@ -1678,6 +1678,36 @@ body.no-overflow-hidden {
   max-width: 80%;
   margin-top: 90px;
 }
+
+.doel-text {
+  max-width: 80%;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.doels {
+  display: grid;
+  grid-template-rows: repeat(3, 2px);
+  gap: 80px;
+  margin-top: 50px;
+  
+}
+
+.doel-container {
+  width: 1400px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  margin-left: 50px;
+}
+
+.doel-container p {
+  margin-left: 25px;
+}
+
 /* end index.html */
 
 @media (max-width: 768px) {
