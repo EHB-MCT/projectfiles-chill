@@ -1252,6 +1252,136 @@ input[type="text"] {
 .search-sort-mobile {
   display: none;
 }
+/*SORRYBOX 2.O*/
+.sorry-twoo {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.sorry-twoo-text {
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin-top: 35px;
+  margin-left: 50px;
+}
+
+.sorry-twoo h2 {
+  margin: 0 0 5px 0;
+}
+
+.sorry-twoo p {
+  margin: 0;
+}
+
+.sorry-twoo img{
+  margin-top: 65px;
+}
+
+.sorry-container{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.sorry-container-image img{
+  margin-top: 50px;
+  max-width: 650px;
+  margin-left: 50px;
+}
+
+.sorry-container-text p{
+  margin-left: 50px;
+  max-width: 80%;
+  margin-top: 90px;
+}
+
+.doel-text {
+  max-width: 80%;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.doels {
+  display: grid;
+  grid-template-rows: repeat(3, 2px);
+  gap: 80px;
+  margin-top: 50px;
+  
+}
+
+.doel-container {
+  width: 1400px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  margin-left: 50px;
+}
+
+.doel-container p {
+  margin-left: 25px;
+}
+
+.opleding-text {
+  max-width: 1500px;
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+.opleding-text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*WERKWIJZE*/
+
+.werkwijze {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.werkwijze-text {
+  max-width: 80%;
+  margin-top: 20px;
+  margin-left: 50px;
+  gap: 20px;
+}
+
+.stuurgroeps {
+  display: grid;
+  grid-template-rows: repeat(5, 80px);
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.stuurgroep {
+  width: 1400px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.stuurgroep p {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.werkwijze-container-text {
+  max-width: 70%;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
 
 @media (max-width: 478px) {
   html,
@@ -2387,9 +2517,6 @@ body.no-overflow-hidden {
     top: 0;
 }
   
-}
-
-
 .sorry-twoo-text h2{
   font-size: 24px;
 }
