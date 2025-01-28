@@ -53,3 +53,7 @@ Generate a link for the emotiefinishpage
 
 To make the carrousel scrollable in mobile version
 [Chatgpt.com](https://chatgpt.com/share/6798a736-5c10-800e-999e-0a84147954b0)
+
+# Methodiek
+
+[ChatGPT Conversation for the filter](https://chatgpt.com/share/6799272e-aac0-8004-beb2-c42658086d78)
