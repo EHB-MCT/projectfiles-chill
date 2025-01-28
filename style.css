@@ -1620,7 +1620,50 @@ body.no-overflow-hidden {
 }
 
 
-/* end index.html */
+/*WERKWIJZE*/
+
+.werkwijze{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.werkwijze-text{
+  max-width: 80%;
+  margin-top: 20px;
+  margin-left: 50px;
+  gap: 20px;
+
+}
+
+.stuurgroeps {
+  display: grid;
+  grid-template-rows: repeat(5, 80px);
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.stuurgroep {
+  width: 1400px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  
+}
+
+.stuurgroep p {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.werkwijze-container-text{
+  max-width: 70%;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
 
 @media (max-width: 768px) {
   html,
@@ -1980,4 +2023,59 @@ body.no-overflow-hidden {
   .wie-zijn-wij-extrainfo-contact p {
     font-size: 0.9rem;
 
+}
+
+.werkwijze {
+  flex-wrap: wrap; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 20px; 
+}
+
+.werkwijze-text {
+  max-width: 80%; 
+  margin-top: 80px; 
+  margin-left: 30px; 
+  gap: 10px; 
+}
+
+.werkwijze-text p {
+  font-size: 0.9rem;
+}
+
+.werkwijze-text h2 {
+  font-size: 24px;
+}
+
+
+.stuurgroeps {
+  grid-template-rows: auto; 
+  margin-top: 20px; 
+  margin-left: 30px; 
+  gap: 15px; 
+}
+
+.stuurgroep {
+  width: 90%; 
+  height: auto; 
+  flex-direction: column; 
+  padding: 5px; 
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+}
+
+.stuurgroep p {
+  font-size: 0.9rem;
+  margin-top: 10px; 
+   
+}
+
+.werkwijze-container-text{
+  max-width: 80%;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.werkwijze-container-text p{
+  font-size: 0.9rem;
+}
 }
