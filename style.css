@@ -1522,6 +1522,44 @@ body.no-overflow-hidden {
   overflow: auto;
 }
 
+@media (max-width: 478px) {
+  .no-overflow-hidden {
+    overflow-x: hidden;
+  }
+
+  .carrousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 16px;
+    width: 35%;
+  }
+
+  .carrousel a {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    width: 35vh;
+  }
+
+  .functie {
+    padding: 16px;
+    width: 35vh;
+    margin: 0;
+    height: 52vh;
+  }
+
+  .functie p {
+    font-size: 2.5vh;
+  }
+
+  .functie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+}
+
 /*end of index.html*/
 
 .wie-zijn-wij {
