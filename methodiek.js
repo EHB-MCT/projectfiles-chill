@@ -43,15 +43,3 @@ document.addEventListener("DOMContentLoaded", () => {
         showPage(1, articles, articlesPerPage);
     }
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const filterToggle = document.querySelector(".filter-toggle");
-    const filters = document.querySelector(".filters");
-
-    filterToggle.addEventListener("click", () => {
-        filters.classList.toggle("open"); // Toggle 'open' class
-        filterToggle.textContent = filters.classList.contains("open")
-            ? "Close Filters"
-            : "Filters";
-    });
-});
