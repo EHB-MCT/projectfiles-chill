@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/sid3fky.css" />
+		<script src="./menu.js"></script>
+		<script src="sticker.js" defer></script>
+	</head>
+	<body>
+		<nav>
+			<a href="index.html" class="logo">
+				<img src="./icons/logo.svg" alt="SorryBox Logo" class="logo-image" />
+			</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="chatbot-loadingpage.html">Sorrybot</a></li>
+				<li><a href="4methods.html" class="active">Sorrytools</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropbtn"
+						>Over ons<i class="bx bxs-chevron-down arrow"></i
+					></a>
+					<ul class="dropdown-content">
+						<li><a href="wiezijnwe.html">Wie zijn we?</a></li>
+						<li><a href="werkwijze.html">Werkwijze</a></li>
+						<li><a href="sorrybox2.html">SorryBox 2.0</a></li>
+						<li><a href="methodieken.html">Methodieken</a></li>
+					</ul>
+				</li>
+			</ul>
+			<img
+				src="./icons/Hamburger.svg"
+				alt="menu hamburger"
+				class="menu-hamburger"
+			/>
+		</nav>
+
+		<div class="edit-sticker-container">
+			<div class="edit-left">
+				<h2>Bewerk</h2>
+				<div class="controls">
+					<div class="dropdown-edit-content">
+						<div class="dropdown-edit">
+							<button id="color-btn">Kleuren</button>
+							<div class="dropdown-edit-content" id="dropdown-edit-content">
+								<label><input type="checkbox" /> Rood</label>
+								<label><input type="checkbox" /> Oranje</label>
+								<label><input type="checkbox" /> Geel</label>
+								<label><input type="checkbox" /> Groen</label>
+								<label><input type="checkbox" /> Blauw</label>
+							</div>
+						</div>
+
+						<div class="dropdown-edit">
+							<button id="typography-btn">Typografie</button>
+							<div class="dropdown-typo-content" id="dropdown-typo-content">
+								<div class="typo-1">Typografie</div>
+								<div class="typo-2">Typografie</div>
+								<div class="typo-3">Typografie</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="edit-right">
+				<div class="edit-right-contain">
+					<div class="btn-titel">
+						<a href="./sticker-page.html"
+							><img
+								src="./icons/back-button.png"
+								alt="Back Button"
+								class="back-button"
+							/>
+						</a>
+					</div>
+					<div class="sticker-preview">
+						<img id="selected-sticker" src="" alt="Selected Sticker" />
+					</div>
+
+					<textarea
+						placeholder="Een kleine bericht op de sticker?"
+						id="sticker-message"
+					></textarea>
+					<div class="sticker-button">
+						<button>Delen</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function toggleDropdown(dropdownContentId) {
+				const dropdownContent = document.getElementById(dropdownContentId);
+
+				dropdownContent.classList.toggle("show");
+			}
+
+			document
+				.getElementById("color-btn")
+				.addEventListener("click", function (event) {
+					event.stopPropagation();
+					toggleDropdown("dropdown-edit-content");
+				});
+
+			document
+				.getElementById("typography-btn")
+				.addEventListener("click", function (event) {
+					event.stopPropagation();
+					toggleDropdown("dropdown-typo-content");
+				});
+
+			window.addEventListener("click", function () {
+				const dropdowns = document.querySelectorAll(
+					".dropdown-edit-content, .dropdown-typo-content"
+				);
+				dropdowns.forEach((dropdown) => {
+					dropdown.classList.remove("show");
+				});
+			});
+		</script>
+	</body>
+</html>

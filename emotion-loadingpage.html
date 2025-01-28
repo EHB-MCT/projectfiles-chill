@@ -9,6 +9,9 @@
 		<script>
 			window.onload = function () {
 				const content = document.querySelector(".loading-container");
+				// Play the audio
+				const audio = new Audio("audio/3-second.mp3");
+				audio.play();
 
 				setTimeout(function () {
 					content.classList.add("show");

@@ -18,6 +18,9 @@
 				<li><a href="chatbot-loadingpage.html">Sorrybot</a></li>
 				<li><a href="4methods.html" class="active">Sorrytools</a></li>
 				<li class="dropdown">
+					<a href="#" class="dropbtn"
+						>Over ons<i class="bx bxs-chevron-down arrow"></i
+					></a>
 					<ul class="dropdown-content">
 						<li><a href="wiezijnwe.html">Wie zijn we?</a></li>
 						<li><a href="werkwijze.html">Werkwijze</a></li>
@@ -33,46 +36,68 @@
 			/>
 		</nav>
 		<div class="sticker-container">
-			<a href="./4methods.html"
-				><img
-					src="./icons/back-button.png"
-					alt="Back Button"
-					class="back-button"
-				/>
-			</a>
-			<h2>Kies een sticker dat je will aanpassen</h2>
+			<div class="btn-titel">
+				<a href="./origami-chosepage.html"
+					><img
+						src="./icons/back-button.png"
+						alt="Back Button"
+						class="back-button"
+					/>
+				</a>
+				<h2>Kies een sticker dat je will aanpassen</h2>
+			</div>
 			<div class="stickers">
-				<div class="sticker">
+				<div
+					class="sticker"
+					onclick="selectSticker('./stickers/heart-sticker.svg')"
+				>
 					<img src="./stickers/heart-sticker.svg" alt="Heart Sticker" />
 				</div>
-				<div class="sticker">
-					<img src="./stickers/wizard-sticker.svg" alt="Wizard Sticker" />
+				<div class="sticker" onclick="selectSticker('./stickers/Triestig.svg')">
+					<img src="./stickers/Triestig.svg" alt="Triestig Sticker" />
 				</div>
-				<div class="sticker">
+				<div
+					class="sticker"
+					onclick="selectSticker('./stickers/controller-sticker.svg')"
+				>
 					<img
 						src="./stickers/controller-sticker.svg"
 						alt="Controller Sticker"
 					/>
 				</div>
-				<div class="sticker">
-					<img src="./stickers/kirby-sticker.svg" alt="Kirby Sticker" />
+				<div class="sticker" onclick="selectSticker('./stickers/Peace.svg')">
+					<img src="./stickers/Peace.svg" alt="Peace Sticker" />
 				</div>
-				<div class="sticker">
-					<img src="./stickers/candy-sticker.svg" alt="Candy Sticker" />
+				<div class="sticker" onclick="selectSticker('./stickers/Love.svg')">
+					<img src="./stickers/Love.svg" alt="Love Sticker" />
 				</div>
-				<div class="sticker">
+				<div
+					class="sticker"
+					onclick="selectSticker('./stickers/rainbow-sticker.svg')"
+				>
 					<img src="./stickers/rainbow-sticker.svg" alt="Rainbow Sticker" />
 				</div>
-				<div class="sticker">
-					<img src="./stickers/pink-sticker.svg" alt="Hippo Sticker" />
+
+				<div class="sticker" onclick="selectSticker('./stickers/Bloem.svg')">
+					<img src="./stickers/Bloem.svg" alt="Bloem Sticker" />
 				</div>
-				<div class="sticker">
-					<img src="./stickers/flame-sticker.svg" alt="Fire Sticker" />
+				<div class="sticker" onclick="selectSticker('./stickers/Smile.svg')">
+					<img src="./stickers/Smile.svg" alt="Smile Sticker" />
 				</div>
-				<div class="sticker">
-					<img src="./stickers/planet-sticker.svg" alt="Planet Sticker" />
+				<div
+					class="sticker"
+					onclick="selectSticker('./stickers/planet-sticker.svg')"
+				>
+					<img src="./stickers/planet-sticker.svg" alt="Rainbow Sticker" />
 				</div>
 			</div>
 		</div>
+
+		<script>
+			function selectSticker(src) {
+				localStorage.setItem("selectedSticker", src);
+				window.location.href = "./sticker-edit-page.html";
+			}
+		</script>
 	</body>
 </html>
