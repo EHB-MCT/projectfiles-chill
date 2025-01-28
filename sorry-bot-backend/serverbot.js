@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -7,7 +8,7 @@ const app = express();
 const PORT = 3000;
 
 // OpenAI API Key
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -38,8 +39,33 @@ De gebruiker zegt:
 Reageer empathisch, reflectief, en zonder oordeel. Vraag door om de gebruiker verder te helpen bij het herstel van de situatie.
 `;
 
-  try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+try {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: "gpt-4",
+      messages: [{ role: "system", content: prompt }],
+      max_tokens: 300,
+      temperature: 0.7,
+    }),
+  });
+
+  const data = await response.json();
+  const reply = data.choices[0].message.content;
+
+  // Check if the user is ready to create a sorry letter for a child
+  if (message.toLowerCase().includes("kind") && message.toLowerCase().includes("sorry")) {
+    const sorryLetterPrompt = `
+    Stel je voor dat je een brief schrijft aan een kind. De situatie is als volgt: "${message}". 
+    De brief moet verontschuldigen op een eenvoudige, oprechte manier, met nadruk op verantwoordelijkheid nemen en beloven om het beter te doen. 
+    Zorg ervoor dat de brief positief, liefdevol en begrijpelijk is voor een kind.
+    `;
+    
+    const letterResponse = await fetch("https://api.openai.com/v1/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,26 +73,27 @@ Reageer empathisch, reflectief, en zonder oordeel. Vraag door om de gebruiker ve
       },
       body: JSON.stringify({
         model: "gpt-4",
-        messages: [{ role: "system", content: prompt }],
+        prompt: sorryLetterPrompt,
         max_tokens: 300,
         temperature: 0.7,
       }),
     });
 
-    const data = await response.json();
-    const reply = data.choices[0].message.content;
+    const letterData = await letterResponse.json();
+    const sorryLetter = letterData.choices[0].text;
 
-    // Optional: update context with AI suggestions
-    const updatedContext = { ...context }; // Add more context logic if needed
-
-    res.json({ reply, context: updatedContext });
-  } catch (error) {
-    console.error("Error with OpenAI API:", error);
-    res.status(500).json({ error: "Error generating response" });
+    res.json({ reply: sorryLetter, context });
+  } else {
+    // Normal reflection-based response
+    res.json({ reply, context });
   }
+} catch (error) {
+  console.error("Error with OpenAI API:", error);
+  res.status(500).json({ error: "Error generating response" });
+}
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+console.log(`Server is running on http://localhost:${PORT}`);
 });
