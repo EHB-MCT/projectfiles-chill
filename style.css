@@ -1255,6 +1255,12 @@ input[type="text"] {
   background: #a81f3f;
 }
 
+.filters-mobile{
+  display: none;
+}
+
+
+
 @media (max-width: 478px) {
 
 	html,
@@ -2138,9 +2144,11 @@ body.no-overflow-hidden {
     flex-direction: column;
     display: flex;
     width: 100%;
+    margin: 10vh auto;
   }
 
   .filters {
+    display: none;
     width: 100%;
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -2211,11 +2219,15 @@ body.no-overflow-hidden {
   }
 
   .article .text p {
-    font-size: 0.9rem;
-    }
+  font-size: 0.9rem;
+  }
 
-    .text {
-      padding-left: 0;
-    }
+  .text {
+  padding-left: 0;
+  }
+
+  .filters-mobile{
+    display: block;
+  }
 }
 

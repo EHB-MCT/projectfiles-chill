@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const articlesPerPage = 10;
     const container = document.querySelector(".content");
 
-    // Create pagination
     const createPagination = (totalArticles, articlesPerPage) => {
         const totalPages = Math.ceil(totalArticles / articlesPerPage);
         const paginationContainer = document.createElement("div");
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         container.appendChild(paginationContainer);
 
-        // Add event listeners to buttons
         const buttons = paginationContainer.querySelectorAll(".page-button");
         buttons.forEach((button) => {
             button.addEventListener("click", (e) => {
@@ -28,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Function to show a specific page
     const showPage = (page, articles, articlesPerPage) => {
         articles.forEach((article, index) => {
             const start = (page - 1) * articlesPerPage;
@@ -41,9 +38,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Initialize
     if (articles.length > articlesPerPage) {
         createPagination(articles.length, articlesPerPage);
-        showPage(1, articles, articlesPerPage); // Show first page by default
+        showPage(1, articles, articlesPerPage);
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const filterToggle = document.querySelector(".filter-toggle");
+    const filters = document.querySelector(".filters");
+
+    filterToggle.addEventListener("click", () => {
+        filters.classList.toggle("open"); // Toggle 'open' class
+        filterToggle.textContent = filters.classList.contains("open")
+            ? "Close Filters"
+            : "Filters";
+    });
 });
