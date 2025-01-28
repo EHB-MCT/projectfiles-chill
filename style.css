@@ -1638,6 +1638,27 @@ body.no-overflow-hidden {
     padding: 1.5vh;
     width: 15vh;
   }
+
+  .purple-big {
+    display: none;
+  }
+
+  .small {
+    bottom: 24vh;
+    width: 6vh;
+  }
+
+  .purple {
+    bottom: 29vh;
+    width: 5vh;
+    left: 7vh;
+  }
+
+  .sparkle-1 {
+    bottom: 68vh;
+    width: 5vh;
+    left: 23vh;
+  }
 }
 
 /*end of index.html*/
