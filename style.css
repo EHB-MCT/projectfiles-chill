@@ -1558,6 +1558,15 @@ body.no-overflow-hidden {
     height: auto;
     margin-bottom: 8px;
   }
+
+  .third {
+    width: 80%;
+  }
+
+  .partner-images img {
+    padding: 1.5vh;
+    width: 12vh;
+  }
 }
 
 /*end of index.html*/
