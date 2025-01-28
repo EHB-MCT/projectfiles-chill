@@ -1522,6 +1522,144 @@ body.no-overflow-hidden {
   overflow: auto;
 }
 
+.sparkles2 img {
+  position: relative;
+  z-index: -1;
+}
+
+.small {
+  bottom: 30vh;
+  left: 35vh;
+  width: 12vh;
+}
+
+.purple-big {
+  bottom: 35vh;
+  left: 55vh;
+}
+
+.purple {
+  bottom: 65vh;
+  width: 8vh;
+}
+
+.sparkle-1 {
+  bottom: 80vh;
+  width: 10vh;
+  left: 10vh;
+}
+
+.sparkle-2 {
+  top: -135vh;
+  rotate: 90deg;
+  right: 100vh;
+  width: 15vh;
+}
+
+@media (max-width: 478px) {
+  .no-overflow-hidden {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-top: 13vh;
+  }
+
+  .primary {
+    width: 80%;
+  }
+
+  .primary p {
+    font-size: 4vw;
+    margin-bottom: 4vh;
+  }
+
+  #horizontal {
+    right: -22vh;
+    top: -52vh;
+    width: 10%;
+  }
+
+  #vertical {
+    right: 22vh;
+    top: -24vh;
+    width: 10%;
+  }
+
+  .secondary {
+    width: 100%;
+  }
+
+  #secondary-call-to-action {
+    font-size: 2vh;
+  }
+
+  .index-button {
+    font-size: 15px;
+  }
+
+  .carrousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 16px;
+    width: 80%;
+  }
+
+  .carrousel a {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    width: 35vh;
+  }
+
+  .functie {
+    padding: 16px;
+    width: 35vh;
+    margin: 0;
+    height: 52vh;
+  }
+
+  .functie p {
+    font-size: 2.5vh;
+  }
+
+  .functie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .third {
+    width: 82%;
+  }
+
+  .partner-images img {
+    padding: 1.5vh;
+    width: 15vh;
+  }
+
+  .purple-big {
+    display: none;
+  }
+
+  .small {
+    bottom: 24vh;
+    width: 6vh;
+  }
+
+  .purple {
+    bottom: 29vh;
+    width: 5vh;
+    left: 7vh;
+  }
+
+  .sparkle-1 {
+    bottom: 68vh;
+    width: 5vh;
+    left: 23vh;
+  }
+}
 
 .wie-zijn-wij {
   display: flex;
@@ -1619,21 +1757,19 @@ body.no-overflow-hidden {
   margin-left: 50px;
 }
 
-
 /*WERKWIJZE*/
 
-.werkwijze{
+.werkwijze {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
 }
 
-.werkwijze-text{
+.werkwijze-text {
   max-width: 80%;
   margin-top: 20px;
   margin-left: 50px;
   gap: 20px;
-
 }
 
 .stuurgroeps {
@@ -1650,7 +1786,6 @@ body.no-overflow-hidden {
   flex-direction: row;
   border: 2px solid #ffffff;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  
 }
 
 .stuurgroep p {
@@ -1658,12 +1793,11 @@ body.no-overflow-hidden {
   margin-left: 20px;
   margin-top: 20px;
 }
-.werkwijze-container-text{
+.werkwijze-container-text {
   max-width: 70%;
   margin-top: 50px;
   margin-left: 50px;
 }
-
 
 @media (max-width: 768px) {
   html,
@@ -2022,60 +2156,57 @@ body.no-overflow-hidden {
 
   .wie-zijn-wij-extrainfo-contact p {
     font-size: 0.9rem;
+  }
 
-}
+  .werkwijze {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 
-.werkwijze {
-  flex-wrap: wrap; 
-  flex-direction: column; 
-  align-items: flex-start; 
-  gap: 20px; 
-}
+  .werkwijze-text {
+    max-width: 80%;
+    margin-top: 80px;
+    margin-left: 30px;
+    gap: 10px;
+  }
 
-.werkwijze-text {
-  max-width: 80%; 
-  margin-top: 80px; 
-  margin-left: 30px; 
-  gap: 10px; 
-}
+  .werkwijze-text p {
+    font-size: 0.9rem;
+  }
 
-.werkwijze-text p {
-  font-size: 0.9rem;
-}
+  .werkwijze-text h2 {
+    font-size: 24px;
+  }
 
-.werkwijze-text h2 {
-  font-size: 24px;
-}
+  .stuurgroeps {
+    grid-template-rows: auto;
+    margin-top: 20px;
+    margin-left: 30px;
+    gap: 15px;
+  }
 
+  .stuurgroep {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
 
-.stuurgroeps {
-  grid-template-rows: auto; 
-  margin-top: 20px; 
-  margin-left: 30px; 
-  gap: 15px; 
-}
+  .stuurgroep p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
 
-.stuurgroep {
-  width: 90%; 
-  height: auto; 
-  flex-direction: column; 
-  padding: 5px; 
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
-}
+  .werkwijze-container-text {
+    max-width: 80%;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
 
-.stuurgroep p {
-  font-size: 0.9rem;
-  margin-top: 10px; 
-   
-}
-
-.werkwijze-container-text{
-  max-width: 80%;
-  margin-top: 50px;
-  margin-left: 30px;
-}
-
-.werkwijze-container-text p{
-  font-size: 0.9rem;
-}
+  .werkwijze-container-text p {
+    font-size: 0.9rem;
+  }
 }
