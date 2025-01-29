@@ -1,6 +1,6 @@
 let originalMethodieken = [];
 let currentPage = 1;
-const itemsPerPage = 10; // Number of articles per page
+const itemsPerPage = 10;
 
 async function fetchmethodieken() {
   try {
@@ -9,18 +9,17 @@ async function fetchmethodieken() {
       throw new Error("Failed to fetch players");
     }
     const methodieken = await response.json();
-    originalMethodieken = methodieken; // Save the original list
-    showPagination(methodieken); // Display pagination
-    showMethodieken(methodieken); // Display articles
+    originalMethodieken = methodieken;
+    showPagination(methodieken);
+    showMethodieken(methodieken);
   } catch (error) {
     console.error("Error: no methodieken available:", error);
   }
 }
 
-// Display the methodieken on the screen
 function showMethodieken(methodieken) {
   const box = document.getElementById("article-1");
-  box.innerHTML = ""; // Clear previous content
+  box.innerHTML = "";
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -53,12 +52,11 @@ function showMethodieken(methodieken) {
   });
 }
 
-// Create pagination buttons
 function showPagination(methodieken) {
   const totalPages = Math.ceil(methodieken.length / itemsPerPage);
   const paginationBox = document.getElementById("pagination");
 
-  paginationBox.innerHTML = ""; // Clear previous pagination buttons
+  paginationBox.innerHTML = "";
 
   for (let i = 1; i <= totalPages; i++) {
     const button = document.createElement("button");
@@ -69,10 +67,9 @@ function showPagination(methodieken) {
   }
 }
 
-// Handle page change
 function changePage(page) {
   currentPage = page;
-  showMethodieken(originalMethodieken); // Show articles for the selected page
+  showMethodieken(originalMethodieken);
 }
 
 fetchmethodieken();

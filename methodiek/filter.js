@@ -1,100 +1,47 @@
-    const filterToggleButton = document.querySelector(".filter-toggle");
-    const filterSection = document.querySelector(".filters-mobile");
-    const clearButton = document.querySelector(".clear-filters");
-    const clearButtonMobile = document.querySelector(".clear-filters-mobile");
-    const searchBarMobile = document.querySelector(".search-bar-mobile");
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchBar");
 
-    filterToggleButton.addEventListener("click", function() {
-        filterSection.classList.toggle("active");
-        filterSection.style.display = filterSection.classList.contains("active") ? "block" : "none";
+  document
+    .querySelectorAll(".age-filter, .methodiek-filter, .level-filter")
+    .forEach((filter) => {
+      filter.addEventListener("change", applyFilters);
     });
 
-    document.querySelectorAll(".age-filter, .methodiek-filter, .level-filter").forEach(checkbox => {
-        checkbox.addEventListener("change", filterContent);
-    });
+  if (searchInput) {
+    searchInput.addEventListener("input", applyFilters);
+  }
+});
 
-    if (searchBarMobile) {
-        searchBarMobile.addEventListener("input", filterContent);
-    }
+function applyFilters() {
+  const ageFilters = Array.from(
+    document.querySelectorAll(".age-filter:checked")
+  ).map((input) => input.value);
+  const methodiekFilters = Array.from(
+    document.querySelectorAll(".methodiek-filter:checked")
+  ).map((input) => input.value);
+  const levelFilters = Array.from(
+    document.querySelectorAll(".level-filter:checked")
+  ).map((input) => input.value);
+  const searchQuery =
+    document.getElementById("searchBar")?.value.trim().toLowerCase() || "";
 
-    clearButton.addEventListener("click", function() {
-        document.querySelectorAll(".age-filter, .methodiek-filter, .level-filter").forEach(checkbox => {
-            checkbox.checked = false;
-        });
-        if (searchBarMobile) searchBarMobile.value = "";
-        filterContent();
-    });
+  const filteredMethodieken = originalMethodieken.filter((methodiek) => {
+    const matchesAge =
+      ageFilters.length === 0 ||
+      ageFilters.some((filter) => methodiek.leeftijd.includes(filter));
+    const matchesMethodiek =
+      methodiekFilters.length === 0 ||
+      methodiekFilters.some((filter) => methodiek.methodiek.includes(filter));
+    const matchesLevel =
+      levelFilters.length === 0 ||
+      levelFilters.some((filter) =>
+        methodiek.ontwikkelingsniveau.includes(filter)
+      );
+    const matchesSearch =
+      !searchQuery || methodiek.titel.toLowerCase().includes(searchQuery);
 
-    clearButtonMobile.addEventListener("click", function() {
-        document.querySelectorAll(".age-filter, .methodiek-filter, .level-filter").forEach(checkbox => {
-            checkbox.checked = false;
-        });
-        if (searchBarMobile) searchBarMobile.value = "";
-        filterContent();
-    });
+    return matchesAge && matchesMethodiek && matchesLevel && matchesSearch;
+  });
 
-    filterContent();
-
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const searchBar = document.querySelector(".search-bar");
-        const ageFilters = document.querySelectorAll(".age-filter");
-        const methodiekFilters = document.querySelectorAll(".methodiek-filter");
-        const levelFilters = document.querySelectorAll(".level-filter");
-        const clearFiltersBtn = document.querySelector(".clear-filters");
-    
-        // Event listeners for filtering
-        searchBar.addEventListener("input", filterMethodieken);
-        ageFilters.forEach(filter => filter.addEventListener("change", filterMethodieken));
-        methodiekFilters.forEach(filter => filter.addEventListener("change", filterMethodieken));
-        levelFilters.forEach(filter => filter.addEventListener("change", filterMethodieken));
-        clearFiltersBtn.addEventListener("click", clearFilters);
-    
-        function filterMethodieken() {
-            let filteredMethodieken = originalMethodieken;
-    
-            // Search filter
-            const searchQuery = searchBar.value.toLowerCase();
-            if (searchQuery) {
-                filteredMethodieken = filteredMethodieken.filter(methodiek =>
-                    methodiek.titel.toLowerCase().includes(searchQuery) ||
-                    methodiek.tekst.toLowerCase().includes(searchQuery)
-                );
-            }
-    
-            // Age filter
-            const selectedAges = [...ageFilters].filter(f => f.checked).map(f => f.value);
-            if (selectedAges.length > 0) {
-                filteredMethodieken = filteredMethodieken.filter(methodiek =>
-                    selectedAges.includes(methodiek.leeftijd)
-                );
-            }
-    
-            // Methodiek filter
-            const selectedMethodieken = [...methodiekFilters].filter(f => f.checked).map(f => f.value);
-            if (selectedMethodieken.length > 0) {
-                filteredMethodieken = filteredMethodieken.filter(methodiek =>
-                    selectedMethodieken.includes(methodiek.methodiek.toString())
-                );
-            }
-    
-            // Ontwikkelingsniveau filter
-            const selectedLevels = [...levelFilters].filter(f => f.checked).map(f => f.value);
-            if (selectedLevels.length > 0) {
-                filteredMethodieken = filteredMethodieken.filter(methodiek =>
-                    selectedLevels.includes(methodiek.niveau.toString())
-                );
-            }
-    
-            Showmethodieken(filteredMethodieken);
-        }
-    
-        function clearFilters() {
-            searchBar.value = "";
-            ageFilters.forEach(f => (f.checked = false));
-            methodiekFilters.forEach(f => (f.checked = false));
-            levelFilters.forEach(f => (f.checked = false));
-            Showmethodieken(originalMethodieken);
-        }
-    });
-    
+  showMethodieken(filteredMethodieken);
+}
