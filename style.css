@@ -1514,11 +1514,6 @@ input[type="text"] {
     box-sizing: border-box;
   }
 
-  .container {
-    margin: 2vh 2vw;
-    gap: 3vw;
-  }
-
   .icon {
     width: 20vmin;
     height: 20vmin;
@@ -2184,6 +2179,22 @@ body.no-overflow-hidden {
     overflow: hidden;
   }
 
+  .loading-container {
+    margin-top: 25vh;
+  }
+
+  .loading-icon img {
+    width: 40vw;
+  }
+
+  .loading-text h2 {
+    font-size: 5vw;
+  }
+
+  .loading-text p {
+    font-size: 3vw;
+  }
+  
   h1 {
     font-size: 7vw;
   }
