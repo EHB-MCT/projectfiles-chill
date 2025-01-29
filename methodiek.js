@@ -1,43 +1,74 @@
-const articles = document.querySelectorAll(".article");
-const articlesPerPage = 10;
-const container = document.querySelector(".content");
+let currentPage = 1;
+let articlesPerPage = 10;
 
-const createPagination = (totalArticles, articlesPerPage) => {
-	const totalPages = Math.ceil(totalArticles / articlesPerPage);
-	const paginationContainer = document.createElement("div");
-	paginationContainer.className = "pagination";
-
-	for (let i = 1; i <= totalPages; i++) {
-		const pageButton = document.createElement("button");
-		pageButton.textContent = i;
-		pageButton.className = "page-button";
-		pageButton.dataset.page = i;
-		paginationContainer.appendChild(pageButton);
-	}
-	container.appendChild(paginationContainer);
-
-	const buttons = paginationContainer.querySelectorAll(".page-button");
-	buttons.forEach((button) => {
-		button.addEventListener("click", (e) => {
-			const page = parseInt(e.target.dataset.page);
-			showPage(page, articles, articlesPerPage);
-		});
-	});
-};
-
-const showPage = (page, articles, articlesPerPage) => {
-	articles.forEach((article, index) => {
-		const start = (page - 1) * articlesPerPage;
-		const end = start + articlesPerPage;
-		if (index >= start && index < end) {
-			article.style.display = "flex";
-		} else {
-			article.style.display = "none";
-		}
-	});
-};
-
-if (articles.length > articlesPerPage) {
-	createPagination(articles.length, articlesPerPage);
-	showPage(1, articles, articlesPerPage);
+async function fetchmethodieken() {
+    try {
+        const response = await fetch(`http://localhost:3000/methodieken`);
+        if (!response.ok) {
+            throw new Error("Failed to fetch players");
+        }
+        const methodieken = await response.json();
+        originalMethodieken = methodieken;
+        Showmethodieken(methodieken);
+    } catch (error) {
+        console.error("Error: no methodieken available:", error);
+    }
 }
+
+function Showmethodieken(methodieken) {
+    const box = document.getElementById("article-1");
+    box.innerHTML = "";
+
+    if (!methodieken || methodieken.length === 0) {
+        box.innerHTML = `<p class="no-results">No methodieken found.</p>`;
+        return;
+    }
+
+    // Calculate the starting index and end index based on the current page
+    const start = (currentPage - 1) * articlesPerPage;
+    const end = start + articlesPerPage;
+    const paginatedArticles = methodieken.slice(start, end);
+
+    // Display articles for the current page
+    paginatedArticles.forEach((methodiek) => {
+        const metho = document.createElement("div");
+        metho.classList.add("article-1");
+
+        metho.innerHTML = `
+            <div class="article" id="article-2">
+                <div class="icon-donwload">
+                    <a href="${methodiek.pdf}">  
+                        <img src="./icons/donwload-icon.svg" alt="Download icon"> 
+                    </a>
+                </div>
+                <div class="text">
+                    <h3>${methodiek.alpha} - ${methodiek.titel}</h3>
+                    <p>${methodiek.tekst}</p>
+                    <p>${methodiek.date}</p>
+                </div>
+            </div>
+        `;
+        box.appendChild(metho);
+    });
+
+    // Show/hide pagination buttons based on the current page
+    document.getElementById("prevBtn").disabled = currentPage === 1;
+    document.getElementById("nextBtn").disabled = currentPage * articlesPerPage >= methodieken.length;
+}
+
+// Event listeners for pagination buttons
+document.getElementById("prevBtn").addEventListener("click", () => {
+    if (currentPage > 1) {
+        currentPage--;
+        Showmethodieken(originalMethodieken);
+    }
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+    if (currentPage * articlesPerPage < originalMethodieken.length) {
+        currentPage++;
+        Showmethodieken(originalMethodieken);
+    }
+});
+
+fetchmethodieken();

@@ -1,49 +1,78 @@
-let originalMethodieken = []; 
+let originalMethodieken = [];
+let currentPage = 1;
+const itemsPerPage = 10; // Number of articles per page
+
 async function fetchmethodieken() {
-	try {
-		const response = await fetch(
-			`http://localhost:3000/methodieken`
-		);
-		if (!response.ok) {
-			throw new Error("Failed to fetch players");
-		}
-		const methodieken = await response.json();
-		originalMethodieken = methodieken; // Save the original list
-		Showmethodieken(methodieken); // Display all methodieken initially
-	} catch (error) {
-		console.error("Error: no methodieken available:", error);
-	}
+  try {
+    const response = await fetch(`http://localhost:3000/methodieken`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch players");
+    }
+    const methodieken = await response.json();
+    originalMethodieken = methodieken; // Save the original list
+    showPagination(methodieken); // Display pagination
+    showMethodieken(methodieken); // Display articles
+  } catch (error) {
+    console.error("Error: no methodieken available:", error);
+  }
 }
 
-// Display players on the screen
-function Showmethodieken(methodieken) {
-	const box = document.getElementById("article-1");
-	box.innerHTML = ""; // Clear previous content
+// Display the methodieken on the screen
+function showMethodieken(methodieken) {
+  const box = document.getElementById("article-1");
+  box.innerHTML = ""; // Clear previous content
 
-	if (!methodieken || methodieken.length === 0) {
-		box.innerHTML = `<p class="no-results">No methodieken found.</p>`;
-		return;
-	}
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const pageItems = methodieken.slice(startIndex, endIndex);
 
-methodieken.forEach((methodieken) => {
-		const metho = document.createElement("div");
-		metho.classList.add("article-1");
+  if (!pageItems || pageItems.length === 0) {
+    box.innerHTML = `<p class="no-results">No methodieken found.</p>`;
+    return;
+  }
 
-		metho.innerHTML = `
-      <div class="article" id="article-2">
-                            <div class="icon-donwload">
-                               <a href="${methodieken.pdf}">  <img src="./icons/donwload-icon.svg" " alt="Icon for article 1"> </a>
-                            </div>
-                            <div class="text">
-                                <h3>${methodieken.alpha} - ${methodieken.titel}</h3>
-                                <p>${methodieken.tekst}</p>
-								<p>${methodieken.date}</p>
+  pageItems.forEach((methodiek) => {
+    const metho = document.createElement("div");
+    metho.classList.add("article-1");
 
-                            </div>
-                        </div>
+    metho.innerHTML = `
+            <div class="article" id="article-2">
+                <div class="icon-donwload">
+                    <a href="${methodiek.pdf}">
+                        <img src="./icons/donwload-icon.svg" alt="Download icon">
+                    </a>
+                </div>
+                <div class="text">
+                    <h3>${methodiek.alpha} - ${methodiek.titel}</h3>
+                    <p>${methodiek.tekst}</p>
+                    <p>${methodiek.date}</p>
+                </div>
+            </div>
         `;
-		box.appendChild(metho);
-	});
+    box.appendChild(metho);
+  });
 }
 
-fetchmethodieken(); 
+// Create pagination buttons
+function showPagination(methodieken) {
+  const totalPages = Math.ceil(methodieken.length / itemsPerPage);
+  const paginationBox = document.getElementById("pagination");
+
+  paginationBox.innerHTML = ""; // Clear previous pagination buttons
+
+  for (let i = 1; i <= totalPages; i++) {
+    const button = document.createElement("button");
+    button.innerText = i;
+    button.classList.add("page-button");
+    button.onclick = () => changePage(i);
+    paginationBox.appendChild(button);
+  }
+}
+
+// Handle page change
+function changePage(page) {
+  currentPage = page;
+  showMethodieken(originalMethodieken); // Show articles for the selected page
+}
+
+fetchmethodieken();
