@@ -1,3 +1,4 @@
+// Select all buttons within the emotiebuttons container
 const buttons = document.querySelectorAll(".emotiebuttons button");
 
 // Handle button selection
@@ -9,6 +10,7 @@ buttons.forEach((button) => {
 });
 
 const emotionButtons = document.querySelectorAll(".emotiebuttons button");
+
 const emotieImages = {
   blij: "images/joy.gif",
   afschuw: "images/disgust.gif",
@@ -105,3 +107,4 @@ generateLinkButton.addEventListener("click", () => {
       messageContainer.innerHTML = `<p>Failed to copy the link. Please try again.</p>`;
     });
 });
+
