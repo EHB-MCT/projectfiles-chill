@@ -3,13 +3,10 @@ body {
   height: 100%;
   margin: 0;
   overflow: auto;
-
   font-style: normal;
   font-weight: 100;
   box-sizing: border-box;
-  cursor:
-    url("./icons/cursor.png") 14 14,
-    default;
+  
 }
 
 *,
@@ -25,12 +22,16 @@ body {
 }
 
 h1 {
+  font-family: "lores-9-narrow", sans-serif;
+font-style: normal;
   font-size: 4vw;
   color: #ffffff;
   font-weight: 100;
 }
 
 h2 {
+  font-family: "lores-9-narrow", sans-serif;
+font-style: normal;
   font-size: 3vw;
   color: #ffffff;
   font-weight: 100;
@@ -1904,6 +1905,8 @@ input[type="text"] {
     width: 5vh;
     left: 23vh;
   }
+
+  
 }
 
 /*index.html*/
@@ -2773,5 +2776,106 @@ body.no-overflow-hidden {
   .werkwijze-container-text p {
     font-size: 0.9rem;
   }
-}
+  .no-overflow-hidden {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-top: 13vh;
+  }
+
+  .primary {
+    width: 80%;
+  }
+
+  .primary p {
+    font-size: 4vw;
+    margin-bottom: 4vh;
+  }
+
+  #horizontal {
+    right: -22vh;
+    top: -52vh;
+    width: 10%;
+  }
+
+  #vertical {
+    right: 22vh;
+    top: -24vh;
+    width: 10%;
+  }
+
+  .secondary {
+    width: 100%;
+  }
+
+  #secondary-call-to-action {
+    font-size: 2vh;
+  }
+
+  .index-button {
+    font-size: 15px;
+  }
+
+  .carrousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 16px;
+    width: 80%;
+  }
+
+  .carrousel a {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    width: 35vh;
+  }
+
+  .functie {
+    padding: 16px;
+    width: 35vh;
+    margin: 0;
+    height: 52vh;
+  }
+
+  .functie p {
+    font-size: 2.5vh;
+  }
+
+  .functie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .third {
+    width: 82%;
+  }
+
+  .partner-images img {
+    padding: 1.5vh;
+    width: 15vh;
+  }
+
+  .purple-big {
+    display: none;
+  }
+
+  .small {
+    bottom: 24vh;
+    width: 6vh;
+  }
+
+  .purple {
+    bottom: 29vh;
+    width: 5vh;
+    left: 7vh;
+  }
+
+  .sparkle-1 {
+    bottom: 68vh;
+    width: 5vh;
+    left: 23vh;
+  }
 }
