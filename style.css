@@ -1503,6 +1503,7 @@ input[type="text"] {
   margin-left: 50px;
 }
 
+
 @media (max-width: 478px) {
   html,
   body {
@@ -1521,6 +1522,8 @@ input[type="text"] {
   .icon {
     width: 20vmin;
     height: 20vmin;
+    position: relative;
+    overflow: hidden;  
   }
 
   h1 {
@@ -1645,6 +1648,7 @@ input[type="text"] {
     gap: 10vw;
   }
 
+  
   .origami-mobile .origami-container {
     position: relative;
     overflow: visible;
@@ -2174,8 +2178,8 @@ body.no-overflow-hidden {
   }
 
   .icon {
-    width: 20vmin;
-    height: 20vmin;
+    width: 70vmin;
+    height: 70vmin;
     position: relative;
     overflow: hidden;
   }
