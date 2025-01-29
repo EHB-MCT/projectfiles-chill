@@ -32,8 +32,6 @@ We imported it from another repository that we created before this repository wa
 [ChatGPT Conversation for the effect of the button, and the svg lines](https://chatgpt.com/share/6789b13c-5080-8000-b9ec-09eebae7bbc7)
 [ChatGPT Converstation for the pen that go on top of the svg](https://chatgpt.com/share/6789c15a-fe30-8000-9fc6-12bb7e6eee08)
 
-
-
 # music-branch
 
 We imported it from another repository that we created before this repository was visible.
@@ -50,3 +48,50 @@ The localstorage of the gif and the switching of the 2 gifs
 [Chatgpt.com](https://chatgpt.com/share/67936ac8-b8dc-8007-a21e-4ac76b0aa2a9)
 Generate a link for the emotiefinishpage
 [Chatgpt.com](https://chatgpt.com/share/67936ac8-b8dc-8007-a21e-4ac76b0aa2a9)
+
+# feature/mobile-index branch
+
+To make the carrousel scrollable in mobile version
+[Chatgpt.com](https://chatgpt.com/share/6798a736-5c10-800e-999e-0a84147954b0)
+
+# Methodiek
+
+[ChatGPT Conversation for the filter](https://chatgpt.com/share/6799272e-aac0-8004-beb2-c42658086d78)
+
+// Installation //
+
+```javascript
+npm install
+```
+
+// Packages //
+
+Cors
+
+```javascript
+npm install cors
+```
+
+Nodemon
+
+```javascript
+npm install nodemon
+```
+
+Mongodb
+
+```javascript
+npm install mongodb
+```
+
+Express JS
+
+```javascript
+npm install express
+```
+
+Dotenv
+
+```javascript
+npm install dotenv
+```
