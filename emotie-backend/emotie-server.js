@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 // MongoDB Connection
 const connectionString =
-  "mongodb+srv://rayanarssi:TrCKeDzk3oEZfEWv@blancoviz-web2.w9kuc.mongodb.net/";
+  "http://localhost:3000/linken";
 mongoose
   .connect(connectionString, {
     useNewUrlParser: true,
@@ -31,7 +31,7 @@ const Link = mongoose.model("Link", linkSchema);
 // API Endpoints
 
 // Save a new link
-app.post("/api/links", async (req, res) => {
+app.post("/linken", async (req, res) => {
   try {
     const { link } = req.body;
     const newLink = new Link({ link });
@@ -43,7 +43,7 @@ app.post("/api/links", async (req, res) => {
 });
 
 // Fetch all links
-app.get("/api/links", async (req, res) => {
+app.get("/linken", async (req, res) => {
   try {
     const links = await Link.find();
     res.status(200).json(links);
@@ -53,7 +53,6 @@ app.get("/api/links", async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+	console.log(`Server is running on port ${port}`);
 });
