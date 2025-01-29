@@ -3,7 +3,6 @@ body {
   height: 100%;
   margin: 0;
   overflow: auto;
-
   font-style: normal;
   font-weight: 100;
   box-sizing: border-box;
@@ -25,12 +24,16 @@ body {
 }
 
 h1 {
+  font-family: "lores-9-narrow", sans-serif;
+font-style: normal;
   font-size: 4vw;
   color: #ffffff;
   font-weight: 100;
 }
 
 h2 {
+  font-family: "lores-9-narrow", sans-serif;
+font-style: normal;
   font-size: 3vw;
   color: #ffffff;
   font-weight: 100;
