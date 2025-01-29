@@ -1,8 +1,16 @@
 // Select all buttons within the emotiebuttons container
 const buttons = document.querySelectorAll(".emotiebuttons button");
+
+// Handle button selection
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttons.forEach((btn) => btn.classList.remove("selected")); // Remove 'selected' class from all buttons
+    button.classList.add("selected"); // Add 'selected' class to clicked button
+  });
+});
+
 const emotionButtons = document.querySelectorAll(".emotiebuttons button");
 
-// Mapping emotions to corresponding image sources
 const emotieImages = {
   blij: "images/joy.gif",
   afschuw: "images/disgust.gif",
@@ -12,46 +20,91 @@ const emotieImages = {
   verrast: "images/shock.gif",
 };
 
-// Select the image element and the next step button
 const emotieImage = document.getElementById("emotieImage");
 const nextStepButton = document.getElementById("nextStep");
 
-// Function to hide or show the next step button
-const updateNextStepVisibility = () => {
-  const selectedButton = document.querySelector(
-    ".emotiebuttons button.selected"
-  );
-  nextStepButton.style.display = selectedButton ? "block" : "none";
-};
-
-// Add click event listeners to all emotion buttons
+// Update the emotion image and handle selections
 emotionButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Remove 'selected' class from all buttons
     emotionButtons.forEach((btn) => btn.classList.remove("selected"));
-    // Add 'selected' class to the clicked button
     button.classList.add("selected");
 
-    // Retrieve emotion and update the image
     const emotie = button.getAttribute("data-emotie");
-    const newSrc = emotieImages[emotie] || "icons/heart2.png"; // Default to heart icon
+    const newSrc = emotieImages[emotie] || "icons/heart2.png"; // Default image
     emotieImage.src = newSrc;
 
-    // Update the ID based on the image file type
-    emotieImage.id = newSrc.endsWith(".gif") ? "gifImage" : "pngImage";
+    if (newSrc.endsWith(".gif")) {
+      emotieImage.id = "gifImage";
+    } else {
+      emotieImage.id = "pngImage";
+    }
 
-    // Save the selected emotion in localStorage
+    if (nextStepButton) {
+      nextStepButton.style.display = "block";
+    }
+
     const currentStep = window.location.pathname.includes(
       "emotie-na-het-conflict"
     )
       ? "after"
       : "during";
     localStorage.setItem(`selectedEmotion-${currentStep}`, newSrc);
-
-    // Ensure the next step button is displayed
-    updateNextStepVisibility();
   });
 });
 
-// Initial setup: Hide the next step button if no emotion is selected
-updateNextStepVisibility();
+// Hide the next step button if no selection
+const hideNextStepButton = () => {
+  if (nextStepButton) {
+    const selectedButton = document.querySelector(
+      ".emotiebuttons button.selected"
+    );
+    nextStepButton.style.display = selectedButton ? "block" : "none";
+  }
+};
+
+// Ensure the button visibility on page load
+if (nextStepButton) hideNextStepButton();
+
+// Listen for changes to button selections
+emotionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (nextStepButton) hideNextStepButton();
+  });
+});
+
+// Handle link generation
+const generateLinkButton = document.getElementById("generateLinkButton");
+const messageContainer = document.getElementById("messageContainer");
+
+generateLinkButton.addEventListener("click", () => {
+  const emotietext = document.getElementById("emotietext").value;
+
+  // Retrieve emotions from localStorage
+  const emotionDuring = localStorage.getItem("selectedEmotion-during");
+  const emotionAfter = localStorage.getItem("selectedEmotion-after");
+
+  if (!emotionDuring || !emotionAfter) {
+    alert("Emoties zijn niet geselecteerd.");
+    return;
+  }
+
+  const baseUrl = window.location.origin + "/emotiefinishTEST.html";
+  const shareableLink = `${baseUrl}?during=${encodeURIComponent(
+    emotionDuring
+  )}&after=${encodeURIComponent(emotionAfter)}&text=${encodeURIComponent(
+    emotietext
+  )}`;
+
+  navigator.clipboard
+    .writeText(shareableLink)
+    .then(() => {
+      messageContainer.innerHTML = `
+        <p>Link gekopieerd naar het klembord!</p>
+        <p><a href="${shareableLink}" target="_blank">${shareableLink}</a></p>
+      `;
+    })
+    .catch(() => {
+      messageContainer.innerHTML = `<p>Failed to copy the link. Please try again.</p>`;
+    });
+});
+
