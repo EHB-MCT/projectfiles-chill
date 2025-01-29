@@ -8,6 +8,8 @@
             <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
             <script src="./menu.js" defer></script>
             <script src="./methodiek.js" defer></script>
+            <script src="./methodiek/api.js" defer></script>
+            <script src="./methodiek/filter.js" defer></script>
         </head>
         <body>
             <nav>
@@ -128,104 +130,23 @@
                     </section>
                             </div>
                         </div>
-                        <div class="article">
+                        <div class="article-1" id="article-1">
+                        <div class="article" id="article-2">
                             <div class="icon-donwload">
-                                <img src="./icons/donwload-icon.svg" alt="Icon for article 1">
+                               <a href=""> <img src="./icons/donwload-icon.svg" href="" alt="Icon for article 1"></a>
                             </div>
                             <div class="text">
                                 <h3>B - Herstel, beweging in bewogen contexten</h3>
                                 <p>Dit artikel beschrijft hoe vzw Oranjehuis aan de slag is gegaan met de belangrijke principes van herstelgericht werken...</p>
+                                <p>2018-19-04</p>
                             </div>
                         </div>
+                    </div>
                         
-                        <div class="article">
-                            <div class="icon-donwload">
-                                <img src="./icons/donwload-icon.svg" alt="Icon for article 1">
-                            </div>
-                            <div class="text">
-                                <h3>B - Herstelconferentie</h3>
-                                <p>Methodiek om enige tijd na het incident een dader inzicht en verantwoordelijkheidsgevoel over het incident te geven...</p>
-                            </div>
-                        </div>
-                        
-                        <div class="article">
-                            <div class="icon-donwload">
-                                <img src="./icons/donwload-icon.svg" alt="Icon for article 1">
-                            </div>
-                            <div class="text">
-                                <h3>B - Het geheim van het sorrybrein</h3>
-                                <p>Het geheim van het sorrybrein verklaart de achterliggende mechanismen in het proces van herstel na een conflict...</p>
-                            </div>
-                        </div>    
                     </section>
                 </div>
                 <script>
-                   document.addEventListener("DOMContentLoaded", function() {
-    const filterToggleButton = document.querySelector(".filter-toggle");
-    const filterSection = document.querySelector(".filters-mobile");
-    const clearButton = document.querySelector(".clear-filters");
-    const clearButtonMobile = document.querySelector(".clear-filters-mobile");
-    const searchBarMobile = document.querySelector(".search-bar-mobile"); // Targeting mobile search bar
-
-    filterToggleButton.addEventListener("click", function() {
-        filterSection.classList.toggle("active");
-        filterSection.style.display = filterSection.classList.contains("active") ? "block" : "none";
-    });
-
-    function filterContent() {
-        const ageFilters = Array.from(document.querySelectorAll(".age-filter:checked")).map(input => input.value);
-        const methodiekFilters = Array.from(document.querySelectorAll(".methodiek-filter:checked")).map(input => input.value);
-        const levelFilters = Array.from(document.querySelectorAll(".level-filter:checked")).map(input => input.value);
-        const searchQuery = searchBarMobile ? searchBarMobile.value.toLowerCase() : ''; // Get the search query from mobile search bar
-
-        const articles = document.querySelectorAll(".article");
-        articles.forEach(article => {
-            const articleAge = article.getAttribute("data-age");
-            const articleMethodiek = article.getAttribute("data-methodiek");
-            const articleLevel = article.getAttribute("data-level");
-            const articleTitle = article.querySelector("h3").textContent.toLowerCase();
-
-            const matchesSearch = articleTitle.includes(searchQuery);
-
-            if (
-                (ageFilters.length === 0 || ageFilters.includes(articleAge)) &&
-                (methodiekFilters.length === 0 || methodiekFilters.includes(articleMethodiek)) &&
-                (levelFilters.length === 0 || levelFilters.includes(articleLevel)) &&
-                (searchQuery === "" || matchesSearch)
-            ) {
-                article.style.display = "block";
-            } else {
-                article.style.display = "none";
-            }
-        });
-    }
-
-    document.querySelectorAll(".age-filter, .methodiek-filter, .level-filter").forEach(checkbox => {
-        checkbox.addEventListener("change", filterContent);
-    });
-
-    if (searchBarMobile) {
-        searchBarMobile.addEventListener("input", filterContent);
-    }
-
-    clearButton.addEventListener("click", function() {
-        document.querySelectorAll(".age-filter, .methodiek-filter, .level-filter").forEach(checkbox => {
-            checkbox.checked = false;
-        });
-        if (searchBarMobile) searchBarMobile.value = "";
-        filterContent();
-    });
-
-    clearButtonMobile.addEventListener("click", function() {
-        document.querySelectorAll(".age-filter, .methodiek-filter, .level-filter").forEach(checkbox => {
-            checkbox.checked = false;
-        });
-        if (searchBarMobile) searchBarMobile.value = "";
-        filterContent();
-    });
-
-    filterContent();
-});
+                  
 
                 </script>
                 

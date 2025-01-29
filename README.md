@@ -57,3 +57,41 @@ To make the carrousel scrollable in mobile version
 # Methodiek
 
 [ChatGPT Conversation for the filter](https://chatgpt.com/share/6799272e-aac0-8004-beb2-c42658086d78)
+
+// Installation //
+
+```javascript
+npm install
+```
+
+// Packages //
+
+Cors
+
+```javascript
+npm install cors
+```
+
+Nodemon
+
+```javascript
+npm install nodemon
+```
+
+Mongodb
+
+```javascript
+npm install mongodb
+```
+
+Express JS
+
+```javascript
+npm install express
+```
+
+Dotenv
+
+```javascript
+npm install dotenv
+```
