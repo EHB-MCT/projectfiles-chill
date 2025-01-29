@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   overflow: auto;
-  font-family: "lores-9-narrow", sans-serif;
+
   font-style: normal;
   font-weight: 100;
   box-sizing: border-box;
@@ -1072,6 +1072,7 @@ input[type="submit"] {
   text-decoration: none;
   width: 28vh;
   text-align: center;
+  font-family: "lores-9-narrow", sans-serif;
 }
 
 .emotiesorry a :hover {
@@ -1089,16 +1090,11 @@ input[type="submit"] {
   margin-bottom: 5%;
 }
 
-.emotiesorry a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 .emotiesturen {
   display: flex;
   justify-content: space-around;
   color: #ffffff;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .container-methods {
@@ -1126,6 +1122,17 @@ input[type="submit"] {
   display: flex;
   justify-content: flex-end;
   width: 94.5%;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+#messageContainer {
+  text-align: end;
+  width: 50%;
+}
+
+#messageContainer a {
+  color: white;
 }
 
 #other-sorrytools {
