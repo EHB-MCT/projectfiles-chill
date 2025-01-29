@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const clearFiltersButtonMobile = document.querySelector(
     ".clear-filters-mobile"
   );
+  const filterToggleButton = document.querySelector(".filter-toggle");
+  const filtersMobile = document.querySelector(".filters-mobile");
 
   document
     .querySelectorAll(".age-filter, .methodiek-filter, .level-filter")
@@ -21,6 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (clearFiltersButtonMobile) {
     clearFiltersButtonMobile.addEventListener("click", clearFilters);
+  }
+
+  if (filterToggleButton && filtersMobile) {
+    filterToggleButton.addEventListener("click", () => {
+      if (
+        filtersMobile.style.display === "none" ||
+        filtersMobile.style.display === ""
+      ) {
+        filtersMobile.style.display = "block";
+      } else {
+        filtersMobile.style.display = "none";
+      }
+    });
   }
 });
 
