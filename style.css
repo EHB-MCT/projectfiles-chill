@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   overflow: auto;
-  font-family: "lores-9-narrow", sans-serif;
+
   font-style: normal;
   font-weight: 100;
   box-sizing: border-box;
@@ -274,6 +274,22 @@ li a.active {
   height: 80vh;
 }
 
+
+#sticker-message.typo-1 {
+  font-family: "dream-big-wide", sans-serif;
+  font-style: normal;
+}
+
+#sticker-message.typo-2 {
+  font-family: "pf-reminder", sans-serif;
+  font-style: normal;
+}
+
+#sticker-message.typo-3 {
+  font-family: "roca", sans-serif;
+  font-style: italic;
+}  
+
 .dropdown-typo-content .typo-1 {
   font-family: "dream-big-wide", sans-serif;
   font-style: normal;
@@ -290,6 +306,28 @@ li a.active {
 }
 
 .dropdown-typo-content .typo-1,
+.dropdown-typo-content .typo-2,
+.dropdown-typo-content .typo-3 {
+	margin-top: 5px;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box; 
+	border: 2px solid white; 
+	transition: border 0.2s ease; 
+}
+
+.dropdown-typo-content .typo-1.active,
+.dropdown-typo-content .typo-2.active,
+.dropdown-typo-content .typo-3.active {
+	border-color: #e62e5a; 
+}
+
 .typo-2,
 .typo-3 {
   margin-top: 5px;
@@ -304,16 +342,18 @@ li a.active {
   justify-content: center;
 }
 
+
 .dropdown-edit #color-btn,
 #typography-btn {
-  background-color: #3377b3;
-  color: white;
-  border: none;
-  text-align: left;
-  font-size: 16px;
-  cursor: pointer;
-  width: 307px;
-  height: 50px;
+	background-color: #3377b3;
+	color: white;
+	border: none;
+	text-align: left;
+	font-size: 16px;
+	cursor: pointer;
+	width: 320px;
+	height: 50px;
+ 
 }
 
 .dropdown-content.show {
@@ -361,6 +401,18 @@ li a.active {
   z-index: 10;
 }
 
+
+.button-container a button {
+	display: flex;
+	margin-left: 12.5vw;
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 5px 25px;
+	font-size: 25px;
+	transition: all 0.1s ease;
+}
+
 .sticker-button button {
   display: flex;
   margin-left: 12.5vw;
@@ -370,6 +422,7 @@ li a.active {
   padding: 5px 25px;
   font-size: 25px;
   transition: all 0.1s ease;
+
 }
 
 .sticker-preview img {
@@ -385,6 +438,16 @@ li a.active {
   border: 3px solid #fff;
   margin-bottom: 10px;
   margin-left: 12.5vw;
+}
+
+#sticker-preview{
+  display: flex;
+	justify-content: center;
+	width: 50vw;
+	padding: 10px 20px;
+	border: 3px solid #fff;
+	margin-bottom: 0;
+	margin-left: 0;
 }
 
 #sticker-message {
@@ -413,6 +476,15 @@ textarea::placeholder {
   display: block;
   text-align: center;
 }
+
+/* Sticker End Page */
+.center-container h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
 
 /* Sorrybot */
 
@@ -1072,6 +1144,7 @@ input[type="submit"] {
   text-decoration: none;
   width: 28vh;
   text-align: center;
+  font-family: "lores-9-narrow", sans-serif;
 }
 
 .emotiesorry a :hover {
@@ -1089,22 +1162,71 @@ input[type="submit"] {
   margin-bottom: 5%;
 }
 
-.emotiesorry a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
 .emotiesturen {
   display: flex;
   justify-content: space-around;
   color: #ffffff;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
-.container-methods{
+.container-methods {
   margin: 5vh auto;
   display: flex;
+}
 
+#generateLinkButton,
+#other-sorrytools {
+  background-color: #e62e5a;
+  border: none;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 25px;
+  font-family: "lores-12", sans-serif;
+  transition: all 0.1s ease;
+}
+
+#generateLinkButton {
+  margin-top: -9vh;
+}
+
+.link-generator {
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: flex-end;
+  width: 94.5%;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+#messageContainer {
+  text-align: end;
+  width: 50%;
+}
+
+#messageContainer a {
+  color: white;
+}
+
+#other-sorrytools {
+  width: fit-content;
+  display: flex;
+  justify-self: center;
+  margin: 5vh;
+}
+
+#other-sorrytools a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.emotiesorry a {
+  background-color: unset;
+}
+
+#generateLinkButton:hover,
+#other-sorrytools:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
 }
 
 /* methodieken.html */
@@ -1120,39 +1242,39 @@ input[type="text"] {
 }
 
 .search-sort {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .search-bar {
-    width: 100%;
+  width: 100%;
 }
 
 .search-button-img {
-    position: absolute;
-    right: 5%;
-    pointer-events: none; 
-    width: 30px;
-    height: 30px;
+  position: absolute;
+  right: 5%;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
 }
 
-.filter-elements{
+.filter-elements {
   display: flex;
   flex-direction: column;
   gap: 10px;
   color: #fff;
   margin-bottom: 20px;
 }
-.clear-filters{
-  background: #60ACBB;
+.clear-filters {
+  background: #60acbb;
   display: flex;
-	border: none;
-	color: #ffffff;
-	padding: 5px 25px;
-	font-size: 20px;
-	transition: all 0.1s ease;
+  border: none;
+  color: #ffffff;
+  padding: 5px 25px;
+  font-size: 20px;
+  transition: all 0.1s ease;
   cursor: pointer;
 }
 
@@ -1168,7 +1290,7 @@ input[type="text"] {
 
 .content {
   width: 75%;
-  padding: 20px 70px
+  padding: 20px 70px;
 }
 
 .sort-buttons {
@@ -1178,13 +1300,13 @@ input[type="text"] {
   margin-bottom: 20px;
 }
 
-.sort-buttons button{
-  background: #60ACBB;
-	border: none;
-	color: #ffffff;
-	padding: 15px 25px;
-	font-size: 20px;
-	transition: all 0.1s ease;
+.sort-buttons button {
+  background: #60acbb;
+  border: none;
+  color: #ffffff;
+  padding: 15px 25px;
+  font-size: 20px;
+  transition: all 0.1s ease;
   cursor: pointer;
   width: 30%;
   display: flex;
@@ -1197,14 +1319,14 @@ input[type="text"] {
   margin: 30px 0;
   border: #fff 1px solid;
 }
-.icon-donwload img{
+.icon-donwload img {
   font-size: 24px;
   padding: 10px;
-  background: #60ACBB;
+  background: #60acbb;
   border-radius: 5px;
   margin-right: 15px;
 }
-.text{
+.text {
   padding-left: 50px;
   margin-bottom: 10px;
 }
@@ -1241,11 +1363,11 @@ input[type="text"] {
   background: #a81f3f;
 }
 
-.filters-mobile{
+.filters-mobile {
   display: none;
 }
 
-.sort-buttons .filter-toggle{
+.sort-buttons .filter-toggle {
   display: none;
 }
 
@@ -1277,23 +1399,23 @@ input[type="text"] {
   margin: 0;
 }
 
-.sorry-twoo img{
+.sorry-twoo img {
   margin-top: 65px;
 }
 
-.sorry-container{
+.sorry-container {
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
 }
 
-.sorry-container-image img{
+.sorry-container-image img {
   margin-top: 50px;
   max-width: 650px;
   margin-left: 50px;
 }
 
-.sorry-container-text p{
+.sorry-container-text p {
   margin-left: 50px;
   max-width: 80%;
   margin-top: 90px;
@@ -1310,7 +1432,6 @@ input[type="text"] {
   grid-template-rows: repeat(3, 2px);
   gap: 80px;
   margin-top: 50px;
-  
 }
 
 .doel-container {
@@ -1393,14 +1514,11 @@ input[type="text"] {
     box-sizing: border-box;
   }
 
-  .container {
-    margin: 2vh 2vw;
-    gap: 3vw;
-  }
-
   .icon {
     width: 20vmin;
     height: 20vmin;
+    position: relative;
+    overflow: hidden;  
   }
 
   h1 {
@@ -1525,6 +1643,7 @@ input[type="text"] {
     gap: 10vw;
   }
 
+  
   .origami-mobile .origami-container {
     position: relative;
     overflow: visible;
@@ -1683,6 +1802,108 @@ input[type="text"] {
   .emotiesturen {
     flex-direction: column;
   }
+  .no-overflow-hidden {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-top: 13vh;
+  }
+
+  .primary {
+    width: 80%;
+  }
+
+  .primary p {
+    font-size: 4vw;
+    margin-bottom: 4vh;
+  }
+
+  #horizontal {
+    right: -22vh;
+    top: -52vh;
+    width: 10%;
+  }
+
+  #vertical {
+    right: 22vh;
+    top: -24vh;
+    width: 10%;
+  }
+
+  .secondary {
+    width: 100%;
+  }
+
+  #secondary-call-to-action {
+    font-size: 2vh;
+  }
+
+  .index-button {
+    font-size: 15px;
+  }
+
+  .carrousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 16px;
+    width: 80%;
+  }
+
+  .carrousel a {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    width: 35vh;
+  }
+
+  .functie {
+    padding: 16px;
+    width: 35vh;
+    margin: 0;
+    height: 52vh;
+  }
+
+  .functie p {
+    font-size: 2.5vh;
+  }
+
+  .functie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .third {
+    width: 82%;
+  }
+
+  .partner-images img {
+    padding: 1.5vh;
+    width: 15vh;
+  }
+
+  .purple-big {
+    display: none;
+  }
+
+  .small {
+    bottom: 24vh;
+    width: 6vh;
+  }
+
+  .purple {
+    bottom: 29vh;
+    width: 5vh;
+    left: 7vh;
+  }
+
+  .sparkle-1 {
+    bottom: 68vh;
+    width: 5vh;
+    left: 23vh;
+  }
 }
 
 /*index.html*/
@@ -1838,110 +2059,7 @@ body.no-overflow-hidden {
   width: 15vh;
 }
 
-@media (max-width: 478px) {
-  .no-overflow-hidden {
-    overflow-x: hidden;
-  }
 
-  .container {
-    padding-top: 13vh;
-  }
-
-  .primary {
-    width: 80%;
-  }
-
-  .primary p {
-    font-size: 4vw;
-    margin-bottom: 4vh;
-  }
-
-  #horizontal {
-    right: -22vh;
-    top: -52vh;
-    width: 10%;
-  }
-
-  #vertical {
-    right: 22vh;
-    top: -24vh;
-    width: 10%;
-  }
-
-  .secondary {
-    width: 100%;
-  }
-
-  #secondary-call-to-action {
-    font-size: 2vh;
-  }
-
-  .index-button {
-    font-size: 15px;
-  }
-
-  .carrousel {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 16px;
-    width: 80%;
-  }
-
-  .carrousel a {
-    scroll-snap-align: center;
-    flex: 0 0 auto;
-    width: 35vh;
-  }
-
-  .functie {
-    padding: 16px;
-    width: 35vh;
-    margin: 0;
-    height: 52vh;
-  }
-
-  .functie p {
-    font-size: 2.5vh;
-  }
-
-  .functie img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 8px;
-  }
-
-  .third {
-    width: 82%;
-  }
-
-  .partner-images img {
-    padding: 1.5vh;
-    width: 15vh;
-  }
-
-  .purple-big {
-    display: none;
-  }
-
-  .small {
-    bottom: 24vh;
-    width: 6vh;
-  }
-
-  .purple {
-    bottom: 29vh;
-    width: 5vh;
-    left: 7vh;
-  }
-
-  .sparkle-1 {
-    bottom: 68vh;
-    width: 5vh;
-    left: 23vh;
-  }
-}
 
 .wie-zijn-wij {
   display: flex;
@@ -2039,8 +2157,6 @@ body.no-overflow-hidden {
   margin-left: 50px;
 }
 
-
-
 @media (max-width: 768px) {
   html,
   body {
@@ -2057,12 +2173,28 @@ body.no-overflow-hidden {
   }
 
   .icon {
-    width: 20vmin;
-    height: 20vmin;
+    width: 70vmin;
+    height: 70vmin;
     position: relative;
     overflow: hidden;
   }
 
+  .loading-container {
+    margin-top: 25vh;
+  }
+
+  .loading-icon img {
+    width: 40vw;
+  }
+
+  .loading-text h2 {
+    font-size: 5vw;
+  }
+
+  .loading-text p {
+    font-size: 3vw;
+  }
+  
   h1 {
     font-size: 7vw;
   }
@@ -2398,24 +2530,23 @@ body.no-overflow-hidden {
 
   .wie-zijn-wij-extrainfo-contact p {
     font-size: 0.9rem;
+  }
 
-}
+  .sorry-twoo {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-.sorry-twoo {
-  flex-wrap: wrap; 
-  flex-direction: column; 
-  align-items: flex-start;  
-  gap: 10px;
-}
+  .sorry-twoo-text {
+    max-width: 80%;
+    margin-left: 30px;
+    margin-top: 80px;
+    gap: 20px;
+  }
 
-.sorry-twoo-text {
-  max-width: 80%; 
-  margin-left: 30px; 
-  margin-top: 80px; 
-  gap: 20px; 
-}
-
-.container-methods {
+  .container-methods {
     flex-direction: column;
     display: flex;
     width: 100%;
@@ -2436,11 +2567,11 @@ body.no-overflow-hidden {
   .filter-elements {
     gap: 5px;
   }
-  
-  .search-sort{
+
+  .search-sort {
     margin-top: 25px;
     display: flex;
-  justify-content: center;
+    justify-content: center;
   }
 
   input[type="text"] {
@@ -2494,104 +2625,102 @@ body.no-overflow-hidden {
   }
 
   .article .text p {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .text {
-  padding-left: 0;
+    padding-left: 0;
   }
 
-  .filters-mobile{
+  .filters-mobile {
     display: none;
   }
 
-  .sort-buttons .filter-toggle{
+  .sort-buttons .filter-toggle {
     display: block;
   }
-  
+
   .search-sort-mobile {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative  ;
+    position: relative;
     top: 0;
-}
-  
-.sorry-twoo-text h2{
-  font-size: 24px;
-}
+  }
 
-.sorry-twoo-text p{
-  font-size: 0.9rem;
-}
-.sorry-twoo img {
-  margin-top: 5px; 
-  max-width: 250px; 
-  margin-left: 30px;
-}
+  .sorry-twoo-text h2 {
+    font-size: 24px;
+  }
 
-.sorry-container {
-  flex-wrap: wrap; 
-  flex-direction: column; 
-  gap: 10px; 
-}
+  .sorry-twoo-text p {
+    font-size: 0.9rem;
+  }
+  .sorry-twoo img {
+    margin-top: 5px;
+    max-width: 380px;
+    margin-left: 30px;
+  }
 
-.sorry-container-image img {
-  max-width: 80%; 
-  margin-top: 20px; 
-  margin-left: 30px; 
-}
+  .sorry-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.sorry-container-text p {
-  max-width: 80%; 
-  margin-left: 30px; 
-  margin-top: 10px; 
-  font-size: 0.9rem;
-}
+  .sorry-container-image img {
+    max-width: 80%;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
 
-.doel-text {
-  max-width: 85%; 
-  margin-left: 30px; 
-  margin-top: 10px; 
-  font-size: 0.9rem;
-}
+  .sorry-container-text p {
+    max-width: 80%;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
 
-.doel-text p{
-  font-size: 0.9rem;
-}
+  .doel-text {
+    max-width: 85%;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
 
-.doels {
-  grid-template-rows: auto; 
-  gap: 20px; 
-  margin-top: 20px /* Adjust top margin */
-}
+  .doel-text p {
+    font-size: 0.9rem;
+  }
 
-.doel-container {
-  width: 80%; 
-  height: auto; 
-  margin-left: 30px;
-  padding: 10px; 
-}
+  .doels {
+    grid-template-rows: auto;
+    gap: 20px;
+    margin-top: 20px; /* Adjust top margin */
+  }
 
-.doel-container p {
-  margin-left: 10px; 
-  font-size: 0.9rem;
-}
+  .doel-container {
+    width: 80%;
+    height: auto;
+    margin-left: 30px;
+    padding: 10px;
+  }
 
-.opleding-text {
-  max-width: 80%; 
-  margin-left: 30px;
-  margin-top: 20px; 
- 
-}
+  .doel-container p {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
 
-.opleding-text p {
-  font-size: 0.9rem;
-}
-.opleding-text a {
-  font-size: 12px; 
-}
+  .opleding-text {
+    max-width: 80%;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
 
+  .opleding-text p {
+    font-size: 0.9rem;
+  }
+  .opleding-text a {
+    font-size: 12px;
+  }
 
   .werkwijze {
     flex-wrap: wrap;
@@ -2644,5 +2773,5 @@ body.no-overflow-hidden {
   .werkwijze-container-text p {
     font-size: 0.9rem;
   }
-
+}
 }
