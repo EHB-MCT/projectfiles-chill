@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.getElementById("searchBar");
+  const searchInputDesktop = document.getElementById("searchBar");
+  const searchInputMobile = document.getElementById("searchBar-mobile");
   const clearFiltersButton = document.querySelector(".clear-filters");
   const clearFiltersButtonMobile = document.querySelector(
     ".clear-filters-mobile"
@@ -13,8 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
       filter.addEventListener("change", applyFilters);
     });
 
-  if (searchInput) {
-    searchInput.addEventListener("input", applyFilters);
+  if (searchInputDesktop) {
+    searchInputDesktop.addEventListener("input", applyFilters);
+  }
+
+  if (searchInputMobile) {
+    searchInputMobile.addEventListener("input", applyFilters);
   }
 
   if (clearFiltersButton) {
@@ -50,7 +55,9 @@ function applyFilters() {
     document.querySelectorAll(".level-filter:checked")
   ).map((input) => input.value);
   const searchQuery =
-    document.getElementById("searchBar")?.value.trim().toLowerCase() || "";
+    document.getElementById("searchBar")?.value.trim().toLowerCase() ||
+    document.getElementById("searchBar-mobile")?.value.trim().toLowerCase() ||
+    "";
 
   const filteredMethodieken = originalMethodieken.filter((methodiek) => {
     const matchesAge =
@@ -81,6 +88,7 @@ function clearFilters() {
     });
 
   document.getElementById("searchBar").value = "";
+  document.getElementById("searchBar-mobile").value = "";
 
   applyFilters();
 }
