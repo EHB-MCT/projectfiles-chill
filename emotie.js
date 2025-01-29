@@ -1,69 +1,57 @@
+// Select all buttons within the emotiebuttons container
 const buttons = document.querySelectorAll(".emotiebuttons button");
- 
-buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-        // Verwijder de klasse 'selected' van alle knoppen
-        buttons.forEach((btn) => btn.classList.remove("selected"));
-        // Voeg de klasse 'selected' toe aan de geklikte knop
-        button.classList.add("selected");
-    });
-});
- 
 const emotionButtons = document.querySelectorAll(".emotiebuttons button");
- 
+
+// Mapping emotions to corresponding image sources
 const emotieImages = {
-    blij: "images/joy.gif",
-    afschuw: "images/disgust.gif",
-    bang: "images/fear.gif",
-    boos: "images/angry.gif",
-    triestig: "images/sad.gif",
-    verrast: "images/shock.gif",
+  blij: "images/joy.gif",
+  afschuw: "images/disgust.gif",
+  bang: "images/fear.gif",
+  boos: "images/angry.gif",
+  triestig: "images/sad.gif",
+  verrast: "images/shock.gif",
 };
- 
+
+// Select the image element and the next step button
 const emotieImage = document.getElementById("emotieImage");
 const nextStepButton = document.getElementById("nextStep");
- 
-emotionButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        emotionButtons.forEach((btn) => btn.classList.remove("selected"));
-        button.classList.add("selected");
- 
-        const emotie = button.getAttribute("data-emotie");
-        const newSrc = emotieImages[emotie] || "icons/heart2.png"; // Default image
-        emotieImage.src = newSrc;
- 
-        if (newSrc.endsWith(".gif")) {
-            emotieImage.id = "gifImage";
-        } else {
-            emotieImage.id = "pngImage";
-        }
- 
-        nextStepButton.style.display = "block";
-    });
-});
- 
-// als geen button geselecteerd word dan wordt het niet gedisplayed
-const hideNextStepButton = () => {
-    const selectedButton = document.querySelector(".emotiebuttons button.selected");
-    if (!selectedButton) {
-        nextStepButton.style.display = "none";
-    }
+
+// Function to hide or show the next step button
+const updateNextStepVisibility = () => {
+  const selectedButton = document.querySelector(
+    ".emotiebuttons button.selected"
+  );
+  nextStepButton.style.display = selectedButton ? "block" : "none";
 };
- 
-// Het tonen van de nextstep button wanneer het geselecteerd is of niet
-hideNextStepButton();
- 
+
+// Add click event listeners to all emotion buttons
 emotionButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        const emotie = button.getAttribute("data-emotie");
-        const newSrc = emotieImages[emotie] || "icons/heart2.png";
- 
-        // Opslaan van de geselecteerde emotie in localStorage
-        const currentStep = window.location.pathname.includes("emotie-na-het-conflict") ? "after" : "during";
-        localStorage.setItem(`selectedEmotion-${currentStep}`, newSrc);
- 
-        // Update afbeelding en volgende stap knop
-        emotieImage.src = newSrc;
-        nextStepButton.style.display = "block";
-    });
+  button.addEventListener("click", () => {
+    // Remove 'selected' class from all buttons
+    emotionButtons.forEach((btn) => btn.classList.remove("selected"));
+    // Add 'selected' class to the clicked button
+    button.classList.add("selected");
+
+    // Retrieve emotion and update the image
+    const emotie = button.getAttribute("data-emotie");
+    const newSrc = emotieImages[emotie] || "icons/heart2.png"; // Default to heart icon
+    emotieImage.src = newSrc;
+
+    // Update the ID based on the image file type
+    emotieImage.id = newSrc.endsWith(".gif") ? "gifImage" : "pngImage";
+
+    // Save the selected emotion in localStorage
+    const currentStep = window.location.pathname.includes(
+      "emotie-na-het-conflict"
+    )
+      ? "after"
+      : "during";
+    localStorage.setItem(`selectedEmotion-${currentStep}`, newSrc);
+
+    // Ensure the next step button is displayed
+    updateNextStepVisibility();
+  });
 });
+
+// Initial setup: Hide the next step button if no emotion is selected
+updateNextStepVisibility();
