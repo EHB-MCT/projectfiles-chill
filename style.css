@@ -274,6 +274,22 @@ li a.active {
   height: 80vh;
 }
 
+
+#sticker-message.typo-1 {
+  font-family: "dream-big-wide", sans-serif;
+  font-style: normal;
+}
+
+#sticker-message.typo-2 {
+  font-family: "pf-reminder", sans-serif;
+  font-style: normal;
+}
+
+#sticker-message.typo-3 {
+  font-family: "roca", sans-serif;
+  font-style: italic;
+}  
+
 .dropdown-typo-content .typo-1 {
   font-family: "dream-big-wide", sans-serif;
   font-style: normal;
@@ -290,6 +306,27 @@ li a.active {
 }
 
 .dropdown-typo-content .typo-1,
+.dropdown-typo-content .typo-2,
+.dropdown-typo-content .typo-3 {
+	margin-top: 5px;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box; 
+	border: 2px solid white; 
+	transition: border 0.2s ease; 
+}
+
+.dropdown-typo-content .typo-1.active,
+.dropdown-typo-content .typo-2.active,
+.dropdown-typo-content .typo-3.active {
+	border-color: #e62e5a; 
+
 .typo-2,
 .typo-3 {
   margin-top: 5px;
@@ -306,6 +343,14 @@ li a.active {
 
 .dropdown-edit #color-btn,
 #typography-btn {
+	background-color: #3377b3;
+	color: white;
+	border: none;
+	text-align: left;
+	font-size: 16px;
+	cursor: pointer;
+	width: 320px;
+	height: 50px;
   background-color: #3377b3;
   color: white;
   border: none;
@@ -361,6 +406,17 @@ li a.active {
   z-index: 10;
 }
 
+
+.button-container a button {
+	display: flex;
+	margin-left: 12.5vw;
+	background-color: #e62e5a;
+	border: none;
+	color: #ffffff;
+	padding: 5px 25px;
+	font-size: 25px;
+	transition: all 0.1s ease;
+
 .sticker-button button {
   display: flex;
   margin-left: 12.5vw;
@@ -370,6 +426,7 @@ li a.active {
   padding: 5px 25px;
   font-size: 25px;
   transition: all 0.1s ease;
+
 }
 
 .sticker-preview img {
@@ -385,6 +442,16 @@ li a.active {
   border: 3px solid #fff;
   margin-bottom: 10px;
   margin-left: 12.5vw;
+}
+
+#sticker-preview{
+  display: flex;
+	justify-content: center;
+	width: 50vw;
+	padding: 10px 20px;
+	border: 3px solid #fff;
+	margin-bottom: 0;
+	margin-left: 0;
 }
 
 #sticker-message {
@@ -413,6 +480,15 @@ textarea::placeholder {
   display: block;
   text-align: center;
 }
+
+/* Sticker End Page */
+.center-container h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
 
 /* Sorrybot */
 
