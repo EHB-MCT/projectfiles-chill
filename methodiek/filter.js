@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchBar");
+  const clearFiltersButton = document.querySelector(".clear-filters");
+  const clearFiltersButtonMobile = document.querySelector(
+    ".clear-filters-mobile"
+  );
 
   document
     .querySelectorAll(".age-filter, .methodiek-filter, .level-filter")
@@ -9,6 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (searchInput) {
     searchInput.addEventListener("input", applyFilters);
+  }
+
+  if (clearFiltersButton) {
+    clearFiltersButton.addEventListener("click", clearFilters);
+  }
+
+  if (clearFiltersButtonMobile) {
+    clearFiltersButtonMobile.addEventListener("click", clearFilters);
   }
 });
 
@@ -44,4 +56,16 @@ function applyFilters() {
   });
 
   showMethodieken(filteredMethodieken);
+}
+
+function clearFilters() {
+  document
+    .querySelectorAll(".age-filter, .methodiek-filter, .level-filter")
+    .forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+
+  document.getElementById("searchBar").value = "";
+
+  applyFilters();
 }
