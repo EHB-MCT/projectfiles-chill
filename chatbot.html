@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -58,17 +58,38 @@
       <ul class="sorrybox">
         <li class="chat incoming">
           <img
-            src="./icons/Chatbot.png"
+            src="./icons/Chatbot.svg"
             alt="Smart Toy Icon"
             class="smart-toy-icon"
           />
           <p>
-            Hallo, ik ben Sorry Bot! Ik ben hier om u te helpen met jouw emoties
-            te begrijpen en sorry te zeggen. Hoe voel je je vandaag?
+            Hallo, ik ben Sorry Bot! Ik ben hier om je te helpen met jouw
+            emoties te begrijpen en sorry te zeggen. Wat is jouw naam?
           </p>
         </li>
       </ul>
-      <div class="suggestions"></div>
+      <div class="makeSorryLetter" style="display: none">
+        <button class="buttonbrief">Maak sorrybrief</button>
+      </div>
+      <div class="yes-or-no" style="display: none">
+        <button class="buttonbrief">Ja</button>
+        <button class="buttonbrief">Nee</button>
+      </div>
+      <div class="choices-container" style="display: none">
+        <a href="./4methods.html">
+          <button id="goTo3Methods" class="choice-btn">
+            Ga naar de 3 methodes
+          </button>
+        </a>
+
+        <button
+          id="newExcusesChat"
+          class="choice-btn"
+          onclick="window.location.reload();"
+        >
+          Maak een nieuwe chat
+        </button>
+      </div>
 
       <div class="chat-input">
         <textarea placeholder="Schrijf hier je antwoord..." required></textarea>
@@ -78,15 +99,6 @@
           alt="Send Icon"
           class="smart-toy-icon"
         />
-      </div>
-
-      <div class="choices-container" style="display: none">
-        <button id="goTo3Methods" class="choice-btn">
-          Ga naar de 3 methodes
-        </button>
-        <button id="newExcusesChat" class="choice-btn">
-          Maak een nieuwe excuses chat
-        </button>
       </div>
     </div>
   </body>
