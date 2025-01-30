@@ -2412,10 +2412,9 @@ body.no-overflow-hidden {
     height: 25px;
   }
 
-  .video {
-    width: 30px;
-    height: 40px;
-    left: 20px;
+  .video iframe {
+    width: 400px;
+    height: 300px;
   }
 
   /**/
