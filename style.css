@@ -1656,23 +1656,28 @@ input[type="text"] {
 /*index.html*/
 
 .primary {
-  text-align: center;
-  width: 100%;
-  max-width: 1200px; /* Or any value that fits your layout */
-  margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .primary p {
   margin-bottom: 10vh;
   margin-top: 4vh;
+  width: 50%;
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row; /* Changed to row for better layout control */
-}
+  flex-direction: column;}
 .links a {
   margin: 2vh;
 }
@@ -1782,7 +1787,7 @@ input[type="text"] {
 #horizontal {
   rotate: 90deg;
   right: -65vh;
-  top: -55vh;
+  top: -45vh;
 }
 
 
