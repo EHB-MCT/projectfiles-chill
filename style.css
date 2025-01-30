@@ -2921,12 +2921,12 @@ input[type="text"] {
 
   #horizontal {
     right: -28%;
-    top: -45vh;
+    top: -48vh;
     width: 10%;
   }
 
   #vertical {
-    right: 48%;
+    right: 56%;
     top: -22vh;
     width: 10%;
   }
@@ -3062,6 +3062,10 @@ input[type="text"] {
   .center-container {
     margin-top: 20vh;
   }
+#center-img{
+  margin-top: 0vh;
+}
+
   .center-container h2 {
     width: 90%;
   }
