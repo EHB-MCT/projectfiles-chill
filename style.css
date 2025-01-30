@@ -1034,11 +1034,6 @@ input[type="submit"]:hover {
 }
 
 /* Container holding the form */
-.emotiezenden form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
 
 #emotietext {
   padding-bottom: 50%;
@@ -1087,10 +1082,12 @@ input[type="submit"] {
   align-items: center;
 }
 
-.emotiezenden form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.emotiezenden textarea {
+  color: white;
+  background-color: transparent;
+  width: 40vw;
+  font-size: 16px;
+  margin-bottom: 100px;
 }
 
 .emotie-container h2 {
@@ -2623,7 +2620,7 @@ body.no-overflow-hidden {
     position: relative;
     top: 0;
   }
-  
+
   .sorry-twoo-text h2 {
     font-size: 24px;
   }
