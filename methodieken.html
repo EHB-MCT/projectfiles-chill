@@ -3,12 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Methodieken</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
-    <link rel="icon" type="image/x-icon" href="./favicon/favicon.png" />
     <script src="./menu.js" defer></script>
-    <script src="./methodiek.js" defer></script>
     <script src="./methodiek/api.js" defer></script>
     <script src="./methodiek/filter.js" defer></script>
   </head>
@@ -48,7 +46,12 @@
     <div class="container-methods">
       <div class="filters">
         <div class="search-sort">
-          <input type="text" placeholder="Search..." class="search-bar" />
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="Search..."
+            class="search-bar"
+          />
           <img
             src="./icons/search-icon.svg"
             class="search-button-img"
@@ -137,6 +140,7 @@
           <div class="search-sort-mobile">
             <input
               type="text"
+              id="searchBar-mobile"
               placeholder="Search..."
               class="search-bar-mobile"
             />
@@ -231,11 +235,8 @@
           <div class="article" id="article-2">
             <div class="icon-donwload">
               <a href="">
-                <img
-                  src="./icons/donwload-icon.svg"
-                  href=""
-                  alt="Icon for article 1"
-              /></a>
+                <img src="./icons/donwload-icon.svg" alt="Icon for article 1" />
+              </a>
             </div>
             <div class="text">
               <h3>B - Herstel, beweging in bewogen contexten</h3>
@@ -247,8 +248,8 @@
             </div>
           </div>
         </div>
+        <div class="pagination" id="pagination"></div>
       </section>
     </div>
-    <script></script>
   </body>
 </html>

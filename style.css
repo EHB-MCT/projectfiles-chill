@@ -1229,6 +1229,11 @@ input[type="submit"] {
   margin-top: 3%;
 }
 
+.container-methods {
+  margin: 5vh auto;
+  display: flex;
+}
+
 @media (max-width: 478px) {
   html,
   body {
@@ -1252,6 +1257,44 @@ input[type="submit"] {
   h1 {
     font-size: 7vw;
   }
+
+
+.search-sort {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-button-img {
+  position: absolute;
+  right: 5%;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+}
+
+.filter-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.clear-filters {
+  background: #60acbb;
+  display: flex;
+  border: none;
+  color: #ffffff;
+  padding: 5px 25px;
+  font-size: 20px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
 
   h2 {
     font-size: 5vw;
@@ -1294,9 +1337,15 @@ input[type="submit"] {
     left: 25px;
   }
 
+
   nav .logo img {
     width: 150px;
   }
+
+.content {
+  width: 75%;
+  padding: 20px 70px;
+}
 
   nav .menu-hamburger {
     display: block;
@@ -1315,6 +1364,7 @@ input[type="submit"] {
     width: 100%;
     z-index: 2;
   }
+
 
   .dropdown.active .dropdown-content {
     display: flex;
@@ -1533,7 +1583,7 @@ input[type="submit"] {
   .choice-btn {
     margin-bottom: 10px;
   }
-=======
+
 .container-methods {
   margin: 5vh auto;
   display: flex;
@@ -1710,26 +1760,29 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  gap: 10px;
 }
 
-.page-button {
-  background: #e62e5a;
+.pagination button {
+  padding: 10px;
+  margin: 5px;
   border: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  font-size: 16px;
+  background-color: #e62e5a;
   cursor: pointer;
-  transition: background 0.3s ease;
-  border-radius: 5px;
 }
 
-.page-button:hover {
-  background: #a81f3f;
+.pagination button:hover {
+  background-color: #b62244;
 }
+
+.pagination button:disabled {
+  background-color: #e62e5a;
+  cursor: not-allowed;
+}
+
 
 body.no-overflow-hidden {
   overflow: auto;
+
 .filters-mobile {
   display: none;
 }
@@ -1871,7 +1924,6 @@ body.no-overflow-hidden {
   margin-top: 50px;
   margin-left: 50px;
 }
-
 
 
 @media (max-width: 478px) {
@@ -3202,6 +3254,7 @@ body.no-overflow-hidden {
 
 .emotiebuttons1{
   margin-right: -25px;
+
 }
 
 .emotiebuttons2{
