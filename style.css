@@ -1394,22 +1394,23 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  gap: 10px;
 }
 
-.page-button {
-  background: #e62e5a;
+.pagination button {
+  padding: 10px;
+  margin: 5px;
   border: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  font-size: 16px;
+  background-color: #e62e5a;
   cursor: pointer;
-  transition: background 0.3s ease;
-  border-radius: 5px;
 }
 
-.page-button:hover {
-  background: #a81f3f;
+.pagination button:hover {
+  background-color: #b62244;
+}
+
+.pagination button:disabled {
+  background-color: #e62e5a;
+  cursor: not-allowed;
 }
 
 .filters-mobile {
