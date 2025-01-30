@@ -61,11 +61,9 @@
         </div>
 
         <script>
-          // Haal de gekozen emoties op uit localStorage
           const emotionDuring = localStorage.getItem("selectedEmotion-during");
           const emotionAfter = localStorage.getItem("selectedEmotion-after");
 
-          // Toon de gecombineerde GIF's met afwisseling
           if (emotionDuring && emotionAfter) {
             const gifElement = document.getElementById("combinedGif");
             let showDuring = true;
@@ -73,7 +71,7 @@
             setInterval(() => {
               gifElement.src = showDuring ? emotionDuring : emotionAfter;
               showDuring = !showDuring;
-            }, 2000); // Wissel elke 2 seconden
+            }, 2000);
           } else {
             console.error(
               "Emoties zijn niet correct opgeslagen in localStorage."
@@ -92,8 +90,12 @@
             </form>
           </div>
 
-          <!-- Button to generate the link -->
-          <button id="generateLinkButton">Genereer Link</button>
+          <div class="copy-container">
+            <img src="./icons/copy.svg" alt="Copy" id="copyButton" class="copy-icon" />
+            <input type="text" id="shortLink" readonly />
+          </div>
+          <p class="copy-instruction">Copieer de link en stuur die maar!</p>
+
 
           <a href="4methods.html">Andere sorrytools</a>
         </div>
@@ -101,39 +103,31 @@
     </div>
 
     <script>
-      // Functie om de link te genereren en naar het klembord te kopiëren
-      const generateShareableLink = () => {
-        const emotietext = document.getElementById("emotietext").value;
-
-        // Haal de emoties uit localStorage
-        const emotionDuring = localStorage.getItem("selectedEmotion-during");
-        const emotionAfter = localStorage.getItem("selectedEmotion-after");
-
-        if (!emotionDuring || !emotionAfter) {
-          alert("Emoties zijn niet geselecteerd.");
-          return;
-        }
-
-        // Genereer de deelbare URL met de emoties en tekst
-        const baseUrl = window.location.origin + "/emotiefinishTEST.html";
-        const shareableLink = `${baseUrl}?during=${encodeURIComponent(emotionDuring)}&after=${encodeURIComponent(emotionAfter)}&text=${encodeURIComponent(emotietext)}`;
-
-        // Kopieer de link naar het klembord
-        navigator.clipboard
-          .writeText(shareableLink)
-          .then(() => {
-            // No feedback to be displayed
-            console.log("Link gekopieerd naar het klembord!");
-          })
-          .catch(() => {
-            alert("Kon de link niet kopiëren. Probeer het opnieuw.");
-          });
-      };
-
-      // Event listener voor de "Genereer Link" knop
-      document
-        .getElementById("generateLinkButton")
-        .addEventListener("click", generateShareableLink);
+      document.addEventListener("DOMContentLoaded", () => {
+      const emotietext = localStorage.getItem("sorryLetter") || "";
+      document.getElementById("emotietext").value = emotietext;
+    
+      const emotionDuring = localStorage.getItem("selectedEmotion-during");
+      const emotionAfter = localStorage.getItem("selectedEmotion-after");
+    
+      if (!emotionDuring || !emotionAfter) {
+        alert("Emoties zijn niet geselecteerd.");
+        return;
+      }
+    
+      // Generate unique short link
+      const uniqueID = Date.now().toString(36);
+      const baseUrl = window.location.origin + "/emotiefinishTEST.html";
+      const shortLink = `${baseUrl}?id=${uniqueID}`;
+    
+      document.getElementById("shortLink").value = shortLink;
+    
+      // Copy button event
+      document.getElementById("copyButton").addEventListener("click", () => {
+        document.getElementById("shortLink").select();
+        document.execCommand("copy");
+      });
+    });
 
       document.addEventListener("DOMContentLoaded", () => {
         const sorryTextElement = document.getElementById("origami-textarea");

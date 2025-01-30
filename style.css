@@ -1088,8 +1088,9 @@ input[type="submit"] {
   color: #ffffff;
   padding: 20px 30px;
   font-size: 30px;
-  font-family: "lores-12", sans-serif;
-  transition: all 0.1s ease;
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
+    transition: all 0.1s ease;
   width: 100%;
   box-sizing: border-box;
 }
@@ -1252,7 +1253,6 @@ input[type="submit"] {
   display: flex;
 }
 
-#generateLinkButton,
 #other-sorrytools {
   background-color: #e62e5a;
   border: none;
@@ -1263,9 +1263,6 @@ input[type="submit"] {
   transition: all 0.1s ease;
 }
 
-#generateLinkButton {
-  margin-top: -9vh;
-}
 
 .link-generator {
   margin-bottom: 3vh;
@@ -1297,11 +1294,74 @@ input[type="submit"] {
   text-decoration: none;
 }
 
-.emotiesorry a {
-  background-color: unset;
+.link-copy {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  width: fit-content;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
-#generateLinkButton:hover,
+.emotiesorry {
+  width: 40%;
+    text-align: right;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+.emotiezenden textarea {
+  color: white;
+  background-color: transparent;
+  width: 40vw;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.copy-instruction {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;}
+
+.copy-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#shortLink {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.copy-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.copy-icon:hover {
+  opacity: 0.7;
+}
+
+
+
+
 #other-sorrytools:hover {
   cursor: pointer;
   box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
@@ -2489,9 +2549,7 @@ body.no-overflow-hidden {
     margin-bottom: 0;
   }
 
-  #generateLinkButton {
-    margin-bottom: 30px;
-  }
+  
 
   #emotie-container {
     display: flex;
