@@ -14,6 +14,4 @@ const selectedVideo = localStorage.getItem("selectedVideo");
 
 if (selectedVideo) {
 	iframeElement.src = selectedVideo;
-} else {
-
 }
