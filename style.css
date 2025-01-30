@@ -295,7 +295,7 @@ li a.active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
-  margin-right: 50px;
+  margin-left: 50px;
   height: 80vh;
 }
 
@@ -307,11 +307,13 @@ li a.active {
 #sticker-message.typo-2 {
   font-family: "pf-reminder", sans-serif;
   font-style: normal;
+  margin-left: 192px;
 }
 
 #sticker-message.typo-3 {
   font-family: "roca", sans-serif;
   font-style: italic;
+  margin-left: 192px;
 }
 
 .dropdown-typo-content .typo-1 {
@@ -374,7 +376,7 @@ li a.active {
   text-align: left;
   font-size: 16px;
   cursor: pointer;
-  width: 320px;
+  width: 307px;
   height: 50px;
 }
 
@@ -673,9 +675,7 @@ textarea::placeholder {
 }
 
 .button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .choices-container {
@@ -1287,6 +1287,14 @@ input[type="submit"] {
   width: 25%;
   padding: 20px 40px;
   border-radius: 10px;
+}
+
+.filters label {
+  font-family: "input-sans", sans-serif;
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
 }
 
 input[type="text"] {
