@@ -27,6 +27,7 @@ font-style: normal;
   font-size: 4vw;
   color: #ffffff;
   font-weight: 100;
+  margin-top: 0;
 }
 
 h2 {
@@ -35,6 +36,13 @@ font-style: normal;
   font-size: 3vw;
   color: #ffffff;
   font-weight: 100;
+}
+
+h3{
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
+    font-size: 1.5vw;
+    color: #ffffff;
 }
 
 p {
@@ -49,7 +57,15 @@ p {
 
 button {
   font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
   font-weight: 700;
+}
+
+a{
+  font-family: "lores-9-narrow", sans-serif;
+font-style: normal;
+  font-size: 4vw;
+  color: #ffffff;
 }
 
 /* Navbar */
@@ -1798,6 +1814,8 @@ input[type="text"] {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 .links a {
@@ -1880,6 +1898,10 @@ body.no-overflow-hidden {
   text-decoration: none;
 }
 
+#funtie2 img {
+  margin-bottom: 45px;
+}
+
 .functie {
   border-style: solid;
   border-color: white;
@@ -1890,6 +1912,10 @@ body.no-overflow-hidden {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.functie p {
+  margin-top: 0px;
 }
 
 .functie img {
