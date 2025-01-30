@@ -1472,7 +1472,7 @@ input[type="text"] {
 .sorry-container-text p {
   margin-left: 50px;
   max-width: 80%;
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 .doel-text {
@@ -1511,8 +1511,8 @@ input[type="text"] {
 }
 
 .opleding-text a {
-  color: #fff;
-  text-decoration: none;
+  color: #e62e5a;
+  font-size: 4vh;
 }
 
 /*WERKWIJZE*/
