@@ -1620,12 +1620,6 @@ input[type="text"] {
     transition: transform 0.3s ease;
   }
 
-  .text-methods h1 {
-    padding-top: 70px;
-    text-align: center;
-    font-size: 12vmin;
-    color: white;
-  }
 
   .icons-1 p,
   .icons-2 p,
@@ -2173,7 +2167,6 @@ body.no-overflow-hidden {
   }
 
   .text-methods h1 {
-    padding-top: 70px;
     text-align: center;
     font-size: 12vmin;
     color: white;
