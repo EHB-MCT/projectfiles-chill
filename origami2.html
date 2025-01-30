@@ -65,7 +65,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const sorryTextElement = document.getElementById("origami-textarea");
-        const savedLetter = localStorage.getItem("sorryLetter");
+        const savedLetter = sessionStorage.getItem("sorryLetter");
 
         if (savedLetter) {
           sorryTextElement.value = savedLetter;

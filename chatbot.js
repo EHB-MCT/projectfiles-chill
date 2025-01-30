@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         addMessage(data.reply);
-        localStorage.setItem("sorryLetter", data.reply);
+        sessionStorage.setItem("sorryLetter", data.reply);
         addMessage("Vind je deze brief goed?");
         sorryLetterBtn.style.display = "none"; // Hide the button
         yesOrNoButtons.style.display = "block"; // Show the Yes/No buttons

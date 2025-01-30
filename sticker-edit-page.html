@@ -85,7 +85,7 @@
           </div>
 
           <textarea
-            placeholder="Een kleine bericht op de sticker?"
+            placeholder="Of genereer een excuus in de Sorrybot..."
             id="sticker-message"
           ></textarea>
           <div class="button-container">
@@ -134,8 +134,8 @@
       });
 
       document.addEventListener("DOMContentLoaded", () => {
-        const sorryTextElement = document.getElementById("sticker-message");
-        const savedLetter = localStorage.getItem("sorryLetter");
+        const sorryTextElement = document.getElementById("origami-textarea");
+        const savedLetter = sessionStorage.getItem("sorryLetter");
 
         if (savedLetter) {
           sorryTextElement.value = savedLetter;
