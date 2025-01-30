@@ -4,7 +4,7 @@ choices.forEach((choice) => {
 	choice.addEventListener("click", (event) => {
 		event.preventDefault();
 		const videoURL = choice.getAttribute("data-video");
-		localStorage.setItem("selectedVideo", videoURL);
+		sessionStorage.setItem("selectedVideo", videoURL);
 		window.location.href = choice.getAttribute("href");
 	});
 });
