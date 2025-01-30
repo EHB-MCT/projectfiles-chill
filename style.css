@@ -2340,12 +2340,6 @@ body.no-overflow-hidden {
     font-size: 20px;
   }
 
-  .origami-button-2 {
-    top: 100px;
-    left: 71%;
-    transform: translateX(-50%);
-  }
-
   .origami-button-2 button {
     padding: 10px 25px;
     font-size: 20px;
@@ -2423,6 +2417,7 @@ body.no-overflow-hidden {
   .choices-container button {
     font-size: 0.8rem;
     padding: 10px 15px;
+    margin-bottom: 10px;
   }
   .suggestions {
     display: flex;
@@ -2438,19 +2433,24 @@ body.no-overflow-hidden {
   }
   .btn-titel {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     margin-top: 10vh;
+    align-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
   .btn-titel h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    width: 70%;
     text-align: center;
+    margin-top: 40px;
   }
 
   .btn-titel .back-button {
-    left: 10px;
+    left: -2vh;
   }
 
   body.no-overflow-hidden {
@@ -2460,8 +2460,15 @@ body.no-overflow-hidden {
   .wie-zijn-wij {
     flex-wrap: wrap;
     flex-direction: column;
-    gap: -55px;
     align-items: flex-start;
+    width: 95%;
+  }
+
+  .wie-zijn-wij-container {
+    width: 95%;
+  }
+  .wie-zijn-wij-extrainfo {
+    width: 95%;
   }
 
   .wie-zijn-wij-text {
