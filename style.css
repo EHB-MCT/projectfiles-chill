@@ -1733,6 +1733,7 @@ body.no-overflow-hidden {
 .filters-mobile {
   display: none;
 }
+}
 
 .sort-buttons .filter-toggle {
   display: none;
