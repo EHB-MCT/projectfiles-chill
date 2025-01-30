@@ -1,39 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Origami</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
-		<script>
-			window.onload = function () {
-				const content = document.querySelector(".loading-container");
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Origami</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.png" />
+    <script>
+      window.onload = function () {
+        const content = document.querySelector(".loading-container");
 
-				// Play the audio
-				const audio = new Audio("audio/3-second.mp3");
-				audio.play();
+        // Play the audio
+        const audio = new Audio("audio/3-second.mp3");
+        audio.play();
 
-				setTimeout(function () {
-					content.classList.add("show");
-				}, 0);
+        setTimeout(function () {
+          content.classList.add("show");
+        }, 0);
 
-				setTimeout(function () {
-					window.location.href = "./origami.html";
-				}, 3000);
-			};
-		</script>
-		<!-- https://chatgpt.com/share/6788e0be-ec60-8004-92fe-271724db49fb -->
-	</head>
-	<body>
-		<div>
-			<div class="loading-container">
-				<div class="loading-icon"><img src="./icons/Origami_loadpage.svg" alt="" /></div>
-				<div class="loading-text">
-					<h2>Welkom bij de Origami maker</h2>
-					<p>Vouw je excuses tot iets mooi!</p>
-				</div>
-			</div>
-		</div>
-	</body>
+        setTimeout(function () {
+          window.location.href = "./origami.html";
+        }, 3000);
+      };
+    </script>
+    <!-- https://chatgpt.com/share/6788e0be-ec60-8004-92fe-271724db49fb -->
+  </head>
+  <body>
+    <div class="loading-container">
+      <div class="loading-icon">
+        <img src="./icons/Origami_loadpage.svg" alt="" />
+      </div>
+      <div class="loading-text">
+        <h2>Welkom bij de Origami maker</h2>
+        <p>Vouw je excuses tot iets mooi!</p>
+      </div>
+    </div>
+  </body>
 </html>
