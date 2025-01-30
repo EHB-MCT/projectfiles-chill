@@ -301,6 +301,10 @@ li a.active {
   height: 80vh;
 }
 
+#back-button {
+  display: none;
+}
+
 #sticker-message.typo-1 {
   font-family: "dream-big-wide", sans-serif;
   font-style: normal;
@@ -2974,6 +2978,8 @@ body.no-overflow-hidden {
     margin-left: -25px;
   }
 
+  /* Sticker Preview */
+
   .sticker {
     width: 150px;
     margin: 0 auto;
@@ -3002,5 +3008,74 @@ body.no-overflow-hidden {
   }
   .sticker-preview img {
     width: 70%;
+  }
+  /* Sticker Preview */
+  .sticker-preview img {
+    max-width: 100%;
+    height: auto;
+-  }
+
+  /* Textarea */
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  textarea::placeholder {
+    color: #ccc;
+  }
+
+  .button-container button {
+    background: #e62e5a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  .button-container button:hover {
+    background: #c0274a;
+  }
+
+  .edit-sticker-container {
+    display: block;
+    margin-top: 30%;
+  }
+
+  .sticker-preview,
+  .button-container {
+    text-align: center;
+  }
+  .edit-left {
+    width: 71vw;
+    margin-left: 10px;
+  }
+  .edit-right {
+    display: flex;
+    justify-content: center;
+  }
+  #back-button {
+    display: block;
+  }
+  #back-button-desktop {
+    display: none;
+  }
+  .sticker-preview {
+    margin-left: 0px;
+  }
+  .button-container a button {
+    margin-left: 0vw;
+  }
+  .sticker-preview {
+    width: 70vw;
+  }
+  #sticker-message {
+    width: 70vw;
   }
 }
