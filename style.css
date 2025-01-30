@@ -1829,7 +1829,7 @@ input[type="text"] {
     flex-direction: column;
   }
   .no-overflow-hidden {
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 
   .container {
@@ -1958,8 +1958,8 @@ input[type="text"] {
 }
 
 #secondary-call-to-action {
-
- 
+  color: #ffffff;
+  text-decoration: underline white;
   font-size: 2.5vh;
 }
 
@@ -1983,7 +1983,7 @@ input[type="text"] {
 .index-button {
   background-color: #e62e5a;
   border: none;
-
+  color: #ffffff;
   padding: 15px 35px;
   font-size: 25px;
   font-family: "lores-12", sans-serif;
@@ -2051,7 +2051,7 @@ body.no-overflow-hidden {
 
 .functie {
   border-style: solid;
- 
+  border-color: white;
   padding: 5vh;
   margin: 4vh;
   height: 65vh;
@@ -2907,7 +2907,7 @@ body.no-overflow-hidden {
   }
 
   .no-overflow-hidden {
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 
   .primary {
