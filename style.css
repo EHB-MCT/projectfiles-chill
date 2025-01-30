@@ -1894,6 +1894,10 @@ body.no-overflow-hidden {
   text-align: center;
 }
 
+.secondary h1 {
+  margin-bottom: 0;
+}
+
 .third {
   width: 70%;
   text-align: center;
@@ -1902,13 +1906,20 @@ body.no-overflow-hidden {
 .partner-images {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
+}
+
+.email {
+  margin-top: 10vh;
+  display: flex;
 }
 
 .partner-images img {
   object-fit: contain;
   padding: 5vh;
-  width: 35vh;
+  width: 25vh;
 }
 
 .carrousel {
@@ -1969,10 +1980,11 @@ body.no-overflow-hidden {
 .purple {
   bottom: 65vh;
   width: 8vh;
+  left: -30vh;
 }
 
 .sparkle-1 {
-  bottom: 80vh;
+  bottom: 85vh;
   width: 10vh;
   left: 10vh;
 }
@@ -1980,8 +1992,8 @@ body.no-overflow-hidden {
 .sparkle-2 {
   top: -135vh;
   rotate: 90deg;
-  right: 100vh;
-  width: 15vh;
+  right: 105vh;
+  width: 10vh;
 }
 
 .wie-zijn-wij {
