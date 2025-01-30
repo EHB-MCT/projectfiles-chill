@@ -108,7 +108,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const emotietext = localStorage.getItem("sorryLetter") || "";
+        const emotietext = sessionStorage.getItem("sorryLetter") || "";
         document.getElementById("emotietext").value = emotietext;
 
         const emotionDuring = localStorage.getItem("selectedEmotion-during");

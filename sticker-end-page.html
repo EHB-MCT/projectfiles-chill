@@ -59,11 +59,47 @@
       </div>
 
       <h2>Blij met je sticker, copy de link en stuur die maar</h2>
+      <div class="copy-container" id="copy-container">
+        <img
+          src="./icons/copy.svg"
+          alt="Copy"
+          id="copyButton"
+          class="copy-icon"
+        />
+        <input type="text" id="shortLink" readonly />
+      </div>
       <div class="button-container">
         <button type="button" onclick="location.href='./4methods.html'">
           Klaar?
         </button>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const emotietext = sessionStorage.getItem("sorryLetter") || "";
+        document.getElementById("emotietext").value = emotietext;
+
+        const emotionDuring = localStorage.getItem("selectedEmotion-during");
+        const emotionAfter = localStorage.getItem("selectedEmotion-after");
+
+        if (!emotionDuring || !emotionAfter) {
+          alert("Emoties zijn niet geselecteerd.");
+          return;
+        }
+
+        // Generate unique short link
+        const uniqueID = Date.now().toString(36);
+        const baseUrl = window.location.origin + "/emotiefinishTEST.html";
+        const shortLink = `${baseUrl}?id=${uniqueID}`;
+
+        document.getElementById("shortLink").value = shortLink;
+
+        // Copy button event
+        document.getElementById("copyButton").addEventListener("click", () => {
+          document.getElementById("shortLink").select();
+          document.execCommand("copy");
+        });
+      });
+    </script>
   </body>
 </html>

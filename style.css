@@ -509,7 +509,7 @@ textarea::placeholder {
 .center-container h2 {
   font-size: 1.8rem;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 25px;
 }
 
 /* Sorrybot */
@@ -948,9 +948,13 @@ textarea::placeholder {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5vh;
   text-align: center;
   width: 100vw;
+}
+
+#copy-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .video-container iframe {
@@ -1090,7 +1094,7 @@ input[type="submit"] {
   font-size: 30px;
   font-family: "lores-9-narrow", sans-serif;
   font-style: normal;
-    transition: all 0.1s ease;
+  transition: all 0.1s ease;
   width: 100%;
   box-sizing: border-box;
 }
@@ -1262,7 +1266,6 @@ input[type="submit"] {
   transition: all 0.1s ease;
 }
 
-
 .link-generator {
   margin-bottom: 3vh;
   display: flex;
@@ -1310,12 +1313,12 @@ input[type="submit"] {
 
 .emotiesorry {
   width: 40%;
-    text-align: right;
-    display: flex
-;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;}
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .emotiezenden textarea {
   color: white;
@@ -1330,7 +1333,8 @@ input[type="submit"] {
   font-weight: bold;
   margin-bottom: 8px;
   font-family: "lores-9-narrow", sans-serif;
-  font-style: normal;}
+  font-style: normal;
+}
 
 .copy-container {
   display: flex;
@@ -1357,9 +1361,6 @@ input[type="submit"] {
 .copy-icon:hover {
   opacity: 0.7;
 }
-
-
-
 
 #other-sorrytools:hover {
   cursor: pointer;
@@ -2547,8 +2548,6 @@ body.no-overflow-hidden {
     margin-bottom: 0;
   }
 
-  
-
   #emotie-container {
     display: flex;
     flex-wrap: wrap;
@@ -3036,7 +3035,7 @@ body.no-overflow-hidden {
 
   #emotietext {
     width: 300px;
-    margin-bottom: 25PX ;
+    margin-bottom: 25px;
   }
 
   /* Sticker Preview */
@@ -3074,7 +3073,7 @@ body.no-overflow-hidden {
   .sticker-preview img {
     max-width: 100%;
     height: auto;
- }
+  }
 
   /* Textarea */
   textarea {
@@ -3094,9 +3093,9 @@ body.no-overflow-hidden {
     background: #e62e5a;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 16px 40px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     transition: 0.3s;
   }
 
