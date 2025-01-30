@@ -1,9 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const { MongoClient } = require("mongodb");
+require("dotenv").config();
 
 const app = express();
-const PORT = 3000;
+const client = new MongoClient(process.env.DATABASE_URL);
+const port = process.env.PORT;
 
 // OpenAI API Key
 const OPENAI_API_KEY =
@@ -11,6 +14,7 @@ const OPENAI_API_KEY =
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json());
 
 app.post("/chat", async (req, res) => {
   const { message, context } = req.body;
@@ -124,7 +128,25 @@ app.post("/chat", async (req, res) => {
   }
 });
 
+// Get all players
+app.get("/methodieken", async (req, res) => {
+  try {
+    await client.connect();
+    const db = client.db("Sorrybox").collection("Methodieken");
+    const query = {};
+    const collection = await db.find(query).toArray();
+    res.status(200).send(collection);
+  } catch (error) {
+    res.status(500).send({
+      error: "An error has occurred",
+      value: error,
+    });
+  } finally {
+    await client.close();
+  }
+});
+
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
