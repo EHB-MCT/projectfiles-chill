@@ -68,37 +68,44 @@
             </form>
           </div>
 
-          <button id="generateLinkButton">Genereer Link</button>
-          <a id="copyMessage" style="display: none; color: white; margin-top: 10px;"></a>
+          <div class="copy-container">
+            <img src="./icons/copy.svg" alt="Copy" id="copyButton" class="copy-icon" />
+            <input type="text" id="shortLink" readonly />
+          </div>
+          <p class="copy-instruction">Copieer de link en stuur die maar!</p>
+
           <a href="4methods.html">Andere sorrytools</a>
         </div>
       </div>
     </div>
 
     <script>
-      const generateShareableLink = () => {
-        const emotietext = document.getElementById("emotietext").value;
-        const emotionDuring = localStorage.getItem("selectedEmotion-during");
-        const emotionAfter = localStorage.getItem("selectedEmotion-after");
+  document.addEventListener("DOMContentLoaded", () => {
+  const emotietext = localStorage.getItem("sorryLetter") || "";
+  document.getElementById("emotietext").value = emotietext;
 
-        if (!emotionDuring || !emotionAfter) {
-          alert("Emoties zijn niet geselecteerd.");
-          return;
-        }
+  const emotionDuring = localStorage.getItem("selectedEmotion-during");
+  const emotionAfter = localStorage.getItem("selectedEmotion-after");
 
-        const baseUrl = window.location.origin + "/emotiefinishTEST.html";
-        const shareableLink = `${baseUrl}?during=${encodeURIComponent(emotionDuring)}&after=${encodeURIComponent(emotionAfter)}&text=${encodeURIComponent(emotietext)}`;
+  if (!emotionDuring || !emotionAfter) {
+    alert("Emoties zijn niet geselecteerd.");
+    return;
+  }
 
-        navigator.clipboard.writeText(shareableLink).then(() => {
-          const messageElement = document.getElementById("copyMessage");
-          messageElement.textContent = `Link gekopieerd! ${shareableLink}`;
-          messageElement.style.display = "block";
-        }).catch(() => {
-          alert("Kon de link niet kopiëren. Probeer het opnieuw.");
-        });
-      };
+  // Generate unique short link
+  const uniqueID = Date.now().toString(36);
+  const baseUrl = window.location.origin + "/emotiefinishTEST.html";
+  const shortLink = `${baseUrl}?id=${uniqueID}`;
 
-      document.getElementById("generateLinkButton").addEventListener("click", generateShareableLink);
+  document.getElementById("shortLink").value = shortLink;
+
+  // Copy button event
+  document.getElementById("copyButton").addEventListener("click", () => {
+    document.getElementById("shortLink").select();
+    document.execCommand("copy");
+  });
+});
+
 
       document.addEventListener("DOMContentLoaded", () => {
         const sorryTextElement = document.getElementById("emotietext");

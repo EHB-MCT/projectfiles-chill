@@ -1084,8 +1084,9 @@ input[type="submit"] {
   color: #ffffff;
   padding: 20px 30px;
   font-size: 30px;
-  font-family: "lores-12", sans-serif;
-  transition: all 0.1s ease;
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
+    transition: all 0.1s ease;
   width: 100%;
   box-sizing: border-box;
 }
@@ -1095,6 +1096,38 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+.copy-instruction {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;}
+
+.copy-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#shortLink {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.copy-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.copy-icon:hover {
+  opacity: 0.7;
 }
 
 .emotiezenden {
@@ -1108,7 +1141,7 @@ input[type="submit"] {
   background-color: transparent;
   width: 40vw;
   font-size: 16px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .emotie-container {
@@ -1187,8 +1220,12 @@ input[type="submit"] {
 
 .emotiesorry {
   width: 40%;
-  text-align: end;
-}
+    text-align: right;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
 
 .emotiegift {
   color: #ffffff;
@@ -1216,7 +1253,6 @@ input[type="submit"] {
   font-size: 23px;
   transition: all 0.1s ease;
   text-decoration: none;
-  width: 28vh;
   text-align: center;
   font-family: "lores-9-narrow", sans-serif;
 }
@@ -1293,9 +1329,6 @@ input[type="submit"] {
   text-decoration: none;
 }
 
-.emotiesorry a {
-  background-color: unset;
-}
 
 #generateLinkButton:hover,
 #other-sorrytools:hover {
@@ -2898,4 +2931,19 @@ body.no-overflow-hidden {
   .emotiebuttons2 {
     margin-left: -25px;
   }
+}
+
+.link-copy {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  width: fit-content;
+  max-width: 100%;
+  word-wrap: break-word;
 }
