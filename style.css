@@ -678,6 +678,10 @@ textarea::placeholder {
   margin-top: 10px;
 }
 
+.button-container a {
+  text-decoration: none;
+}
+
 .choices-container {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -824,27 +828,19 @@ textarea::placeholder {
 }
 
 /*Origami tweede pagina*/
-.pen {
-  position: absolute;
-  top: 248px;
-  left: 60%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.pen img {
-  width: 300px;
-  height: 250px;
-}
 
 .btn-titel {
   position: relative;
   overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-titel .back-button {
   position: absolute;
-  top: 20px;
+  top: 45px;
   left: 50px;
   width: 30px;
   height: 45px;
@@ -872,7 +868,6 @@ textarea::placeholder {
 .origami-button-2 {
   position: relative;
   top: 9px;
-  left: 690px;
 }
 
 .origami-button-2 button {
@@ -887,6 +882,22 @@ textarea::placeholder {
 .origami-button-2 button:hover {
   cursor: pointer;
   box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+.btn-titel textarea {
+  display: block;
+  margin: 20px auto;
+  width: 75%;
+  height: 300px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #ccc;
+  text-align: left;
+}
+
+textarea::placeholder {
+  color: gray;
+  opacity: 0.7; /* Adjust opacity for better visibility */
 }
 
 /*Origami kies jou shape page*/
@@ -2316,19 +2327,6 @@ body.no-overflow-hidden {
   .origami-button button {
     padding: 10px 25px;
     font-size: 20px;
-  }
-
-  .pen {
-    position: absolute;
-    top: 235px;
-    left: 71%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  .pen img {
-    width: 150px;
-    height: 125px;
   }
 
   .origami-button-2 {
