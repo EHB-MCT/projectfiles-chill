@@ -15,6 +15,5 @@ const selectedVideo = localStorage.getItem("selectedVideo");
 if (selectedVideo) {
 	iframeElement.src = selectedVideo;
 } else {
-	alert("Geen video geselecteerd! Keer terug naar de vorige pagina.");
-	window.location.href = "./origami2.html";
+
 }
