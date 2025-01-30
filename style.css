@@ -1741,10 +1741,15 @@ input[type="text"] {
 
   .emotiegift {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
   }
 
   .emotiesorry {
-    margin-top: 10%;
+    margin-top: 5%;
     width: 80%;
     text-align: center;
     align-self: center;
@@ -2289,6 +2294,18 @@ body.no-overflow-hidden {
   }
 
   /**/
+
+  .button-container button {
+    padding: 1vh 2vw;
+    font-size: 1.2rem;
+  }
+
+  .origami-tussentitel p {
+    font-size: 1.2rem;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20%;
+  }
   .origami-container {
     position: relative;
     overflow: visible;
@@ -2323,10 +2340,10 @@ body.no-overflow-hidden {
   }
 
   .origami-container img {
-    height: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
+    height: 140px;
+    top: 20px;
+    margin-bottom: 20px;
+    margin-top: 50px;
   }
 
   .origami-button {
@@ -2442,6 +2459,37 @@ body.no-overflow-hidden {
     margin-bottom: 20px;
   }
 
+  .emotiezenden textarea {
+    width: 100%;
+    margin-bottom: 50px;
+    padding-left: 50px;
+  }
+  .emotiesturen {
+    margin-top: 0;
+  }
+
+  .emotiegift p {
+    font-size: 20px;
+    width: 80%;
+    margin-bottom: 0;
+  }
+
+  .emotiegift img {
+    margin-bottom: 0;
+  }
+
+  #generateLinkButton {
+    margin-bottom: 30px;
+  }
+
+  #emotie-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20vh;
+  }
   .btn-titel h2 {
     font-size: 1.8rem;
     width: 70%;
