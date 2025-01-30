@@ -10,7 +10,7 @@ choices.forEach((choice) => {
 });
 
 const iframeElement = document.getElementById("origami-video");
-const selectedVideo = localStorage.getItem("selectedVideo");
+const selectedVideo = sessionStorage.getItem("selectedVideo");
 
 if (selectedVideo) {
 	iframeElement.src = selectedVideo;
