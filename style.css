@@ -3138,4 +3138,9 @@ body.no-overflow-hidden {
   #sticker-message {
     width: 70vw;
   }
+  .emotie-container .back-button {
+    position: relative;
+    top: 0vh;
+    left: -40vw;
+  }
 }
