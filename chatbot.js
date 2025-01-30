@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let userAnswerCount = 0;
   const maxQuestions = 3;
   let conversationHistory = []; // Conversation history for context
+  let typingIndicator;
 
   // Function to add a message to the chat
-  function addMessage(text, isUser = false) {
+  function addMessage(text, isUser = false, isTyping = false) {
     const chatItem = document.createElement("li");
-    chatItem.classList.add("chat");
-    chatItem.classList.add(isUser ? "outgoing" : "incoming");
+    chatItem.classList.add("chat", isUser ? "outgoing" : "incoming");
 
     if (!isUser) {
       const icon = document.createElement("img");
@@ -26,11 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const messageText = document.createElement("p");
-    messageText.textContent = text;
+
+    if (isTyping) {
+      messageText.classList.add("typing-indicator");
+      messageText.innerHTML = `<span>.</span><span>.</span><span>.</span>`;
+    } else {
+      messageText.textContent = text;
+    }
 
     chatItem.appendChild(messageText);
     chatBox.appendChild(chatItem);
     chatBox.scrollTop = chatBox.scrollHeight;
+
+    return chatItem;
   }
 
   // Send the message to the chat
@@ -46,37 +54,50 @@ document.addEventListener("DOMContentLoaded", () => {
     conversationHistory.push({ role: "user", content: message });
     userAnswerCount++;
 
-    // Send the message to the backend
-    fetch("http://localhost:3000/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        message,
-        context: { messages: conversationHistory },
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Show chatbot reply if questionCount < 3
-        if (questionCount < maxQuestions) {
-          addMessage(data.reply);
-          questionCount++;
-        }
+    // Voeg typanimatie toe, but skip it if questionCount > 1
+    if (questionCount < 3) {
+      typingIndicator = addMessage("", false, true); // Add typing animation
+    }
 
-        // After 4th user input, show the buttons
-        if (userAnswerCount >= 4) {
-          sorryLetterBtn.style.display = "block"; // Show the button
-          inputField.disabled = true; // Disable input
-          sendBtn.disabled = true; // Disable send button
-        }
+    // Send the message to the backend
+    setTimeout(() => {
+      fetch("http://localhost:3000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          message,
+          context: { messages: conversationHistory },
+        }),
       })
-      .catch((error) => {
-        console.error("Error while sending:", error);
-        addMessage("Sorry, something went wrong. Please try again.");
-      })
-      .finally(() => {
-        sendBtn.disabled = false;
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          // Show chatbot reply if questionCount < 3
+          if (questionCount < maxQuestions) {
+            if (questionCount < 3) {
+              typingIndicator.remove(); // Verwijder typanimatie
+            }
+            addMessage(data.reply);
+            questionCount++;
+          }
+
+          // After 4th user input, show the buttons
+          if (userAnswerCount >= 4) {
+            sorryLetterBtn.style.display = "block"; // Show the button
+            inputField.disabled = true; // Disable input
+            sendBtn.disabled = true; // Disable send button
+          }
+        })
+        .catch((error) => {
+          console.error("Error while sending:", error);
+          if (questionCount < 3) {
+            typingIndicator.remove(); // Verwijder typanimatie
+          }
+          addMessage("Sorry, something went wrong. Please try again.");
+        })
+        .finally(() => {
+          sendBtn.disabled = false;
+        });
+    }, 2000);
   }
 
   // Event listener for sending message
