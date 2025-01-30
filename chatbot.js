@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Send the message to the backend
     setTimeout(() => {
-      fetch("http://localhost:3000/chat", {
+      fetch("https://projectfiles-chill.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addMessage("Ik maak een sorrybrief voor je...");
 
     // Create the sorry letter by sending the request
-    fetch("http://localhost:3000/chat", {
+    fetch("https://projectfiles-chill.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
