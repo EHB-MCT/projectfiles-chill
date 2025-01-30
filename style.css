@@ -1432,6 +1432,10 @@ input[type="submit"] {
   .emotiesturen {
     flex-direction: column;
   }
+
+  .choice-btn {
+    margin-bottom: 10px;
+  }
 }
 
 /*index.html*/
