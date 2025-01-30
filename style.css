@@ -2532,7 +2532,6 @@ body.no-overflow-hidden {
   .emotiezenden textarea {
     width: 100%;
     margin-bottom: 50px;
-    padding-left: 50px;
   }
   .emotiesturen {
     margin-top: 0;
@@ -3035,6 +3034,11 @@ body.no-overflow-hidden {
     margin-left: -25px;
   }
 
+  #emotietext {
+    width: 300px;
+    margin-bottom: 25PX ;
+  }
+
   /* Sticker Preview */
 
   .sticker {
@@ -3070,7 +3074,7 @@ body.no-overflow-hidden {
   .sticker-preview img {
     max-width: 100%;
     height: auto;
--  }
+ }
 
   /* Textarea */
   textarea {
