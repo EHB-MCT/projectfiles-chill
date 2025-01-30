@@ -2973,4 +2973,21 @@ body.no-overflow-hidden {
   .emotiebuttons2 {
     margin-left: -25px;
   }
+
+  .sticker {
+    width: 200px;
+    margin: 0 auto;
+    height: 200px;
+  }
+
+  .sticker IMG {
+    width: 100px;
+    margin: 0 auto;
+    height: 100px;
+  }
+
+  .stickers {
+    grid-template-columns: repeat(2, 200px);
+    gap: 20px;
+  }
 }
