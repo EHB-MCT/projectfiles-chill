@@ -1671,7 +1671,11 @@ input[type="text"] {
   }
 
   .secondary h1 {
+<<<<<<< HEAD
     margin-top: 50px;
+=======
+    margin-top: 20px;
+>>>>>>> de18706ae86136e74321931051160f3b6fc840ea
   }
 
   .dropdown.active .dropdown-content {
