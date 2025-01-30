@@ -1,4 +1,4 @@
-html,
+BACKGROUNDhtml,
 body {
   height: 100%;
   margin: 0;
@@ -1996,10 +1996,6 @@ input[type="text"] {
   box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
 }
 
-body.no-overflow-hidden {
-  overflow: auto;
-}
-
 .secondary {
   margin-top: -9vh;
   text-align: center;
@@ -2069,9 +2065,6 @@ body.no-overflow-hidden {
   width: 80%;
 }
 
-body.no-overflow-hidden {
-  overflow: auto;
-}
 
 .sparkles2 img {
   position: relative;
@@ -2569,9 +2562,7 @@ body.no-overflow-hidden {
     left: -2vh;
   }
 
-  body.no-overflow-hidden {
-    overflow: auto;
-  }
+ 
 
   .wie-zijn-wij {
     flex-wrap: wrap;
