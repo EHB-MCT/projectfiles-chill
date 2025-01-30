@@ -2311,6 +2311,14 @@ body.no-overflow-hidden {
     overflow: visible;
     z-index: 0;
   }
+  .origami-foto img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .origami-foto h2 {
+    font-size: 1.2rem;
+  }
 
   .origami-schaar {
     position: absolute;
