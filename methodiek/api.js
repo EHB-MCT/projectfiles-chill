@@ -4,7 +4,9 @@ const itemsPerPage = 10;
 
 async function fetchmethodieken() {
   try {
-    const response = await fetch(`http://localhost:3000/methodieken`);
+    const response = await fetch(
+      `https://projectfiles-chill-1.onrender.com/methodieken`
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch players");
     }

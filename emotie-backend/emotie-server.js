@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+const port = process.env.PORT;
 const app = express();
 
 // Middleware
