@@ -6,7 +6,9 @@
     <title>Emotie visualiser</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
+
     <link rel="icon" type="image/x-icon" href="./favicon/favicon.png" />
+
     <script src="./menu.js" defer></script>
     <script src="./emotie.js" defer></script>
   </head>
@@ -43,6 +45,8 @@
     </nav>
 
     <div class="emotie-container">
+
+
       <a href="./emotie-na-het-conflict.html"
         ><img
           src="./icons/back-button.png"
@@ -80,29 +84,21 @@
         </script>
 
         <div class="emotiesorry">
-          <form action="#">
-            <div class="help">
-              <input
-                class="emotietextsorry"
-                type="text"
+          <div class="emotiezenden">
+            <form>
+              <textarea
                 id="emotietext"
-                name="fname"
-                size="100"
-                placeholder="Voer je sorry tekst in..."
-              /><br /><br />
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="bottom">
-        <!-- Button to generate the link -->
-        <div class="link-generator">
+                class="styled-textarea"
+                placeholder="Typ hier je bericht..."
+              ></textarea>
+            </form>
+          </div>
+
+          <!-- Button to generate the link -->
           <button id="generateLinkButton">Genereer Link</button>
-          <div id="messageContainer"></div>
+
+          <a href="4methods.html">Andere sorrytools</a>
         </div>
-      </div>
-      <div id="other-sorrytools">
-        <a href="4methods.html">Andere sorrytools</a>
       </div>
     </div>
 
@@ -140,6 +136,15 @@
       document
         .getElementById("generateLinkButton")
         .addEventListener("click", generateShareableLink);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const sorryTextElement = document.getElementById("emotietext");
+        const savedLetter = localStorage.getItem("sorryLetter");
+
+        if (savedLetter) {
+          sorryTextElement.value = savedLetter;
+        }
+      });
     </script>
   </body>
 </html>
