@@ -1655,7 +1655,78 @@ input[type="text"] {
 
 /*index.html*/
 
+.primary {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px; /* Or any value that fits your layout */
+  margin: 0 auto;
+}
 
+.primary p {
+  margin-bottom: 10vh;
+  margin-top: 4vh;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row; /* Changed to row for better layout control */
+}
+.links a {
+  margin: 2vh;
+}
+
+#secondary-call-to-action {
+  color: #ffffff;
+  text-decoration: underline white;
+  font-size: 2.5vh;
+}
+
+.primary img {
+  width: 12vh;
+  position: relative; 
+}
+
+
+.index-button {
+  background-color: #e62e5a;
+  border: none;
+  color: #ffffff;
+  padding: 15px 35px;
+  font-size: 25px;
+  font-family: "lores-12", sans-serif;
+  transition: all 0.1s ease;
+  text-decoration: none;
+}
+
+.index-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+.secondary {
+  margin-top: -9vh;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.secondary h1 {
+  margin-bottom: 0;
+}
+
+.third {
+  width: 70%;
+  text-align: center;
+}
+
+.partner-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
+}
 
 .email {
   margin-top: 10vh;
