@@ -132,6 +132,15 @@
           dropdown.classList.remove("show");
         });
       });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const sorryTextElement = document.getElementById("sticker-message");
+        const savedLetter = localStorage.getItem("sorryLetter");
+
+        if (savedLetter) {
+          sorryTextElement.value = savedLetter;
+        }
+      });
     </script>
   </body>
 </html>
