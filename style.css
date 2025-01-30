@@ -1126,6 +1126,8 @@ input[type="submit"] {
   width: 30px;
   cursor: pointer;
   margin-left: 50px;
+  left: 0;
+  top: 150px;
 }
 
 .emotiebuttons button.selected {
