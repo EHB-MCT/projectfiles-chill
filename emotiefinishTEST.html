@@ -6,6 +6,9 @@
     <title>Emotie visualiser</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
+
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.png" />
+
     <script src="./menu.js" defer></script>
     <script src="./emotie.js" defer></script>
   </head>
@@ -41,8 +44,8 @@
       />
     </nav>
 
-    <div class="emotie-container">
-      <a href="./4methods.html"
+    <div class="emotie-container" id="emotie-container">
+      <a href="./emotie-na-het-conflict.html"
         ><img
           src="./icons/back-button.png"
           alt="Back Button"
@@ -58,11 +61,9 @@
         </div>
 
         <script>
-          // Haal de gekozen emoties op uit localStorage
           const emotionDuring = localStorage.getItem("selectedEmotion-during");
           const emotionAfter = localStorage.getItem("selectedEmotion-after");
 
-          // Toon de gecombineerde GIF's met afwisseling
           if (emotionDuring && emotionAfter) {
             const gifElement = document.getElementById("combinedGif");
             let showDuring = true;
@@ -70,7 +71,7 @@
             setInterval(() => {
               gifElement.src = showDuring ? emotionDuring : emotionAfter;
               showDuring = !showDuring;
-            }, 2000); // Wissel elke 2 seconden
+            }, 2000);
           } else {
             console.error(
               "Emoties zijn niet correct opgeslagen in localStorage."
@@ -79,38 +80,37 @@
         </script>
 
         <div class="emotiesorry">
-          <form action="#">
-            <div class="help">
-              <input
-                class="emotietextsorry"
-                type="text"
+          <div class="emotiezenden">
+            <form>
+              <textarea
                 id="emotietext"
-                name="fname"
-                size="100"
-                placeholder="Voer je sorry tekst in..."
-              /><br /><br />
-            </div>
-          </form>
+                class="styled-textarea"
+                placeholder="Of genereer een excuus in de Sorrybot..."
+              ></textarea>
+            </form>
+          </div>
+
+          <div class="copy-container">
+            <img
+              src="./icons/copy.svg"
+              alt="Copy"
+              id="copyButton"
+              class="copy-icon"
+            />
+            <input type="text" id="shortLink" readonly />
+          </div>
+          <p class="copy-instruction">Copieer de link en stuur die maar!</p>
+
+          <a href="4methods.html">Andere sorrytools</a>
         </div>
-      </div>
-      <div class="bottom">
-        <!-- Button to generate the link -->
-        <div class="link-generator">
-          <button id="generateLinkButton">Genereer Link</button>
-          <div id="messageContainer"></div>
-        </div>
-      </div>
-      <div id="other-sorrytools">
-        <a href="4methods.html">Andere sorrytools</a>
       </div>
     </div>
 
     <script>
-      // Functie om de link te genereren en naar het klembord te kopiëren
-      const generateShareableLink = () => {
-        const emotietext = document.getElementById("emotietext").value;
+      document.addEventListener("DOMContentLoaded", () => {
+        const emotietext = sessionStorage.getItem("sorryLetter") || "";
+        document.getElementById("emotietext").value = emotietext;
 
-        // Haal de emoties uit localStorage
         const emotionDuring = localStorage.getItem("selectedEmotion-during");
         const emotionAfter = localStorage.getItem("selectedEmotion-after");
 
@@ -119,26 +119,28 @@
           return;
         }
 
-        // Genereer de deelbare URL met de emoties en tekst
+        // Generate unique short link
+        const uniqueID = Date.now().toString(36);
         const baseUrl = window.location.origin + "/emotiefinishTEST.html";
-        const shareableLink = `${baseUrl}?during=${encodeURIComponent(emotionDuring)}&after=${encodeURIComponent(emotionAfter)}&text=${encodeURIComponent(emotietext)}`;
+        const shortLink = `${baseUrl}?id=${uniqueID}`;
 
-        // Kopieer de link naar het klembord
-        navigator.clipboard
-          .writeText(shareableLink)
-          .then(() => {
-            // No feedback to be displayed
-            console.log("Link gekopieerd naar het klembord!");
-          })
-          .catch(() => {
-            alert("Kon de link niet kopiëren. Probeer het opnieuw.");
-          });
-      };
+        document.getElementById("shortLink").value = shortLink;
 
-      // Event listener voor de "Genereer Link" knop
-      document
-        .getElementById("generateLinkButton")
-        .addEventListener("click", generateShareableLink);
+        // Copy button event
+        document.getElementById("copyButton").addEventListener("click", () => {
+          document.getElementById("shortLink").select();
+          document.execCommand("copy");
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const sorryTextElement = document.getElementById("emotietext");
+        const savedLetter = sessionStorage.getItem("sorryLetter");
+
+        if (savedLetter) {
+          sorryTextElement.value = savedLetter;
+        }
+      });
     </script>
   </body>
 </html>

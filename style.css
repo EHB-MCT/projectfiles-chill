@@ -6,7 +6,6 @@ body {
   font-style: normal;
   font-weight: 100;
   box-sizing: border-box;
-  
 }
 
 *,
@@ -23,18 +22,26 @@ body {
 
 h1 {
   font-family: "lores-9-narrow", sans-serif;
-font-style: normal;
+  font-style: normal;
   font-size: 4vw;
   color: #ffffff;
   font-weight: 100;
+  margin-top: 0;
 }
 
 h2 {
   font-family: "lores-9-narrow", sans-serif;
-font-style: normal;
+  font-style: normal;
   font-size: 3vw;
   color: #ffffff;
   font-weight: 100;
+}
+
+h3 {
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: #ffffff;
 }
 
 p {
@@ -49,7 +56,15 @@ p {
 
 button {
   font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
   font-weight: 700;
+}
+
+a {
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
+  font-size: 4vw;
+  color: #ffffff;
 }
 
 /* Navbar */
@@ -61,6 +76,8 @@ nav {
   padding: 20px 20px;
   padding-left: 50px;
   padding-right: 50px;
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
 }
 
 nav .logo img {
@@ -192,8 +209,12 @@ li a.active {
 /* Sticker-page */
 
 .loading-container {
-  text-align: center;
-  margin-top: 15vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: opacity 3s ease-in-out;
 }
@@ -205,16 +226,21 @@ li a.active {
 .loading-icon img {
   width: 20vw;
   height: auto;
+  margin: 20px;
 }
 
 .loading-text h2 {
   margin: 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .loading-text p {
   color: #ffffff;
   font-size: 2vw;
   margin: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Sticker page make choice*/
@@ -271,10 +297,13 @@ li a.active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
-  margin-right: 50px;
+  margin-left: 50px;
   height: 80vh;
 }
 
+#back-button {
+  display: none;
+}
 
 #sticker-message.typo-1 {
   font-family: "dream-big-wide", sans-serif;
@@ -284,12 +313,14 @@ li a.active {
 #sticker-message.typo-2 {
   font-family: "pf-reminder", sans-serif;
   font-style: normal;
+  margin-left: 192px;
 }
 
 #sticker-message.typo-3 {
   font-family: "roca", sans-serif;
   font-style: italic;
-}  
+  margin-left: 192px;
+}
 
 .dropdown-typo-content .typo-1 {
   font-family: "dream-big-wide", sans-serif;
@@ -309,24 +340,24 @@ li a.active {
 .dropdown-typo-content .typo-1,
 .dropdown-typo-content .typo-2,
 .dropdown-typo-content .typo-3 {
-	margin-top: 5px;
-	color: white;
-	font-size: 30px;
-	padding: 10px;
-	width: 200px;
-	height: 100px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-sizing: border-box; 
-	border: 2px solid white; 
-	transition: border 0.2s ease; 
+  margin-top: 5px;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid white;
+  transition: border 0.2s ease;
 }
 
 .dropdown-typo-content .typo-1.active,
 .dropdown-typo-content .typo-2.active,
 .dropdown-typo-content .typo-3.active {
-	border-color: #e62e5a; 
+  border-color: #e62e5a;
 }
 
 .typo-2,
@@ -343,18 +374,16 @@ li a.active {
   justify-content: center;
 }
 
-
 .dropdown-edit #color-btn,
 #typography-btn {
-	background-color: #3377b3;
-	color: white;
-	border: none;
-	text-align: left;
-	font-size: 16px;
-	cursor: pointer;
-	width: 320px;
-	height: 50px;
- 
+  background-color: #3377b3;
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  width: 307px;
+  height: 50px;
 }
 
 .dropdown-content.show {
@@ -402,16 +431,15 @@ li a.active {
   z-index: 10;
 }
 
-
 .button-container a button {
-	display: flex;
-	margin-left: 12.5vw;
-	background-color: #e62e5a;
-	border: none;
-	color: #ffffff;
-	padding: 5px 25px;
-	font-size: 25px;
-	transition: all 0.1s ease;
+  display: flex;
+  margin-left: 12.5vw;
+  background-color: #e62e5a;
+  border: none;
+  color: #ffffff;
+  padding: 5px 25px;
+  font-size: 25px;
+  transition: all 0.1s ease;
 }
 
 .sticker-button button {
@@ -423,7 +451,6 @@ li a.active {
   padding: 5px 25px;
   font-size: 25px;
   transition: all 0.1s ease;
-
 }
 
 .sticker-preview img {
@@ -441,14 +468,14 @@ li a.active {
   margin-left: 12.5vw;
 }
 
-#sticker-preview{
+#sticker-preview {
   display: flex;
-	justify-content: center;
-	width: 50vw;
-	padding: 10px 20px;
-	border: 3px solid #fff;
-	margin-bottom: 0;
-	margin-left: 0;
+  justify-content: center;
+  width: 50vw;
+  padding: 10px 20px;
+  border: 3px solid #fff;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
 #sticker-message {
@@ -482,10 +509,8 @@ textarea::placeholder {
 .center-container h2 {
   font-size: 1.8rem;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 25px;
 }
-
-
 
 /* Sorrybot */
 
@@ -523,7 +548,6 @@ textarea::placeholder {
   padding: 10px;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .sorrybox::-webkit-scrollbar {
@@ -641,25 +665,67 @@ textarea::placeholder {
   cursor: pointer;
 }
 
-.suggestions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 25px;
+.sorry-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.suggestions button {
-  padding: 10px 15px;
-  font-size: 1rem;
-  color: white;
+.sorry-btn:hover {
+  background-color: #e04e4e;
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+.button-container a {
+  text-decoration: none;
+}
+
+.choices-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.makeSorryLetter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.yes-or-no {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.yes-or-no button {
   background-color: #e62e5a;
   border: none;
+  color: #ffffff;
+  padding: 10px 25px;
+  transition: all 0.1s ease;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+}
+.makeSorryLetter button {
+  background-color: #e62e5a;
+  border: none;
+  color: #ffffff;
+  padding: 10px 25px;
+  transition: all 0.1s ease;
+  cursor: pointer;
 }
 
-.suggestions button:hover {
-  background-color: #ff6b8b;
+.choices-container button {
+  background-color: #e62e5a;
+  border: none;
+  color: #ffffff;
+  padding: 10px 25px;
+  transition: all 0.1s ease;
+  cursor: pointer;
 }
 
 /* Typende animatie */
@@ -769,27 +835,19 @@ textarea::placeholder {
 }
 
 /*Origami tweede pagina*/
-.pen {
-  position: absolute;
-  top: 248px;
-  left: 60%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.pen img {
-  width: 300px;
-  height: 250px;
-}
 
 .btn-titel {
   position: relative;
   overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-titel .back-button {
   position: absolute;
-  top: 20px;
+  top: 45px;
   left: 50px;
   width: 30px;
   height: 45px;
@@ -817,7 +875,6 @@ textarea::placeholder {
 .origami-button-2 {
   position: relative;
   top: 9px;
-  left: 690px;
 }
 
 .origami-button-2 button {
@@ -832,6 +889,22 @@ textarea::placeholder {
 .origami-button-2 button:hover {
   cursor: pointer;
   box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
+}
+
+.btn-titel textarea {
+  display: block;
+  margin: 20px auto;
+  width: 75%;
+  height: 300px;
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #ccc;
+  text-align: left;
+}
+
+textarea::placeholder {
+  color: gray;
+  opacity: 0.7; /* Adjust opacity for better visibility */
 }
 
 /*Origami kies jou shape page*/
@@ -875,9 +948,13 @@ textarea::placeholder {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5vh;
   text-align: center;
   width: 100vw;
+}
+
+#copy-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .video-container iframe {
@@ -986,11 +1063,6 @@ input[type="submit"]:hover {
 }
 
 /* Container holding the form */
-.emotiezenden form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
 
 #emotietext {
   padding-bottom: 50%;
@@ -1020,7 +1092,8 @@ input[type="submit"] {
   color: #ffffff;
   padding: 20px 30px;
   font-size: 30px;
-  font-family: "lores-12", sans-serif;
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
   transition: all 0.1s ease;
   width: 100%;
   box-sizing: border-box;
@@ -1039,10 +1112,18 @@ input[type="submit"] {
   align-items: center;
 }
 
-.emotiezenden form {
+.emotiezenden textarea {
+  color: white;
+  background-color: transparent;
+  width: 40vw;
+  font-size: 16px;
+  margin-bottom: 100px;
+}
+
+.emotie-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
 }
 
 .emotie-container h2 {
@@ -1057,6 +1138,8 @@ input[type="submit"] {
   width: 30px;
   cursor: pointer;
   margin-left: 50px;
+  left: 0;
+  top: 150px;
 }
 
 .emotiebuttons button.selected {
@@ -1066,13 +1149,13 @@ input[type="submit"] {
 }
 
 .heartemotievisualiser img {
-  width: 360px;
+  width: 300px;
   /* Default width for the heart image */
   height: auto;
 }
 
 #gifImage {
-  width: 650px;
+  width: 520px;
   height: auto;
 }
 
@@ -1097,7 +1180,6 @@ input[type="submit"] {
   font-size: 23px;
   transition: all 0.1s ease;
   text-decoration: none;
-  width: 28vh;
   text-align: center;
 }
 
@@ -1143,7 +1225,6 @@ input[type="submit"] {
   font-size: 23px;
   transition: all 0.1s ease;
   text-decoration: none;
-  width: 28vh;
   text-align: center;
   font-family: "lores-9-narrow", sans-serif;
 }
@@ -1175,7 +1256,6 @@ input[type="submit"] {
   display: flex;
 }
 
-#generateLinkButton,
 #other-sorrytools {
   background-color: #e62e5a;
   border: none;
@@ -1184,10 +1264,6 @@ input[type="submit"] {
   font-size: 25px;
   font-family: "lores-12", sans-serif;
   transition: all 0.1s ease;
-}
-
-#generateLinkButton {
-  margin-top: -9vh;
 }
 
 .link-generator {
@@ -1220,11 +1296,72 @@ input[type="submit"] {
   text-decoration: none;
 }
 
-.emotiesorry a {
-  background-color: unset;
+.link-copy {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  width: fit-content;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
-#generateLinkButton:hover,
+.emotiesorry {
+  width: 40%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emotiezenden textarea {
+  color: white;
+  background-color: transparent;
+  width: 40vw;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.copy-instruction {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-family: "lores-9-narrow", sans-serif;
+  font-style: normal;
+}
+
+.copy-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#shortLink {
+  width: 240px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.copy-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.copy-icon:hover {
+  opacity: 0.7;
+}
+
 #other-sorrytools:hover {
   cursor: pointer;
   box-shadow: 0 0 10px 5px rgba(230, 46, 90, 0.5);
@@ -1235,6 +1372,14 @@ input[type="submit"] {
   width: 25%;
   padding: 20px 40px;
   border-radius: 10px;
+}
+
+.filters label {
+  font-family: "input-sans", sans-serif;
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
 }
 
 input[type="text"] {
@@ -1346,22 +1491,23 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  gap: 10px;
 }
 
-.page-button {
-  background: #e62e5a;
+.pagination button {
+  padding: 10px;
+  margin: 5px;
   border: none;
-  color: #ffffff;
-  padding: 10px 20px;
-  font-size: 16px;
+  background-color: #e62e5a;
   cursor: pointer;
-  transition: background 0.3s ease;
-  border-radius: 5px;
 }
 
-.page-button:hover {
-  background: #a81f3f;
+.pagination button:hover {
+  background-color: #b62244;
+}
+
+.pagination button:disabled {
+  background-color: #e62e5a;
+  cursor: not-allowed;
 }
 
 .filters-mobile {
@@ -1419,7 +1565,7 @@ input[type="text"] {
 .sorry-container-text p {
   margin-left: 50px;
   max-width: 80%;
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 .doel-text {
@@ -1458,8 +1604,8 @@ input[type="text"] {
 }
 
 .opleding-text a {
-  color: #fff;
-  text-decoration: none;
+  color: #e62e5a;
+  font-size: 4vh;
 }
 
 /*WERKWIJZE*/
@@ -1504,7 +1650,6 @@ input[type="text"] {
   margin-left: 50px;
 }
 
-
 @media (max-width: 478px) {
   html,
   body {
@@ -1519,7 +1664,7 @@ input[type="text"] {
     width: 20vmin;
     height: 20vmin;
     position: relative;
-    overflow: hidden;  
+    overflow: hidden;
   }
 
   h1 {
@@ -1589,6 +1734,10 @@ input[type="text"] {
     z-index: 2;
   }
 
+  .secondary h1 {
+    margin-top: 50px;
+  }
+
   .dropdown.active .dropdown-content {
     display: flex;
   }
@@ -1599,12 +1748,12 @@ input[type="text"] {
   }
 
   ul li a {
-    font-size: 12vw;
+    font-size: 8vw;
   }
 
   .dropdown:hover .dropdown-content li a {
     display: block;
-    font-size: 6vw;
+    font-size: 4vw;
   }
 
   .nav-right .dropdown-content {
@@ -1616,13 +1765,6 @@ input[type="text"] {
   .menu-hamburger {
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-
-  .text-methods h1 {
-    padding-top: 70px;
-    text-align: center;
-    font-size: 12vmin;
-    color: white;
   }
 
   .icons-1 p,
@@ -1644,130 +1786,6 @@ input[type="text"] {
     gap: 10vw;
   }
 
-  
-  .origami-mobile .origami-container {
-    position: relative;
-    overflow: visible;
-    z-index: 0;
-  }
-
-  .origami-schaar {
-    position: absolute;
-    opacity: 0.9;
-    top: 264px;
-    margin-left: 10%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  .origami-schaar img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .origami-container .back-button {
-    top: -35px;
-    left: 18px;
-    margin-left: 0;
-    width: 15px;
-    height: 25px;
-  }
-
-  .origami-container h2 {
-    font-size: 24px;
-    margin-top: 20px;
-  }
-
-  .origami-container img {
-    height: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-  }
-
-  .origami-button {
-    bottom: -55px;
-    left: 70%;
-    transform: translateX(-50%);
-  }
-
-  .origami-button button {
-    padding: 10px 25px;
-    font-size: 20px;
-  }
-
-  .pen {
-    position: absolute;
-    top: 235px;
-    left: 71%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  .pen img {
-    width: 150px;
-    height: 125px;
-  }
-
-  .origami-container-2 {
-    position: relative;
-    overflow: visible;
-  }
-
-  .origami-container-2 .back-button {
-    top: -35px;
-    left: 18px;
-    margin-left: 0;
-    width: 15px;
-    height: 25px;
-  }
-
-  .origami-container-2 h2 {
-    font-size: 24px;
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .origami-container-2 img {
-    height: 200px;
-    width: 200px;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-    position: relative;
-  }
-
-  .origami-button-2 {
-    top: 100px;
-    left: 71%;
-    transform: translateX(-50%);
-  }
-
-  .origami-button-2 button {
-    padding: 10px 25px;
-    font-size: 20px;
-  }
-
-  .kiezen h2 {
-    font-size: 24px;
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .kiezen .back-button {
-    top: -5px;
-    left: 18px;
-    margin-left: 10px;
-    width: 15px;
-    height: 25px;
-  }
-
-  .video {
-    width: 30px;
-    height: 40px;
-    left: 20px;
-  }
-
   .emotiebuttons {
     display: flex;
     flex-direction: row;
@@ -1787,10 +1805,15 @@ input[type="text"] {
 
   .emotiegift {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
   }
 
   .emotiesorry {
-    margin-top: 10%;
+    margin-top: 5%;
     width: 80%;
     text-align: center;
     align-self: center;
@@ -1905,8 +1928,6 @@ input[type="text"] {
     width: 5vh;
     left: 23vh;
   }
-
-  
 }
 
 /*index.html*/
@@ -1926,6 +1947,8 @@ input[type="text"] {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 .links a {
@@ -1978,6 +2001,11 @@ body.no-overflow-hidden {
 .secondary {
   margin-top: -9vh;
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.secondary h1 {
+  margin-bottom: 0;
 }
 
 .third {
@@ -1988,13 +2016,20 @@ body.no-overflow-hidden {
 .partner-images {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  align-content: stretch;
+}
+
+.email {
+  margin-top: 10vh;
+  display: flex;
 }
 
 .partner-images img {
   object-fit: contain;
   padding: 5vh;
-  width: 35vh;
+  width: 25vh;
 }
 
 .carrousel {
@@ -2008,6 +2043,10 @@ body.no-overflow-hidden {
   text-decoration: none;
 }
 
+#funtie2 img {
+  margin-bottom: 45px;
+}
+
 .functie {
   border-style: solid;
   border-color: white;
@@ -2018,6 +2057,10 @@ body.no-overflow-hidden {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.functie p {
+  margin-top: 0px;
 }
 
 .functie img {
@@ -2047,10 +2090,11 @@ body.no-overflow-hidden {
 .purple {
   bottom: 65vh;
   width: 8vh;
+  left: -30vh;
 }
 
 .sparkle-1 {
-  bottom: 80vh;
+  bottom: 85vh;
   width: 10vh;
   left: 10vh;
 }
@@ -2058,11 +2102,9 @@ body.no-overflow-hidden {
 .sparkle-2 {
   top: -135vh;
   rotate: 90deg;
-  right: 100vh;
-  width: 15vh;
+  right: 105vh;
+  width: 10vh;
 }
-
-
 
 .wie-zijn-wij {
   display: flex;
@@ -2182,10 +2224,6 @@ body.no-overflow-hidden {
     overflow: hidden;
   }
 
-  .loading-container {
-    margin-top: 25vh;
-  }
-
   .loading-icon img {
     width: 40vw;
   }
@@ -2197,7 +2235,7 @@ body.no-overflow-hidden {
   .loading-text p {
     font-size: 3vw;
   }
-  
+
   h1 {
     font-size: 7vw;
   }
@@ -2295,7 +2333,6 @@ body.no-overflow-hidden {
   }
 
   .text-methods h1 {
-    padding-top: 70px;
     text-align: center;
     font-size: 12vmin;
     color: white;
@@ -2320,10 +2357,31 @@ body.no-overflow-hidden {
     gap: 10vw;
   }
 
-  .origami-mobile .origami-container {
+  /**/
+
+  .button-container button {
+    padding: 1vh 2vw;
+    font-size: 1.2rem;
+  }
+
+  .origami-tussentitel p {
+    font-size: 1.2rem;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20%;
+  }
+  .origami-container {
     position: relative;
     overflow: visible;
     z-index: 0;
+  }
+  .origami-foto img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .origami-foto h2 {
+    font-size: 1.2rem;
   }
 
   .origami-schaar {
@@ -2354,10 +2412,10 @@ body.no-overflow-hidden {
   }
 
   .origami-container img {
-    height: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
+    height: 140px;
+    top: 20px;
+    margin-bottom: 20px;
+    margin-top: 50px;
   }
 
   .origami-button {
@@ -2371,29 +2429,59 @@ body.no-overflow-hidden {
     font-size: 20px;
   }
 
-  .pen {
-    position: absolute;
-    top: 235px;
-    left: 71%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  .pen img {
-    width: 150px;
-    height: 125px;
-  }
-
-  .origami-button-2 {
-    top: 100px;
-    left: 71%;
-    transform: translateX(-50%);
-  }
-
   .origami-button-2 button {
     padding: 10px 25px;
     font-size: 20px;
   }
+
+  .origami-container-2 {
+    position: relative;
+    overflow: visible;
+  }
+
+  .origami-container-2 .back-button {
+    top: -35px;
+    left: 18px;
+    margin-left: 0;
+    width: 15px;
+    height: 25px;
+  }
+
+  .origami-container-2 h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .origami-container-2 img {
+    height: 200px;
+    width: 200px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    position: relative;
+  }
+
+  .kiezen h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .kiezen .back-button {
+    top: -5px;
+    left: 18px;
+    margin-left: 10px;
+    width: 15px;
+    height: 25px;
+  }
+
+  .video iframe {
+    width: 400px;
+    height: 300px;
+  }
+
+  /**/
   .smart-toy-icon {
     width: 50px;
     height: 50px;
@@ -2417,6 +2505,7 @@ body.no-overflow-hidden {
   .choices-container button {
     font-size: 0.8rem;
     padding: 10px 15px;
+    margin-bottom: 10px;
   }
   .suggestions {
     display: flex;
@@ -2432,19 +2521,50 @@ body.no-overflow-hidden {
   }
   .btn-titel {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     margin-top: 10vh;
+    align-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
+  .emotiezenden textarea {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .emotiesturen {
+    margin-top: 0;
+  }
+
+  .emotiegift p {
+    font-size: 20px;
+    width: 80%;
+    margin-bottom: 0;
+  }
+
+  .emotiegift img {
+    margin-bottom: 0;
+  }
+
+  #emotie-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20vh;
+  }
   .btn-titel h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    width: 70%;
     text-align: center;
+    margin-top: 40px;
   }
 
   .btn-titel .back-button {
-    left: 10px;
+    left: -2vh;
   }
 
   body.no-overflow-hidden {
@@ -2454,8 +2574,15 @@ body.no-overflow-hidden {
   .wie-zijn-wij {
     flex-wrap: wrap;
     flex-direction: column;
-    gap: -55px;
     align-items: flex-start;
+    width: 95%;
+  }
+
+  .wie-zijn-wij-container {
+    width: 95%;
+  }
+  .wie-zijn-wij-extrainfo {
+    width: 95%;
   }
 
   .wie-zijn-wij-text {
@@ -2776,12 +2903,9 @@ body.no-overflow-hidden {
   .werkwijze-container-text p {
     font-size: 0.9rem;
   }
+
   .no-overflow-hidden {
     overflow-x: hidden;
-  }
-
-  .container {
-    padding-top: 13vh;
   }
 
   .primary {
@@ -2794,14 +2918,14 @@ body.no-overflow-hidden {
   }
 
   #horizontal {
-    right: -22vh;
-    top: -52vh;
+    right: -28%;
+    top: -45vh;
     width: 10%;
   }
 
   #vertical {
-    right: 22vh;
-    top: -24vh;
+    right: 48%;
+    top: -22vh;
     width: 10%;
   }
 
@@ -2814,6 +2938,14 @@ body.no-overflow-hidden {
   }
 
   .index-button {
+    font-size: 14px;
+  }
+
+  .functie h3 {
+    font-size: 1.2rem;
+  }
+
+  .email p {
     font-size: 15px;
   }
 
@@ -2865,17 +2997,145 @@ body.no-overflow-hidden {
   .small {
     bottom: 24vh;
     width: 6vh;
+    left: 60%;
   }
 
   .purple {
     bottom: 29vh;
     width: 5vh;
-    left: 7vh;
+    left: -50%;
   }
 
   .sparkle-1 {
-    bottom: 68vh;
-    width: 5vh;
-    left: 23vh;
+    bottom: 65vh;
+    width: 3vh;
+    left: -65%;
+  }
+
+  .sparkle-2 {
+    display: none;
+  }
+
+  .emotiebuttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    gap: -10px;
+  }
+
+  .emotiebuttons1 {
+    margin-right: -25px;
+  }
+
+  .emotiebuttons2 {
+    margin-left: -25px;
+  }
+
+  #emotietext {
+    width: 300px;
+    margin-bottom: 25px;
+  }
+
+  /* Sticker Preview */
+
+  .sticker {
+    width: 150px;
+    margin: 0 auto;
+    height: 150px;
+  }
+
+  .sticker IMG {
+    width: 100px;
+    margin: 0 auto;
+    height: 100px;
+  }
+
+  .stickers {
+    grid-template-columns: repeat(2, 150px);
+    gap: 20px;
+  }
+
+  .center-container {
+    margin-top: 20vh;
+  }
+  .center-container h2 {
+    width: 90%;
+  }
+  #sticker-preview {
+    width: 70vw;
+  }
+  .sticker-preview img {
+    width: 70%;
+  }
+  /* Sticker Preview */
+  .sticker-preview img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Textarea */
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  textarea::placeholder {
+    color: #ccc;
+  }
+
+  .button-container button {
+    background: #e62e5a;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+
+  .button-container button:hover {
+    background: #c0274a;
+  }
+
+  .edit-sticker-container {
+    display: block;
+    margin-top: 30%;
+  }
+
+  .sticker-preview,
+  .button-container {
+    text-align: center;
+  }
+  .edit-left {
+    width: 71vw;
+    margin-left: 10px;
+  }
+  .edit-right {
+    display: flex;
+    justify-content: center;
+  }
+  #back-button {
+    display: block;
+  }
+  #back-button-desktop {
+    display: none;
+  }
+  .sticker-preview {
+    margin-left: 0px;
+  }
+  .button-container a button {
+    margin-left: 0vw;
+  }
+  .sticker-preview {
+    width: 70vw;
+  }
+  #sticker-message {
+    width: 70vw;
   }
 }

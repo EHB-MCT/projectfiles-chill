@@ -1,154 +1,255 @@
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Document</title>
-            <link rel="stylesheet" href="style.css" />
-            <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
-            <script src="./menu.js" defer></script>
-            <script src="./methodiek.js" defer></script>
-            <script src="./methodiek/api.js" defer></script>
-            <script src="./methodiek/filter.js" defer></script>
-        </head>
-        <body>
-            <nav>
-                <div class="nav-left">
-                    <a href="index.html" class="logo">
-                        <img src="./icons/logo.svg" alt="SorryBox Logo" class="logo-image" />
-                    </a>
-                </div>
-                <div class="nav-right">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="chatbot-loadingpage.html">Sorrybot</a></li>
-                        <li><a href="4methods.html" >Sorrytools</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropbtn active" 
-                                >Over ons<i class="bx bxs-chevron-down arrow"></i
-                            ></a>
-                            <ul class="dropdown-content">
-                                <li><a href="./wiezijnwe.html">Wie zijn we?</a></li>
-                                <li><a href="./werkwijze.html">Werkwijze</a></li>
-                                <li><a href="./sorrybox2.html">SorryBox 2.0</a></li>
-                                <li><a class="active" href="./methodieken.html">Methodieken</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <img
-                    src="./icons/Hamburger.svg"
-                    alt="menu hamburger"
-                    class="menu-hamburger"
-                />
-            </nav>
-                <div class="container-methods"> 
-                    <div class="filters">
-                        <div class="search-sort">
-                            <input type="text" placeholder="Search..." class="search-bar">
-                            <img src="./icons/search-icon.svg" class="search-button-img" alt="Search">
-                        </div>
-                        <button class="clear-filters">Filter leegmaken</button>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methodieken</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
+    <script src="./menu.js" defer></script>
+    <script src="./methodiek/api.js" defer></script>
+    <script src="./methodiek/filter.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img src="./icons/logo.svg" alt="SorryBox Logo" class="logo-image" />
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chatbot-loadingpage.html">Sorrybot</a></li>
+          <li><a href="4methods.html">Sorrytools</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn active"
+              >Over ons<i class="bx bxs-chevron-down arrow"></i
+            ></a>
+            <ul class="dropdown-content">
+              <li><a href="./wiezijnwe.html">Wie zijn we?</a></li>
+              <li><a href="./werkwijze.html">Werkwijze</a></li>
+              <li><a href="./sorrybox2.html">SorryBox 2.0</a></li>
+              <li>
+                <a class="active" href="./methodieken.html">Methodieken</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <img
+        src="./icons/Hamburger.svg"
+        alt="menu hamburger"
+        class="menu-hamburger"
+      />
+    </nav>
+    <div class="container-methods">
+      <div class="filters">
+        <div class="search-sort">
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="Search..."
+            class="search-bar"
+          />
+          <img
+            src="./icons/search-icon.svg"
+            class="search-button-img"
+            alt="Search"
+          />
+        </div>
+        <button class="clear-filters">Filter leegmaken</button>
 
-                    <section class="filter-group">
-                        <h2>Leeftijd</h2>
-                        <div class="filter-elements">
-                            <label><input type="checkbox" class="age-filter" value="-06"> -06 jaar</label>
-                            <label><input type="checkbox" class="age-filter" value="06-12"> 06-12 jaar</label>
-                            <label><input type="checkbox" class="age-filter" value="12-18"> 12-18 jaar</label>
-                            <label><input type="checkbox" class="age-filter" value="18+"> 18+ jaar</label>
-                        </div>
-                    </section>
+        <section class="filter-group">
+          <h2>Leeftijd</h2>
+          <div class="filter-elements">
+            <label
+              ><input type="checkbox" class="age-filter" value="-06" /> -06
+              jaar</label
+            >
+            <label
+              ><input type="checkbox" class="age-filter" value="06-12" /> 06-12
+              jaar</label
+            >
+            <label
+              ><input type="checkbox" class="age-filter" value="12-18" /> 12-18
+              jaar</label
+            >
+            <label
+              ><input type="checkbox" class="age-filter" value="18+" /> 18+
+              jaar</label
+            >
+          </div>
+        </section>
 
-                    <section class="filter-group">
-                        <h2>Methodieken</h2>
-                        <div class="filter-elements">
-                            <label><input type="checkbox" class="methodiek-filter" value="1"> 1. Om herstelvaardigheden te ontwikkelen</label>
-                            <label><input type="checkbox" class="methodiek-filter" value="2"> 2. Om samen met de jongere stil te staan</label>
-                            <label><input type="checkbox" class="methodiek-filter" value="3"> 3. Om het goed te maken</label>
-                            <label><input type="checkbox" class="methodiek-filter" value="4"> 4. Om te reflecteren samen met collega's</label>
-                            <label><input type="checkbox" class="methodiek-filter" value="5"> 5. Om een herstelbeleid te ontwikkelen</label>
-                        </div>
-                    </section>
+        <section class="filter-group">
+          <h2>Methodieken</h2>
+          <div class="filter-elements">
+            <label
+              ><input type="checkbox" class="methodiek-filter" value="1" /> 1.
+              Om herstelvaardigheden te ontwikkelen</label
+            >
+            <label
+              ><input type="checkbox" class="methodiek-filter" value="2" /> 2.
+              Om samen met de jongere stil te staan</label
+            >
+            <label
+              ><input type="checkbox" class="methodiek-filter" value="3" /> 3.
+              Om het goed te maken</label
+            >
+            <label
+              ><input type="checkbox" class="methodiek-filter" value="4" /> 4.
+              Om te reflecteren samen met collega's</label
+            >
+            <label
+              ><input type="checkbox" class="methodiek-filter" value="5" /> 5.
+              Om een herstelbeleid te ontwikkelen</label
+            >
+          </div>
+        </section>
 
-                    <section class="filter-group">
-                        <h2>Ontwikkelingsniveau</h2>
-                        <div class="filter-elements">
-                            <label><input type="checkbox" class="level-filter" value="1"> 1. Hoog</label>
-                            <label><input type="checkbox" class="level-filter" value="2"> 2. Eerder hoog</label>
-                            <label><input type="checkbox" class="level-filter" value="3"> 3. Gemiddeld</label>
-                            <label><input type="checkbox" class="level-filter" value="4"> 4. Eerder laag</label>
-                            <label><input type="checkbox" class="level-filter" value="5"> 5. Laag</label>
-                        </div>
-                    </section>
-                    </div>
-        
-                    <section class="content">
-                    
-                        <div class="sort-buttons">
-                            <div class="search-sort-mobile">
-                                <input type="text" placeholder="Search..." class="search-bar-mobile">
-                                <img src="./icons/search-icon.svg" class="search-button-img" alt="Search">
-                            </div>                            
-                            <button class="sort-az">A ➔ Z</button>
-                            <button class="sort-date">Nieuw ➔ Oud</button>
-                            <button class="filter-toggle">Filter</button>
-                            <div class="filters-mobile">
-                                
-                                <button class="clear-filters-mobile">Filter leegmaken</button>
+        <section class="filter-group">
+          <h2>Ontwikkelingsniveau</h2>
+          <div class="filter-elements">
+            <label
+              ><input type="checkbox" class="level-filter" value="1" /> 1.
+              Hoog</label
+            >
+            <label
+              ><input type="checkbox" class="level-filter" value="2" /> 2.
+              Eerder hoog</label
+            >
+            <label
+              ><input type="checkbox" class="level-filter" value="3" /> 3.
+              Gemiddeld</label
+            >
+            <label
+              ><input type="checkbox" class="level-filter" value="4" /> 4.
+              Eerder laag</label
+            >
+            <label
+              ><input type="checkbox" class="level-filter" value="5" /> 5.
+              Laag</label
+            >
+          </div>
+        </section>
+      </div>
 
-                    <section class="filter-group">
-                        <h2>Leeftijd</h2>
-                        <div class="filter-elements">
-                            <label><input type="checkbox" class="age-filter" value="-06"> -06 jaar</label>
-                            <label><input type="checkbox" class="age-filter" value="06-12"> 06-12 jaar</label>
-                            <label><input type="checkbox" class="age-filter" value="12-18"> 12-18 jaar</label>
-                            <label><input type="checkbox" class="age-filter" value="18+"> 18+ jaar</label>
-                        </div>
-                    </section>
+      <section class="content">
+        <div class="sort-buttons">
+          <div class="search-sort-mobile">
+            <input
+              type="text"
+              id="searchBar-mobile"
+              placeholder="Search..."
+              class="search-bar-mobile"
+            />
+            <img
+              src="./icons/search-icon.svg"
+              class="search-button-img"
+              alt="Search"
+            />
+          </div>
+          <button class="sort-az">A ➔ Z</button>
+          <button class="sort-date">Nieuw ➔ Oud</button>
+          <button class="filter-toggle">Filter</button>
+          <div class="filters-mobile">
+            <button class="clear-filters-mobile">Filter leegmaken</button>
 
-                    <section class="filter-group">
-                        <h2>Methodieken</h2>
-                        <div class="filter-elements">
-                            <label><input type="checkbox" class="methodiek-filter" value="1"> 1. Om herstelvaardigheden te ontwikkelen</label>
-                            <label><input type="checkbox" class="methodiek-filter" value="2"> 2. Om samen met de jongere stil te staan</label>
-                            <label><input type="checkbox" class="methodiek-filter" value="3"> 3. Om het goed te maken</label>
-                            <label><input type="checkbox" class="methodiek-filter" value="4"> 4. Om te reflecteren samen met collega's</label>
-                            <label><input type="checkbox" class="methodiek-filter" value="5"> 5. Om een herstelbeleid te ontwikkelen</label>
-                        </div>
-                    </section>
+            <section class="filter-group">
+              <h2>Leeftijd</h2>
+              <div class="filter-elements">
+                <label
+                  ><input type="checkbox" class="age-filter" value="-06" /> -06
+                  jaar</label
+                >
+                <label
+                  ><input type="checkbox" class="age-filter" value="06-12" />
+                  06-12 jaar</label
+                >
+                <label
+                  ><input type="checkbox" class="age-filter" value="12-18" />
+                  12-18 jaar</label
+                >
+                <label
+                  ><input type="checkbox" class="age-filter" value="18+" /> 18+
+                  jaar</label
+                >
+              </div>
+            </section>
 
-                    <section class="filter-group">
-                        <h2>Ontwikkelingsniveau</h2>
-                        <div class="filter-elements">
-                            <label><input type="checkbox" class="level-filter" value="1"> 1. Hoog</label>
-                            <label><input type="checkbox" class="level-filter" value="2"> 2. Eerder hoog</label>
-                            <label><input type="checkbox" class="level-filter" value="3"> 3. Gemiddeld</label>
-                            <label><input type="checkbox" class="level-filter" value="4"> 4. Eerder laag</label>
-                            <label><input type="checkbox" class="level-filter" value="5"> 5. Laag</label>
-                        </div>
-                    </section>
-                            </div>
-                        </div>
-                        <div class="article-1" id="article-1">
-                        <div class="article" id="article-2">
-                            <div class="icon-donwload">
-                               <a href=""> <img src="./icons/donwload-icon.svg" href="" alt="Icon for article 1"></a>
-                            </div>
-                            <div class="text">
-                                <h3>B - Herstel, beweging in bewogen contexten</h3>
-                                <p>Dit artikel beschrijft hoe vzw Oranjehuis aan de slag is gegaan met de belangrijke principes van herstelgericht werken...</p>
-                                <p>2018-19-04</p>
-                            </div>
-                        </div>
-                    </div>
-                        
-                    </section>
-                </div>
-                <script>
-                  
+            <section class="filter-group">
+              <h2>Methodieken</h2>
+              <div class="filter-elements">
+                <label
+                  ><input type="checkbox" class="methodiek-filter" value="1" />
+                  1. Om herstelvaardigheden te ontwikkelen</label
+                >
+                <label
+                  ><input type="checkbox" class="methodiek-filter" value="2" />
+                  2. Om samen met de jongere stil te staan</label
+                >
+                <label
+                  ><input type="checkbox" class="methodiek-filter" value="3" />
+                  3. Om het goed te maken</label
+                >
+                <label
+                  ><input type="checkbox" class="methodiek-filter" value="4" />
+                  4. Om te reflecteren samen met collega's</label
+                >
+                <label
+                  ><input type="checkbox" class="methodiek-filter" value="5" />
+                  5. Om een herstelbeleid te ontwikkelen</label
+                >
+              </div>
+            </section>
 
-                </script>
-                
-        </body>
-    </html>
+            <section class="filter-group">
+              <h2>Ontwikkelingsniveau</h2>
+              <div class="filter-elements">
+                <label
+                  ><input type="checkbox" class="level-filter" value="1" /> 1.
+                  Hoog</label
+                >
+                <label
+                  ><input type="checkbox" class="level-filter" value="2" /> 2.
+                  Eerder hoog</label
+                >
+                <label
+                  ><input type="checkbox" class="level-filter" value="3" /> 3.
+                  Gemiddeld</label
+                >
+                <label
+                  ><input type="checkbox" class="level-filter" value="4" /> 4.
+                  Eerder laag</label
+                >
+                <label
+                  ><input type="checkbox" class="level-filter" value="5" /> 5.
+                  Laag</label
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="article-1" id="article-1">
+          <div class="article" id="article-2">
+            <div class="icon-donwload">
+              <a href="">
+                <img src="./icons/donwload-icon.svg" alt="Icon for article 1" />
+              </a>
+            </div>
+            <div class="text">
+              <h3>B - Herstel, beweging in bewogen contexten</h3>
+              <p>
+                Dit artikel beschrijft hoe vzw Oranjehuis aan de slag is gegaan
+                met de belangrijke principes van herstelgericht werken...
+              </p>
+              <p>2018-19-04</p>
+            </div>
+          </div>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </section>
+    </div>
+  </body>
+</html>
