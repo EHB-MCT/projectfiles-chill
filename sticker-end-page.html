@@ -76,9 +76,6 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const emotietext = sessionStorage.getItem("sorryLetter") || "";
-        document.getElementById("emotietext").value = emotietext;
-
         const emotionDuring = localStorage.getItem("selectedEmotion-during");
         const emotionAfter = localStorage.getItem("selectedEmotion-after");
 
@@ -89,7 +86,7 @@
 
         // Generate unique short link
         const uniqueID = Date.now().toString(36);
-        const baseUrl = window.location.origin + "/emotiefinishTEST.html";
+        const baseUrl = window.location.origin + "/sticker-end-page.html";
         const shortLink = `${baseUrl}?id=${uniqueID}`;
 
         document.getElementById("shortLink").value = shortLink;
