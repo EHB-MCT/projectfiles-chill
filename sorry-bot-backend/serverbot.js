@@ -9,11 +9,14 @@ const client = new MongoClient(process.env.DATABASE_URL);
 const port = process.env.PORT;
 
 // OpenAI API Key
-const OPENAI_API_KEY =
-  "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";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-app.use(cors());
-app.use(bodyParser.json());
+  app.use(cors({
+    origin: "https://automatic-spoon-j7y4oq3.pages.github.io", 
+    methods: "GET,POST",
+    allowedHeaders: "Content-Type"
+  }));
+  app.use(bodyParser.json());
 app.use(express.json());
 
 app.post("/chat", async (req, res) => {
