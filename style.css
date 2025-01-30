@@ -2975,9 +2975,9 @@ body.no-overflow-hidden {
   }
 
   .sticker {
-    width: 200px;
+    width: 150px;
     margin: 0 auto;
-    height: 200px;
+    height: 150px;
   }
 
   .sticker IMG {
@@ -2987,7 +2987,20 @@ body.no-overflow-hidden {
   }
 
   .stickers {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 150px);
     gap: 20px;
+  }
+
+  .center-container {
+    margin-top: 20vh;
+  }
+  .center-container h2 {
+    width: 90%;
+  }
+  #sticker-preview {
+    width: 70vw;
+  }
+  .sticker-preview img {
+    width: 70%;
   }
 }
