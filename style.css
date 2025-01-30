@@ -1108,6 +1108,12 @@ input[type="submit"] {
   margin-bottom: 100px;
 }
 
+.emotie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .emotie-container h2 {
   font-size: 1.7rem;
   display: flex;
@@ -1129,13 +1135,13 @@ input[type="submit"] {
 }
 
 .heartemotievisualiser img {
-  width: 360px;
+  width: 300px;
   /* Default width for the heart image */
   height: auto;
 }
 
 #gifImage {
-  width: 650px;
+  width: 520px;
   height: auto;
 }
 
@@ -1160,7 +1166,6 @@ input[type="submit"] {
   font-size: 23px;
   transition: all 0.1s ease;
   text-decoration: none;
-  width: 28vh;
   text-align: center;
 }
 
