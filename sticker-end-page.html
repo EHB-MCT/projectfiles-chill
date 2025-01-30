@@ -6,9 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/sid3fky.css" />
     <link rel="icon" type="image/x-icon" href="./favicon/favicon.png" />
     <script src="./menu.js" defer></script>
-    <script src="./methods.js" defer></script>
+    <script src="./sticker-end.js" defer></script>
   </head>
   <body>
     <nav>
@@ -42,29 +43,26 @@
       />
     </nav>
 
-    <div class="container">
-      <div class="text-methods">
-        <h1>Op welke manier wil <br />je sorry zeggen?</h1>
+    <div class="btn-titel">
+      <a href="./sticker-edit-page.html"
+        ><img
+          src="./icons/back-button.png"
+          alt="Back Button"
+          class="back-button"
+        />
+      </a>
+    </div>
+
+    <div class="center-container">
+      <div class="sticker-preview" id="sticker-preview">
+        <img id="selected-sticker" src="" alt="Selected Sticker" />
       </div>
-      <div class="icons">
-        <div class="icons-1">
-          <a href="emotion-loadingpage.html" class="icon heart">
-            <img src="/icons/Heart.svg" alt="Heart Icon" class="icon-img" />
-          </a>
-          <p>Emotie maker</p>
-        </div>
-        <div class="icons-2">
-          <a href="./sticker-loadingpage.html" class="icon sun">
-            <img src="/icons/Sticker.svg" alt="Sticker Icon" class="icon-img" />
-          </a>
-          <p>Sticker maker</p>
-        </div>
-        <div class="icons-3">
-          <a href="./origami-loadingpage.html" class="icon origami">
-            <img src="/icons/Origami.svg" alt="Origami Icon" class="icon-img" />
-          </a>
-          <p>Origami maker</p>
-        </div>
+
+      <h2>Blij met jouw sticker, copy de link en stuur die maar</h2>
+      <div class="button-container">
+        <button type="button" onclick="location.href='./4methods.html'">
+          Klaar?
+        </button>
       </div>
     </div>
   </body>

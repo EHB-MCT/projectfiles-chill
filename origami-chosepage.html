@@ -1,92 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Origami</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
-		<script src="./menu.js" defer></script>
-		<script src="origami-video.js" defer></script>
-	</head>
-	<body>
-		<nav>
-			<a href="index.html" class="logo">
-				<img src="./icons/logo.svg" alt="SorryBox Logo" class="logo-image" />
-			</a>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="chatbot-loadingpage.html">Sorrybot</a></li>
-				<li><a href="4methods.html" class="active">Sorrytools</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropbtn"
-						>Over ons<i class="bx bxs-chevron-down arrow"></i
-					></a>
-					<ul class="dropdown-content">
-						<li><a href="wiezijnwe.html">Wie zijn we?</a></li>
-						<li><a href="werkwijze.html">Werkwijze</a></li>
-						<li><a href="sorrybox2.html">SorryBox 2.0</a></li>
-						<li><a href="methodieken.html">Methodieken</a></li>
-					</ul>
-				</li>
-			</ul>
-			<img
-				src="./icons/Hamburger.svg"
-				alt="menu hamburger"
-				class="menu-hamburger"
-			/>
-		</nav>
-		<div class="btn-titel">
-			<a href="./origami2.html"
-				><img
-					src="./icons/back-button.png"
-					alt="Back Button"
-					class="back-button"
-				/>
-			</a>
-			<h2>Kies een origami die je wilt maken</h2>
-		</div>
-		<div class="choose">
-			<div class="origami-foto">
-				<a
-					href="./origami-videos.html"
-					data-video="https://www.youtube.com/embed/reE-X2osEJQ?si=3ylHAgoVQHczJvyA"
-					class="origami-choice"
-				>
-					<img src="images/hart-origami.png" alt="hart origami" />
-				</a>
-				<h2>Hart</h2>
-			</div>
-			<div class="origami-foto">
-				<a
-					href="./origami-videos.html"
-					data-video="https://www.youtube.com/embed/XJ7x_WDnB1c?si=gD3WpCbF88XVYczf"
-					class="origami-choice"
-				>
-					<img src="images/vlinder-origami.png" alt="vlinder origami" />
-				</a>
-				<h2>Vlinder</h2>
-			</div>
-			<div class="origami-foto">
-				<a
-					href="./origami-videos.html"
-					data-video="https://www.youtube.com/embed/ujGZIb6KDgg?si=mjiYLRNZRmM-nHMz"
-					class="origami-choice"
-				>
-					<img src="images/bird-origami.png" alt="bird origami" />
-				</a>
-				<h2>Kraanvogel</h2>
-			</div>
-			<div class="origami-foto">
-				<a
-					href="./origami-videos.html"
-					data-video="https://www.youtube.com/embed/n6I_TgccC-w?si=Y0C3sgyzMXHWcekB"
-					class="origami-choice"
-				>
-					<img src="images/Ster-origami.png" alt="ster origami" />
-				</a>
-				<h2>Ster</h2>
-			</div>
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Origami</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ura5hhu.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.png" />
+    <script src="./menu.js" defer></script>
+    <script src="origami-video.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img src="./icons/logo.svg" alt="SorryBox Logo" class="logo-image" />
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chatbot-loadingpage.html">Sorrybot</a></li>
+          <li><a href="4methods.html" class="active">Sorrytools</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn"
+              >Over ons<i class="bx bxs-chevron-down arrow"></i
+            ></a>
+            <ul class="dropdown-content">
+              <li><a href="./wiezijnwe.html">Wie zijn we?</a></li>
+              <li><a href="./werkwijze.html">Werkwijze</a></li>
+              <li><a href="./sorrybox2.html">SorryBox 2.0</a></li>
+              <li><a href="./methodieken.html">Methodieken</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <img
+        src="./icons/Hamburger.svg"
+        alt="menu hamburger"
+        class="menu-hamburger"
+      />
+    </nav>
+    <div class="btn-titel">
+      <a href="./origami2.html"
+        ><img
+          src="./icons/back-button.png"
+          alt="Back Button"
+          class="back-button"
+        />
+      </a>
+      <h2>Kies een origami die je wilt maken</h2>
+    </div>
+    <div class="choose">
+      <div class="origami-foto">
+        <a
+          href="./origami-videos.html"
+          data-video="https://www.youtube.com/embed/reE-X2osEJQ?si=3ylHAgoVQHczJvyA"
+          class="origami-choice"
+        >
+          <img src="images/hart-origami.png" alt="hart origami" />
+        </a>
+        <h2>Hart</h2>
+      </div>
+      <div class="origami-foto">
+        <a
+          href="./origami-videos.html"
+          data-video="https://www.youtube.com/embed/XJ7x_WDnB1c?si=gD3WpCbF88XVYczf"
+          class="origami-choice"
+        >
+          <img src="images/vlinder-origami.png" alt="vlinder origami" />
+        </a>
+        <h2>Vlinder</h2>
+      </div>
+      <div class="origami-foto">
+        <a
+          href="./origami-videos.html"
+          data-video="https://www.youtube.com/embed/ujGZIb6KDgg?si=mjiYLRNZRmM-nHMz"
+          class="origami-choice"
+        >
+          <img src="images/bird-origami.png" alt="bird origami" />
+        </a>
+        <h2>Kraanvogel</h2>
+      </div>
+      <div class="origami-foto">
+        <a
+          href="./origami-videos.html"
+          data-video="https://www.youtube.com/embed/n6I_TgccC-w?si=Y0C3sgyzMXHWcekB"
+          class="origami-choice"
+        >
+          <img src="images/Ster-origami.png" alt="ster origami" />
+        </a>
+        <h2>Ster</h2>
+      </div>
+    </div>
+  </body>
 </html>
