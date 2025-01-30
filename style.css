@@ -1221,7 +1221,6 @@ input[type="submit"] {
   font-size: 23px;
   transition: all 0.1s ease;
   text-decoration: none;
-  width: 28vh;
   text-align: center;
   font-family: "lores-9-narrow", sans-serif;
 }
@@ -1340,8 +1339,8 @@ input[type="submit"] {
 }
 
 #shortLink {
-  width: 200px;
-  padding: 5px;
+  width: 240px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
