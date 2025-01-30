@@ -215,6 +215,8 @@ li a.active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
 }
 
 .loading-container.show {
@@ -712,6 +714,7 @@ textarea::placeholder {
   transition: all 0.1s ease;
   cursor: pointer;
 }
+
 .choices-container button {
   background-color: #e62e5a;
   border: none;
