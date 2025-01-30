@@ -1670,6 +1670,10 @@ input[type="text"] {
     z-index: 2;
   }
 
+  .secondary h1 {
+    margin-top: 50px;
+  }
+
   .dropdown.active .dropdown-content {
     display: flex;
   }
@@ -1680,12 +1684,12 @@ input[type="text"] {
   }
 
   ul li a {
-    font-size: 12vw;
+    font-size: 8vw;
   }
 
   .dropdown:hover .dropdown-content li a {
     display: block;
-    font-size: 6vw;
+    font-size: 4vw;
   }
 
   .nav-right .dropdown-content {
@@ -2797,14 +2801,14 @@ body.no-overflow-hidden {
   }
 
   #horizontal {
-    right: -22vh;
-    top: -52vh;
+    right: -28%;
+    top: -45vh;
     width: 10%;
   }
 
   #vertical {
-    right: 22vh;
-    top: -24vh;
+    right: 48%;
+    top: -22vh;
     width: 10%;
   }
 
@@ -2817,6 +2821,14 @@ body.no-overflow-hidden {
   }
 
   .index-button {
+    font-size: 14px;
+  }
+
+  .functie h3 {
+    font-size: 1.2rem;
+  }
+
+  .email p {
     font-size: 15px;
   }
 
@@ -2868,18 +2880,23 @@ body.no-overflow-hidden {
   .small {
     bottom: 24vh;
     width: 6vh;
+    left: 60%;
   }
 
   .purple {
     bottom: 29vh;
     width: 5vh;
-    left: 7vh;
+    left: -50%;
   }
 
   .sparkle-1 {
-    bottom: 68vh;
-    width: 5vh;
-    left: 23vh;
+    bottom: 65vh;
+    width: 3vh;
+    left: -65%;
+  }
+
+  .sparkle-2 {
+    display: none;
   }
 
   .emotiebuttons {
