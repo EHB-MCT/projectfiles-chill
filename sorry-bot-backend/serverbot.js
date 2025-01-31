@@ -149,7 +149,7 @@ app.get("/methodieken", async (req, res) => {
   }
 });
 
-// Start server
+// Start serverr
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
