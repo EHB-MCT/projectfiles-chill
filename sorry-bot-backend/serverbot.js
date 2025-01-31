@@ -12,7 +12,7 @@ const port = process.env.PORT;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
   app.use(cors({
-    origin: "https://automatic-spoon-j7y4oq3.pages.github.io", 
+    origin: ["https://ehb-mct.github.io/projectfiles-chill/", "http://127.0.0.1:5500"],
     methods: "GET,POST",
     allowedHeaders: "Content-Type"
   }));
